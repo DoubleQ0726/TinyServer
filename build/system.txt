@@ -1,0 +1,2 @@
+2021-04-07 11:51:37	[INFO]	Hello System Log
+2021-04-07 11:51:37	[INFO]	Hello System Log

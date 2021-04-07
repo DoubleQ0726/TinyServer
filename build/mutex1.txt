@@ -1,0 +1,2 @@
+2021-04-07 10:50:17	9767	0	[INFO]	[root]	tests/test_thread.cpp:65	test thread end
+2021-04-07 10:50:17	9767	0	[INFO]	[root]	tests/test_thread.cpp:66	count = 50000000
