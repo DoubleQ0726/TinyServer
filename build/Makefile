@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szq/Work/TinyServer
+CMAKE_SOURCE_DIR = /mnt/c/Users/QQ/Desktop/TinyServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szq/Work/TinyServer/build
+CMAKE_BINARY_DIR = /mnt/c/Users/QQ/Desktop/TinyServer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/szq/Work/TinyServer/build/CMakeFiles /home/szq/Work/TinyServer/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles /mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/szq/Work/TinyServer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -112,6 +112,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
 
 #=============================================================================
 # Target rules for targets named test_util
@@ -204,6 +217,33 @@ src/config.s: src/config.cpp.s
 src/config.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
+
+src/fiber.o: src/fiber.cpp.o
+
+.PHONY : src/fiber.o
+
+# target to build an object file
+src/fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/fiber.cpp.o
+.PHONY : src/fiber.cpp.o
+
+src/fiber.i: src/fiber.cpp.i
+
+.PHONY : src/fiber.i
+
+# target to preprocess a source file
+src/fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/fiber.cpp.i
+.PHONY : src/fiber.cpp.i
+
+src/fiber.s: src/fiber.cpp.s
+
+.PHONY : src/fiber.s
+
+# target to generate assembly for a file
+src/fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/fiber.cpp.s
+.PHONY : src/fiber.cpp.s
 
 src/log.o: src/log.cpp.o
 
@@ -340,6 +380,33 @@ tests/test_config.cpp.s:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cpp.s
 .PHONY : tests/test_config.cpp.s
 
+tests/test_fiber.o: tests/test_fiber.cpp.o
+
+.PHONY : tests/test_fiber.o
+
+# target to build an object file
+tests/test_fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o
+.PHONY : tests/test_fiber.cpp.o
+
+tests/test_fiber.i: tests/test_fiber.cpp.i
+
+.PHONY : tests/test_fiber.i
+
+# target to preprocess a source file
+tests/test_fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.i
+.PHONY : tests/test_fiber.cpp.i
+
+tests/test_fiber.s: tests/test_fiber.cpp.s
+
+.PHONY : tests/test_fiber.s
+
+# target to generate assembly for a file
+tests/test_fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.s
+.PHONY : tests/test_fiber.cpp.s
+
 tests/test_thread.o: tests/test_thread.cpp.o
 
 .PHONY : tests/test_thread.o
@@ -400,6 +467,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test_fiber"
 	@echo "... rebuild_cache"
 	@echo "... test_util"
 	@echo "... test_config"
@@ -410,6 +478,9 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/fiber.o"
+	@echo "... src/fiber.i"
+	@echo "... src/fiber.s"
 	@echo "... src/log.o"
 	@echo "... src/log.i"
 	@echo "... src/log.s"
@@ -425,6 +496,9 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_fiber.o"
+	@echo "... tests/test_fiber.i"
+	@echo "... tests/test_fiber.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

@@ -8,5 +8,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include 
 
-# Custom defines: CMakeFiles/test.dir/tests/test.cpp.o_DEFINES = __FILE__="tests/test.cpp"
+# Custom defines: CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o_DEFINES = __FILE__="tests/test_fiber.cpp"
 

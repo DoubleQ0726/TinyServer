@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_util.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/test_util.dir/tests/test_util.cpp.o"
+  "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_fiber.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,6 +4,7 @@
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/Singleton.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/TinyServer.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/config.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/fiber.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/log.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/macro.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/thread.h
