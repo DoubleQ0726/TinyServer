@@ -54,7 +54,7 @@ Logger::Logger(const std::string& name)
     : m_name(name), m_level(LogLevel::Level::DEBUG)
 {
     //Default Format
-    m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
+    m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
 }
 
 void Logger::debug(Ref<LogEvent>& event)
@@ -305,6 +305,17 @@ public:
     }
 };
 
+class ThreadNameFormatItem : public LogFormatter::FormatItem
+{
+public:
+    ThreadNameFormatItem(const std::string& fmt)
+        : FormatItem(fmt) {}
+    void format(std::ostream& os, LogLevel::Level level, Ref<Logger>& logger, Ref<LogEvent>& event) override
+    {
+        os << event->getThreadName();
+    }
+};
+
 class FiberIdFormatItem : public LogFormatter::FormatItem
 {
 public:
@@ -502,6 +513,7 @@ void LogFormatter::init()
         XX(l, LineFormatItem),
         XX(T, TabFormatItem),
         XX(F, FiberIdFormatItem),
+        XX(N, ThreadNameFormatItem),
 #undef XX
     };
 

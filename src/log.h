@@ -18,7 +18,7 @@ using Ref = std::shared_ptr<T>;
 #define TINY_LOG_LEVEL(logger, level)\
     if (logger->getLevel() <= level)\
     TinyServer::LogEventWarp(Ref<TinyServer::LogEvent>(new TinyServer::LogEvent(logger, level, __FILE__, __LINE__,\
-    0, time(0), TinyServer::GetThreadId(), TinyServer::GetFiberId()))).getSS()
+    0, time(0), TinyServer::GetThreadId(), TinyServer::Thread::GetName(), TinyServer::GetFiberId()))).getSS()
 
 #define TINY_LOG_DEBUG(logger) TINY_LOG_LEVEL(logger, TinyServer::LogLevel::Level::DEBUG)
 #define TINY_LOG_INFO(logger) TINY_LOG_LEVEL(logger, TinyServer::LogLevel::Level::INFO)
@@ -29,7 +29,7 @@ using Ref = std::shared_ptr<T>;
 #define TINY_LOG_FORMAT_LEVEL(logger, level, fmt, ...)\
     if (logger->getLevel() <= level)\
     TinyServer::LogEventWarp(Ref<TinyServer::LogEvent>(new TinyServer::LogEvent(logger, level, __FILE__, __LINE__,\
-    0, time(0), TinyServer::GetThreadId(), TinyServer::GetFiberId()))).getEvent()->format(fmt, ##__VA_ARGS__)
+    0, time(0), TinyServer::GetThreadId(), TinyServer::Thread::GetName(), TinyServer::GetFiberId()))).getEvent()->format(fmt, ##__VA_ARGS__)
 
 #define TINY_LOG_FORMAT_DEBUG(logger, fmt, ...) TINY_LOG_FORMAT_LEVEL(logger, TinyServer::LogLevel::Level::DEBUG, fmt, ##__VA_ARGS__)
 #define TINY_LOG_FORMAT_INFO(logger, fmt, ...) TINY_LOG_FORMAT_LEVEL(logger, TinyServer::LogLevel::Level::INFO, fmt, ##__VA_ARGS__)
@@ -63,16 +63,17 @@ class LogEvent
 public:
     LogEvent(const Ref<Logger>& logger, LogLevel::Level level, 
         const char* file, uint32_t line, uint32_t elapse, 
-        uint32_t time, uint32_t threadId, uint32_t fiberId)
+        uint32_t time, uint32_t threadId, std::string threadName, uint32_t fiberId)
         : m_logger(logger), m_level(level), m_file(file), 
         m_line(line), m_elapse(elapse), m_time(time), 
-        m_threadId(threadId), m_fiberId(fiberId) {}
+        m_threadId(threadId), m_threadName(threadName), m_fiberId(fiberId) {}
 
     const char* getFile() const { return m_file; }
     uint32_t getLine() const { return m_line; }
     uint32_t getElapse() const { return m_elapse; }
     uint32_t getTime() const { return m_time; }
     uint32_t getThreadId() const { return m_threadId; }
+    std::string getThreadName() const { return m_threadName; }
     uint32_t getcFiberId() const { return m_fiberId; }
     std::string getContent() const { return m_ss.str(); }
     std::stringstream& getSS() { return m_ss; }
@@ -108,6 +109,7 @@ private:
     uint32_t m_elapse;          //程序启动到现在的毫秒数
     uint32_t m_time;            //时间戳
     uint32_t m_threadId;        //线程id
+    std::string m_threadName;   //线程名称
     uint32_t m_fiberId;         //协程id
     std::stringstream m_ss;     //消息内容
 };

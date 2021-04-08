@@ -1,6 +1,7 @@
 #include "util.h"
 #include "log.h"
 #include <execinfo.h>
+#include "fiber.h"
 
 namespace TinyServer
 {
@@ -12,7 +13,7 @@ pid_t GetThreadId()
 }
 u_int32_t GetFiberId()
 {
-    return 0;
+    return Fiber::GetFiberId();
 }
 
 void BackTrace(std::vector<std::string>& bt, int size, int skip)
