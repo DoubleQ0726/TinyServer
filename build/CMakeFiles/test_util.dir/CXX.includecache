@@ -19,6 +19,8 @@ thread.h
 ../src/thread.h
 fiber.h
 ../src/fiber.h
+scheduler.h
+../src/scheduler.h
 
 ../src/config.h
 boost/lexical_cast.hpp
@@ -79,6 +81,12 @@ cassert
 -
 util.h
 ../src/util.h
+
+../src/scheduler.h
+memory
+-
+fiber.h
+../src/fiber.h
 
 ../src/thread.h
 memory

@@ -6,6 +6,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/TinyServer.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/config.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/fiber.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/log.h
+CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/scheduler.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/thread.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../src/util.h
 CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/binary.h

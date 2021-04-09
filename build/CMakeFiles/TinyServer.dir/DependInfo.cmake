@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/QQ/Desktop/TinyServer/src/config.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/config.cpp.o"
   "/mnt/c/Users/QQ/Desktop/TinyServer/src/fiber.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
   "/mnt/c/Users/QQ/Desktop/TinyServer/src/log.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/log.cpp.o"
+  "/mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
   "/mnt/c/Users/QQ/Desktop/TinyServer/src/thread.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/thread.cpp.o"
   "/mnt/c/Users/QQ/Desktop/TinyServer/src/util.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/util.cpp.o"
   )

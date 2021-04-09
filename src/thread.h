@@ -212,7 +212,7 @@ public:
     Thread(std::function<void()> cb, const std::string& name);
     ~Thread();
     
-    pid_t getID() const { return m_id; }
+    pid_t getId() const { return m_id; }
     std::string getName() const { return m_name; }
     void join();
 

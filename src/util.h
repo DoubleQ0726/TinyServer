@@ -13,9 +13,9 @@ namespace TinyServer
 pid_t GetThreadId();
 u_int32_t GetFiberId();
 
-void BackTrace(std::vector<std::string>& bt, int size, int skip = 1);
+void BackTrace(std::vector<std::string>& bt, int size = 64, int skip = 1);
 
-std::string BackTraceToString(int size, int skip = 2, std::string prefix = "");
+std::string BackTraceToString(int size = 64, int skip = 2, std::string prefix = "");
 
 } // namespace TinyServer
 

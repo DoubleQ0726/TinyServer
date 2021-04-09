@@ -12,6 +12,7 @@ set(LIB_SRC
     src/log.cpp
     src/util.cpp
     src/config.cpp
+    src/scheduler.cpp
     src/thread.cpp
     )
 
@@ -48,6 +49,11 @@ add_executable(test_fiber tests/test_fiber.cpp)
 add_dependencies(test_fiber TinyServer)
 force_redefine_file_macro_for_sources(test_fiber)
 target_link_libraries(test_fiber TinyServer yaml-cpp pthread)
+
+add_executable(test_scheduler tests/test_scheduler.cpp)
+add_dependencies(test_scheduler TinyServer)
+force_redefine_file_macro_for_sources(test_scheduler)
+target_link_libraries(test_scheduler TinyServer yaml-cpp pthread)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

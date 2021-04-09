@@ -28,8 +28,13 @@ public:
     //切换到后台执行
     void swapOut();
 
+    void call();
+
     //返回协程Id
     uint64_t getId() const { return m_id; }
+
+    State getState() const { return m_state; }
+    void setState(State state) { m_state = state; }
 
 public:
     //设置当前协程

@@ -76,6 +76,7 @@ CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/fiber.cpp
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/fiber.h
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/macro.h
+CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/scheduler.h
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/util.h
 
@@ -116,6 +117,15 @@ CMakeFiles/TinyServer.dir/src/log.cpp.o: ../src/log.cpp
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../src/util.h
+
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/fiber.h
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/macro.h
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/scheduler.cpp
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/scheduler.h
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/util.h
 
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/Singleton.h
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/log.h

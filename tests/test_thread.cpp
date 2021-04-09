@@ -15,7 +15,7 @@ void func1()
     TINY_LOG_INFO(logger) << "name: " << Thread::GetName()
                           << " this.name: " << Thread::GetThis()->getName()
                           << " id: " << GetThreadId()
-                          << " this.id: " << Thread::GetThis()->getID();
+                          << " this.id: " << Thread::GetThis()->getId();
     //sleep(5);
     for (int i = 0; i < 10000000; ++i)
     {

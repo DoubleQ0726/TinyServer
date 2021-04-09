@@ -2,6 +2,7 @@
 #include "config.h"
 #include "macro.h"
 #include <atomic>
+#include "scheduler.h"
 
 
 namespace TinyServer
@@ -106,6 +107,15 @@ void Fiber::swapIn()
     SetThis(this);
     TINY_ASSERT(m_state != State::EXEC);
     m_state = State::EXEC;
+    if (::swapcontext(&(Scheduler::GetMainFiber()->m_context), &m_context))
+    {
+        TINY_ASSERT_P(false, "swapcontext");
+    }
+}
+
+void Fiber::call()
+{
+    m_state = State::EXEC;
     if (::swapcontext(&(t_threadFiber->m_context), &m_context))
     {
         TINY_ASSERT_P(false, "swapcontext");
@@ -115,9 +125,9 @@ void Fiber::swapIn()
 //切换到后台执行
 void Fiber::swapOut()
 {
-    SetThis(t_threadFiber.get());
+    SetThis(Scheduler::GetMainFiber());
 
-    if (::swapcontext(&m_context, &(t_threadFiber->m_context)))
+    if (::swapcontext(&m_context, &(Scheduler::GetMainFiber()->m_context)))
     {
         TINY_ASSERT_P(false, "swapcontext");
     }
@@ -150,7 +160,7 @@ void Fiber::YieldToReady()
     cur->swapOut();
 }
 
-//协程切换到后台，并设置为Ready状态
+//协程切换到后台，并设置为HOLD状态
 void Fiber::YieldToHold()
 {
     Ref<Fiber> cur = GetThis();
@@ -176,13 +186,13 @@ void Fiber::MainFunc()
     catch(const std::exception& e)
     {
         cur->m_state = State::EXCEPT;
-        TINY_LOG_ERROR(logger) << "Fiber Except: " << e.what();
+        TINY_LOG_ERROR(logger) << "Fiber Except: " << e.what() << " fiber_id = " << cur->m_id << "\n" << BackTraceToString();
     }
     auto raw_ptr = cur.get();
     cur.reset();
     raw_ptr->swapOut();
 
-    TINY_ASSERT_P(false, "never reach");
+    TINY_ASSERT_P(false, "never reach fiber_id = " + std::to_string(raw_ptr->m_id));
 }
 
 uint64_t Fiber::GetFiberId()

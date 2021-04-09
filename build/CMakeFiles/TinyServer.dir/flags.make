@@ -16,5 +16,7 @@ CXX_INCLUDES = -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Deskto
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/config.cpp.o_DEFINES = __FILE__="src/config.cpp"
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/scheduler.cpp.o_DEFINES = __FILE__="src/scheduler.cpp"
+
 # Custom defines: CMakeFiles/TinyServer.dir/src/thread.cpp.o_DEFINES = __FILE__="src/thread.cpp"
 

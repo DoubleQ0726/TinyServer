@@ -19,6 +19,8 @@ thread.h
 ../src/thread.h
 fiber.h
 ../src/fiber.h
+scheduler.h
+../src/scheduler.h
 
 ../src/config.h
 boost/lexical_cast.hpp
@@ -71,6 +73,12 @@ Singleton.h
 ../src/Singleton.h
 thread.h
 ../src/thread.h
+
+../src/scheduler.h
+memory
+-
+fiber.h
+../src/fiber.h
 
 ../src/thread.h
 memory
