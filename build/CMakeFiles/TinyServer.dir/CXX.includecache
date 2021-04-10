@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/Singleton.h
+/home/szq/Work/TinyServer/src/Singleton.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/fiber.h
+/home/szq/Work/TinyServer/src/fiber.h
 ucontext.h
 -
 memory
@@ -16,9 +16,9 @@ memory
 functional
 -
 log.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/log.h
+/home/szq/Work/TinyServer/src/log.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/log.h
+/home/szq/Work/TinyServer/src/log.h
 string
 -
 memory
@@ -38,35 +38,35 @@ map
 stdarg.h
 -
 util.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/util.h
+/home/szq/Work/TinyServer/src/util.h
 Singleton.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/Singleton.h
+/home/szq/Work/TinyServer/src/Singleton.h
 thread.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/thread.h
+/home/szq/Work/TinyServer/src/thread.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/macro.h
+/home/szq/Work/TinyServer/src/macro.h
 string
 -
 cassert
 -
 util.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/util.h
+/home/szq/Work/TinyServer/src/util.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.cpp
+/home/szq/Work/TinyServer/src/scheduler.cpp
 scheduler.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.h
+/home/szq/Work/TinyServer/src/scheduler.h
 log.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/log.h
+/home/szq/Work/TinyServer/src/log.h
 macro.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/macro.h
+/home/szq/Work/TinyServer/src/macro.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.h
+/home/szq/Work/TinyServer/src/scheduler.h
 memory
 -
 fiber.h
-/mnt/c/Users/QQ/Desktop/TinyServer/src/fiber.h
+/home/szq/Work/TinyServer/src/fiber.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/thread.h
+/home/szq/Work/TinyServer/src/thread.h
 memory
 -
 functional
@@ -80,7 +80,7 @@ semaphore.h
 atomic
 -
 
-/mnt/c/Users/QQ/Desktop/TinyServer/src/util.h
+/home/szq/Work/TinyServer/src/util.h
 pthread.h
 -
 unistd.h

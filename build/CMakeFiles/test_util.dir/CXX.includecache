@@ -466,9 +466,9 @@ yaml-cpp/node/parse.h
 yaml-cpp/node/emit.h
 ../vendor/yaml-cpp/include/yaml-cpp/yaml-cpp/node/emit.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_util.cpp
+/home/szq/Work/TinyServer/tests/test_util.cpp
 TinyServer.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/TinyServer.h
+/home/szq/Work/TinyServer/tests/TinyServer.h
 macro.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/macro.h
+/home/szq/Work/TinyServer/tests/macro.h
 

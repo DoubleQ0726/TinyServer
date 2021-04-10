@@ -2,6 +2,10 @@
 #include <memory>
 #include "fiber.h"
 
+/////////////////////////////////////////////////////////////////////
+//                    main ==> run ==> idle ==> main               //
+/////////////////////////////////////////////////////////////////////
+
 namespace TinyServer
 {
 class Scheduler
@@ -38,7 +42,7 @@ public:
     }
 
     template<typename InputIterator>
-    void scheduel(InputIterator begin, InputIterator end)
+    void schedule(InputIterator begin, InputIterator end)
     {
         bool need_tickle = false;
         {

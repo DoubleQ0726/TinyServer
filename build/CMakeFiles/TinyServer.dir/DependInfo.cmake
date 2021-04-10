@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/QQ/Desktop/TinyServer/src/config.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/config.cpp.o"
-  "/mnt/c/Users/QQ/Desktop/TinyServer/src/fiber.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
-  "/mnt/c/Users/QQ/Desktop/TinyServer/src/log.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/log.cpp.o"
-  "/mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
-  "/mnt/c/Users/QQ/Desktop/TinyServer/src/thread.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/thread.cpp.o"
-  "/mnt/c/Users/QQ/Desktop/TinyServer/src/util.cpp" "/mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/TinyServer.dir/src/util.cpp.o"
+  "/home/szq/Work/TinyServer/src/config.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/config.cpp.o"
+  "/home/szq/Work/TinyServer/src/fiber.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
+  "/home/szq/Work/TinyServer/src/log.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/log.cpp.o"
+  "/home/szq/Work/TinyServer/src/scheduler.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
+  "/home/szq/Work/TinyServer/src/thread.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/thread.cpp.o"
+  "/home/szq/Work/TinyServer/src/util.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

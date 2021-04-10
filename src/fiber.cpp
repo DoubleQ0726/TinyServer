@@ -4,7 +4,6 @@
 #include <atomic>
 #include "scheduler.h"
 
-
 namespace TinyServer
 {
 static Ref<Logger> logger = TINY_LOG_NAME("system");
@@ -12,7 +11,7 @@ static std::atomic<uint64_t> s_fiber_id {0};
 static std::atomic<uint64_t> s_fiber_count {0};
 
 static thread_local Fiber* t_fiber = nullptr;
-static thread_local Ref<Fiber> t_threadFiber = nullptr;
+static thread_local Ref<Fiber> t_threadFiber = nullptr; // ==> main fiber
 
 static Ref<ConfigVar<uint32_t>> fiber_stack_size = Config::Lookup<uint32_t>("fiber.stack.size", 1024 * 1024, "fiber stack size");
 
@@ -42,10 +41,10 @@ Fiber::Fiber()
         TINY_ASSERT_P(false, "getcontext");
     }
     ++s_fiber_count;
-    TINY_LOG_DEBUG(logger) << "Fiber::Fiber";
+    TINY_LOG_DEBUG(logger) << "Fiber::Fiber id = " << m_id;
 }
 
-Fiber::Fiber(std::function<void()> cb, size_t stacksize)
+Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_call)
     : m_id(++s_fiber_id), m_cb(cb)
 {
     ++s_fiber_count;
@@ -59,7 +58,10 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize)
     m_context.uc_link = nullptr;
     m_context.uc_stack.ss_sp = m_stack;
     m_context.uc_stack.ss_size = m_stacksize;
-    ::makecontext(&m_context, &MainFunc, 0);
+    if (!use_call)
+        ::makecontext(&m_context, &MainFunc, 0);
+    else
+        ::makecontext(&m_context, &CallerMainFunc, 0);
     TINY_LOG_DEBUG(logger) << "Fiber::Fiber id = " << m_id;
 }
 
@@ -113,8 +115,19 @@ void Fiber::swapIn()
     }
 }
 
+//切换到后台执行
+void Fiber::swapOut()
+{
+    SetThis(Scheduler::GetMainFiber());
+    if (::swapcontext(&m_context, &(Scheduler::GetMainFiber()->m_context)))
+    {
+        TINY_ASSERT_P(false, "swapcontext");
+    }
+}
+
 void Fiber::call()
 {
+    SetThis(this);
     m_state = State::EXEC;
     if (::swapcontext(&(t_threadFiber->m_context), &m_context))
     {
@@ -122,16 +135,15 @@ void Fiber::call()
     }
 }
 
-//切换到后台执行
-void Fiber::swapOut()
+void Fiber::back()
 {
-    SetThis(Scheduler::GetMainFiber());
-
-    if (::swapcontext(&m_context, &(Scheduler::GetMainFiber()->m_context)))
+    SetThis(t_threadFiber.get());
+    if (::swapcontext(&m_context, &(t_threadFiber->m_context)))
     {
         TINY_ASSERT_P(false, "swapcontext");
     }
 }
+
 
 //设置当前协程
 void Fiber::SetThis(Fiber* f)
@@ -191,6 +203,28 @@ void Fiber::MainFunc()
     auto raw_ptr = cur.get();
     cur.reset();
     raw_ptr->swapOut();
+
+    TINY_ASSERT_P(false, "never reach fiber_id = " + std::to_string(raw_ptr->m_id));
+}
+
+void Fiber::CallerMainFunc()
+{
+    Ref<Fiber> cur = GetThis();
+    TINY_ASSERT(cur);
+    try
+    {
+        cur->m_cb();
+        cur->m_cb = nullptr;
+        cur->m_state = State::TERM;
+    }
+    catch(const std::exception& e)
+    {
+        cur->m_state = State::EXCEPT;
+        TINY_LOG_ERROR(logger) << "Fiber Except: " << e.what() << " fiber_id = " << cur->m_id << "\n" << BackTraceToString();
+    }
+    auto raw_ptr = cur.get();
+    cur.reset();
+    raw_ptr->back();
 
     TINY_ASSERT_P(false, "never reach fiber_id = " + std::to_string(raw_ptr->m_id));
 }
