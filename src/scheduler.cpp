@@ -69,12 +69,12 @@ void Scheduler::start()
             m_threadIds.push_back(m_threads[i]->getId());    
         }   
     }
-    if (m_rootFiber)
-    {
-        m_rootFiber->call();
-        //m_rootFiber->swapIn()
-        TINY_LOG_INFO(logger) << "call out";
-    }
+    // if (m_rootFiber)
+    // {
+    //     m_rootFiber->call();
+    //     //m_rootFiber->swapIn()
+    //     TINY_LOG_INFO(logger) << "call out";
+    // }
 }
 
 void Scheduler::stop()
@@ -106,6 +106,32 @@ void Scheduler::stop()
     {
         tickle();
     }
+    if (m_rootFiber)
+    {
+        // while (!stopping())
+        // {
+        //     if (m_rootFiber->getState() == Fiber::TERM || m_rootFiber->getState() == Fiber::EXCEPT)
+        //     {
+        //         m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this), 0, true));
+        //         TINY_LOG_INFO(logger) << " root fiber is term";
+        //         t_fiber = m_rootFiber.get();
+        //     }
+        //     m_rootFiber->call();
+        // }
+        if (!stopping())
+            m_rootFiber->call();
+    }
+
+    std::vector<Ref<Thread>> thrs;
+    {
+        MutexLock::MutexLockGuard lock(m_mutex);
+        thrs.swap(m_threads);
+    }
+    for (auto item : thrs)
+    {
+        item->join();
+    }
+
     if (stopping())
         return;
 }
@@ -119,6 +145,11 @@ bool Scheduler::stopping()
 void Scheduler::idle()
 {
     TINY_LOG_INFO(logger) << "idle";
+    while (!stopping())
+    {
+        Fiber::YieldToHold();
+    }
+    
 }
 
 void Scheduler::tickle()
@@ -143,10 +174,11 @@ void Scheduler::run()
     Ref<Fiber> cb_fiber;
 
     FiberAndThread ft;
-    while (!stopping())
+    while (true)
     {
         ft.reset();
         bool tickle_me = false;
+        bool is_active = false;
         {
             MutexType::MutexLockGuard lock(m_mutex);
             auto iter = m_fibers.begin();
@@ -164,10 +196,13 @@ void Scheduler::run()
                     ++iter;
                     continue;
                 }
+                //TINY_LOG_INFO(logger) << "get task from queue";
                 ft = *iter;
                 tickle_me = true;
                 //list erase之后迭代器也被销毁了，不可再使用
                 m_fibers.erase(iter);
+                ++m_activateThreadCount;
+                is_active = true;
                 break;
             }
         }
@@ -176,9 +211,9 @@ void Scheduler::run()
         {
             tickle();
         }
+
         if (ft.fiber && (ft.fiber->getState() != Fiber::TERM && ft.fiber->getState() != Fiber::EXCEPT))
         {
-            ++m_activateThreadCount;
             ft.fiber->swapIn();
             --m_activateThreadCount;
             if (ft.fiber->getState() == Fiber::READY)
@@ -202,7 +237,6 @@ void Scheduler::run()
                 cb_fiber.reset(new Fiber(ft.cb));
             }
             ft.reset();
-            ++m_activateThreadCount;
             cb_fiber->swapIn();
             --m_activateThreadCount;
             if (cb_fiber->getState() == Fiber::READY)
@@ -222,6 +256,11 @@ void Scheduler::run()
         }
         else
         {
+            if (is_active)
+            {
+                --m_activateThreadCount;
+                continue;
+            }
             if (idle_fiber->getState() == Fiber::TERM)
             {
                 TINY_LOG_INFO(logger) << "idle fiber term";
