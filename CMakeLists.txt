@@ -14,6 +14,7 @@ set(LIB_SRC
     src/config.cpp
     src/scheduler.cpp
     src/thread.cpp
+    src/iomanager.cpp
     )
 
 include_directories(${PROJECT_SOURCE_DIR}/src 
@@ -54,6 +55,11 @@ add_executable(test_scheduler tests/test_scheduler.cpp)
 add_dependencies(test_scheduler TinyServer)
 force_redefine_file_macro_for_sources(test_scheduler)
 target_link_libraries(test_scheduler TinyServer yaml-cpp pthread)
+
+add_executable(test_iomanager tests/test_iomanager.cpp)
+add_dependencies(test_iomanager TinyServer)
+force_redefine_file_macro_for_sources(test_iomanager)
+target_link_libraries(test_iomanager TinyServer yaml-cpp pthread)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

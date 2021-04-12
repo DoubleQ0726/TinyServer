@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/szq/Work/TinyServer/src/config.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/config.cpp.o"
   "/home/szq/Work/TinyServer/src/fiber.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
+  "/home/szq/Work/TinyServer/src/iomanager.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/iomanager.cpp.o"
   "/home/szq/Work/TinyServer/src/log.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/log.cpp.o"
   "/home/szq/Work/TinyServer/src/scheduler.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
   "/home/szq/Work/TinyServer/src/thread.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/thread.cpp.o"

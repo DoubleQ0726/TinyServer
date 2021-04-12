@@ -20,3 +20,5 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/thread.cpp.o_DEFINES = __FILE__="src/thread.cpp"
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/iomanager.cpp.o_DEFINES = __FILE__="src/iomanager.cpp"
+

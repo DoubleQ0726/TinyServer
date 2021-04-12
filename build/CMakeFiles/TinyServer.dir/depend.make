@@ -80,6 +80,16 @@ CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/scheduler.h
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/util.h
 
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/fiber.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/iomanager.cpp
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/iomanager.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/macro.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/scheduler.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/util.h
+
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/binary.h
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/dll.h
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/emitter.h

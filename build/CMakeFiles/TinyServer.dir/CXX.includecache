@@ -18,6 +18,26 @@ functional
 log.h
 /home/szq/Work/TinyServer/src/log.h
 
+/home/szq/Work/TinyServer/src/iomanager.cpp
+iomanager.h
+/home/szq/Work/TinyServer/src/iomanager.h
+macro.h
+/home/szq/Work/TinyServer/src/macro.h
+log.h
+/home/szq/Work/TinyServer/src/log.h
+sys/epoll.h
+-
+unistd.h
+-
+fcntl.h
+-
+string.h
+-
+
+/home/szq/Work/TinyServer/src/iomanager.h
+scheduler.h
+/home/szq/Work/TinyServer/src/scheduler.h
+
 /home/szq/Work/TinyServer/src/log.h
 string
 -
@@ -51,14 +71,6 @@ cassert
 -
 util.h
 /home/szq/Work/TinyServer/src/util.h
-
-/home/szq/Work/TinyServer/src/scheduler.cpp
-scheduler.h
-/home/szq/Work/TinyServer/src/scheduler.h
-log.h
-/home/szq/Work/TinyServer/src/log.h
-macro.h
-/home/szq/Work/TinyServer/src/macro.h
 
 /home/szq/Work/TinyServer/src/scheduler.h
 memory

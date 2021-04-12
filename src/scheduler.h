@@ -3,7 +3,10 @@
 #include "fiber.h"
 
 /////////////////////////////////////////////////////////////////////
-//                    main ==> run ==> idle ==> main               //
+//                    main --> run --> 2.idle --> run              //
+//                              |                                  //
+//                              |                                  //
+//                              1.test_fiber                       //
 /////////////////////////////////////////////////////////////////////
 
 namespace TinyServer
@@ -61,6 +64,8 @@ public:
 
     void run();
 
+    bool hasIdleThreads() { return m_idleThreadCount > 0; }
+
 protected:
     virtual void tickle();
 
@@ -114,11 +119,11 @@ private:
     };
 
 private:
+    std::string m_name;
     MutexType m_mutex;
     std::vector<Ref<Thread>> m_threads;
     std::list<FiberAndThread> m_fibers;
     Ref<Fiber> m_rootFiber;
-    std::string m_name;
 
 protected:
     std::vector<int> m_threadIds;
