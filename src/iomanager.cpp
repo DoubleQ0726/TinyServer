@@ -277,7 +277,16 @@ void IOManager::tickle()
 
 bool IOManager::stopping()
 {
-    return Scheduler::stopping() && m_pendingEventCount == 0;
+    uint64_t time_out = 0;
+    return stopping(time_out);
+}
+
+bool IOManager::stopping(uint64_t& time_out)
+{
+    time_out = getNextTimer();
+    return time_out == ~0ull
+        && m_pendingEventCount == 0
+        && Scheduler::stopping();
 }
 
 void IOManager::idle()
@@ -289,7 +298,8 @@ void IOManager::idle()
 
     while (true)
     {
-        if (stopping())
+        uint64_t next_timeout = 0;
+        if (stopping(next_timeout))
         {
             TINY_LOG_INFO(logger) << "name = " << getName() << " idle stopping exit";
             break;
@@ -298,8 +308,13 @@ void IOManager::idle()
         do
         {
             static const int MAX_TIMEOUT = 5000;
-            res = epoll_wait(m_epollfd, epevents, 64, MAX_TIMEOUT);
-            TINY_LOG_INFO(logger) << "epoll_wait res = " << res;
+            if (next_timeout != ~0ull)
+                next_timeout = (int)next_timeout < MAX_TIMEOUT ? next_timeout : MAX_TIMEOUT;
+            else
+                next_timeout = MAX_TIMEOUT;
+            res = epoll_wait(m_epollfd, epevents, 64, next_timeout);
+            //TINY_LOG_INFO(logger) << next_timeout;
+            //TINY_LOG_INFO(logger) << "epoll_wait res = " << res;
 
             if (res < 0 && errno == EINTR)
             {
@@ -310,6 +325,14 @@ void IOManager::idle()
                 break;
             }
         } while (true);
+
+        std::vector<std::function<void()>> cbs;
+        listExpireCB(cbs);
+        if (!cbs.empty())
+        {
+            schedule(cbs.begin(), cbs.end());
+            cbs.clear();
+        }
 
         for (int i = 0; i < res; ++i)
         {
@@ -371,6 +394,10 @@ void IOManager::idle()
     }  
 }
 
+void IOManager::onTimerInsertAtFront()
+{
+    tickle();
+}
 
 
 

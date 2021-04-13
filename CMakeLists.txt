@@ -15,6 +15,7 @@ set(LIB_SRC
     src/scheduler.cpp
     src/thread.cpp
     src/iomanager.cpp
+    src/timer.cpp
     )
 
 include_directories(${PROJECT_SOURCE_DIR}/src 

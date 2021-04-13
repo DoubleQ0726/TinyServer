@@ -1,8 +1,9 @@
 #pragma once
 #include "scheduler.h"
+#include "timer.h"
 namespace TinyServer
 {
-class IOManager : public Scheduler
+class IOManager : public Scheduler, public TimerManager 
 {
 public:
     typedef RWLock RWMutexType;
@@ -50,7 +51,10 @@ public:
 protected:
     void tickle() override;
     bool stopping() override;
+    bool stopping(uint64_t& time_out);
     void idle() override;
+
+    void onTimerInsertAtFront() override;
 
     void eventResize(size_t size);
 

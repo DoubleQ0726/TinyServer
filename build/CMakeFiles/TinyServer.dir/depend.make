@@ -88,6 +88,7 @@ CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/macro.h
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/scheduler.h
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/timer.h
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/util.h
 
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/binary.h
@@ -142,6 +143,13 @@ CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/thread.cpp
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/util.h
+
+CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/timer.cpp
+CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/timer.h
+CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/util.h
 
 CMakeFiles/TinyServer.dir/src/util.cpp.o: ../src/Singleton.h
 CMakeFiles/TinyServer.dir/src/util.cpp.o: ../src/fiber.h

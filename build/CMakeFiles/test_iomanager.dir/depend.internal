@@ -10,6 +10,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o
  ../src/log.h
  ../src/scheduler.h
  ../src/thread.h
+ ../src/timer.h
  ../src/util.h
  ../vendor/yaml-cpp/include/yaml-cpp/binary.h
  ../vendor/yaml-cpp/include/yaml-cpp/dll.h

@@ -2,6 +2,7 @@
 #include "log.h"
 #include <execinfo.h>
 #include "fiber.h"
+#include <sys/time.h>
 
 namespace TinyServer
 {
@@ -45,6 +46,21 @@ std::string BackTraceToString(int size, int skip, std::string prefix)
     }
     return ss.str();
 }
+
+uint64_t GetCurrentMs()
+{
+    struct timeval tv;
+    gettimeofday(&tv, nullptr);
+    return tv.tv_sec * 1000ul + tv.tv_usec / 1000;
+}
+
+uint64_t GetCurrentUs()
+{
+    struct timeval tv;
+    gettimeofday(&tv, nullptr);
+    return tv.tv_sec * 1000 * 1000ul + tv.tv_usec;
+}
+
 
 }
 

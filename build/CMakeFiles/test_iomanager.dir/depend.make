@@ -9,6 +9,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/iomanager.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/log.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/thread.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/timer.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/util.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/binary.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/dll.h

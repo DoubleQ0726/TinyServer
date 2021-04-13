@@ -31,6 +31,23 @@ void test_fiber()
     });
 }
 
+Ref<Timer> s_timer;
+void test_timer()
+{
+    IOManager iom(2);
+    //非局部变量，如静态变量、全局变量等可以不经捕获，直接使用
+    s_timer = iom.addTimer(500, [](){
+        TINY_LOG_INFO(logger) << "hello timer";
+        static int count = 0;
+        if (++count == 3)
+        {
+            //s_timer->reset(2000, true);
+            //s_timer->cancle();
+            //s_timer->refresh();
+        }
+    }, true);
+}
+
 void test1()
 {
     IOManager iom(2, false);
@@ -39,6 +56,7 @@ void test1()
 
 int main()
 {
-    test1();
+    //test1();
+    test_timer();
     return 0;
 }
