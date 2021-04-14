@@ -80,6 +80,8 @@ Singleton.h
 thread.h
 ../src/thread.h
 
+../src/noncoptable.h
+
 ../src/scheduler.h
 memory
 -
@@ -99,6 +101,8 @@ semaphore.h
 -
 atomic
 -
+noncoptable.h
+../src/noncoptable.h
 
 ../src/timer.h
 memory

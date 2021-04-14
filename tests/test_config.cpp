@@ -170,7 +170,7 @@ void test_class()
     }
 
     //test Config Change CallBack
-    person_config->setCallBack(10, [](const Person& old_value, const Person& new_value){
+    person_config->setCallBack([](const Person& old_value, const Person& new_value){
         TINY_LOG_INFO(TINY_LOG_ROOT) << "old_value: " << old_value.toString() << ", " << "new_value: " << new_value.toString();
     });
 

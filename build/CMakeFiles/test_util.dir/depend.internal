@@ -8,6 +8,7 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o
  ../src/fiber.h
  ../src/log.h
  ../src/macro.h
+ ../src/noncoptable.h
  ../src/scheduler.h
  ../src/thread.h
  ../src/util.h

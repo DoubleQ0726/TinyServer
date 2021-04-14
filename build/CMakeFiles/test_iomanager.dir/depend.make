@@ -7,6 +7,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/config.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/fiber.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/iomanager.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/log.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/noncoptable.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/thread.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: ../src/timer.h

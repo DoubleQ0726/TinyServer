@@ -7,6 +7,7 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/config.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/fiber.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/log.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/macro.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/noncoptable.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/scheduler.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/thread.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: ../src/util.h

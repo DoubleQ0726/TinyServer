@@ -412,7 +412,7 @@ public:
         m_val = value;
     }
 
-    uint64_t setCallBack(uint64_t key, ConfigChangeCB cb)
+    uint64_t setCallBack(ConfigChangeCB cb)
     {
         static uint64_t s_init = 0;
         RWMutexType::WriteLockGuard lock(m_mutex);

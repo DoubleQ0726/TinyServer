@@ -5,10 +5,11 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <atomic>
+#include "noncoptable.h"
 
 namespace TinyServer
 {
-class Semaphore
+class Semaphore : public Noncopyable
 {
 public:
     Semaphore(const uint32_t count = 0);
@@ -16,11 +17,11 @@ public:
     void wait();
     void notify();
 
-private:
-    Semaphore(const Semaphore&) = delete;
-    Semaphore(const Semaphore&&) = delete;
-    Semaphore operator=(const Semaphore&) = delete;
-    Semaphore operator=(const Semaphore&&) = delete;
+//private:
+    // Semaphore(const Semaphore&) = delete;
+    // Semaphore(const Semaphore&&) = delete;
+    // Semaphore operator=(const Semaphore&) = delete;
+    // Semaphore operator=(const Semaphore&&) = delete;
 
 private:
     sem_t m_semaphore;
@@ -143,7 +144,7 @@ private:
     bool m_locked;
 };
 
-class MutexLock
+class MutexLock : public Noncopyable
 {
 public:
     using MutexLockGuard = ScopeLockImp<MutexLock>;
@@ -172,7 +173,7 @@ private:
     pthread_mutex_t m_mutex;
 };
 
-class RWLock
+class RWLock : public Noncopyable
 {
 public:
     using ReadLockGuard = ReadScopeLockImp<RWLock>;
@@ -206,7 +207,7 @@ private:
     pthread_rwlock_t m_rwlock;
 };
 
-class Thread
+class Thread : public Noncopyable
 {
 public:
     Thread(std::function<void()> cb, const std::string& name);
@@ -221,11 +222,11 @@ public:
     static std::string GetName();
     static void SetName(std::string name);
 
-private:
-    Thread(const Thread&) = delete;
-    Thread(const Thread&&) = delete;
-    Thread operator=(const Thread&) = delete;
-    Thread operator=(const Thread&&) = delete;
+// private:
+//     Thread(const Thread&) = delete;
+//     Thread(const Thread&&) = delete;
+//     Thread operator=(const Thread&) = delete;
+//     Thread operator=(const Thread&&) = delete;
 
     static void* run(void* arg);
 private:
@@ -236,7 +237,7 @@ private:
     Semaphore m_semaphore;
 };
 
-class SpinLock
+class SpinLock : public Noncopyable
 {
 public:
     using MutexLockGuard = ScopeLockImp<SpinLock>;
@@ -264,7 +265,7 @@ private:
     pthread_spinlock_t m_spinlock;
 };
 
-class CASLock
+class CASLock : public Noncopyable
 {
 public:
     using MutexLockGuard = ScopeLockImp<CASLock>;
@@ -294,7 +295,7 @@ private:
 };
 
 //Debug Multi Thread
-class NullMutexLock
+class NullMutexLock : public Noncopyable
 {
 public:
     using MutexLockGuard = ScopeLockImp<NullMutexLock>;
@@ -304,7 +305,7 @@ public:
     void unlock() {}
 };
 //Debug Multi Thread
-class NullRWLock
+class NullRWLock : public Noncopyable
 {
 public:
     using ReadLockGuard = ReadScopeLockImp<NullRWLock>;

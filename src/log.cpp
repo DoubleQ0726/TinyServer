@@ -553,7 +553,7 @@ struct LogIniter
 {
     LogIniter()
     {
-        log_config->setCallBack(0xF1E231, [](const std::set<LogDefine>& old_value, const std::set<LogDefine>& new_value){
+        log_config->setCallBack([](const std::set<LogDefine>& old_value, const std::set<LogDefine>& new_value){
             TINY_LOG_INFO(TINY_LOG_ROOT) << "ON Log Config Change Event";
             for (auto& item : new_value)
             {

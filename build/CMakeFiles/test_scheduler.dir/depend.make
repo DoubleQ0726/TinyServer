@@ -6,6 +6,7 @@ CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/TinyServer.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/config.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/fiber.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/log.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/noncoptable.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/scheduler.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/thread.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: ../src/util.h

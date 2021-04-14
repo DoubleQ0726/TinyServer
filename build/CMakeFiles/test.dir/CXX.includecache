@@ -34,6 +34,8 @@ Singleton.h
 thread.h
 ../src/thread.h
 
+../src/noncoptable.h
+
 ../src/thread.h
 memory
 -
@@ -47,6 +49,8 @@ semaphore.h
 -
 atomic
 -
+noncoptable.h
+../src/noncoptable.h
 
 ../src/util.h
 pthread.h

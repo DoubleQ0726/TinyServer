@@ -82,6 +82,8 @@ cassert
 util.h
 ../src/util.h
 
+../src/noncoptable.h
+
 ../src/scheduler.h
 memory
 -
@@ -101,6 +103,8 @@ semaphore.h
 -
 atomic
 -
+noncoptable.h
+../src/noncoptable.h
 
 ../src/util.h
 pthread.h

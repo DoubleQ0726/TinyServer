@@ -1,6 +1,7 @@
 #include "scheduler.h"
 #include "log.h"
 #include "macro.h"
+#include "hook.h"
 
 namespace TinyServer
 {
@@ -165,6 +166,7 @@ void Scheduler::setThis()
 void Scheduler::run()
 {
     TINY_LOG_INFO(logger) << "run";
+    set_hook_enable(true);
     setThis();
     if (GetThreadId() != m_rootThread)
     {

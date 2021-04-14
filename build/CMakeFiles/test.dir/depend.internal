@@ -4,6 +4,7 @@
 CMakeFiles/test.dir/tests/test.cpp.o
  ../src/Singleton.h
  ../src/log.h
+ ../src/noncoptable.h
  ../src/thread.h
  ../src/util.h
  /home/szq/Work/TinyServer/tests/test.cpp

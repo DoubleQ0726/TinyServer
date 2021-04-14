@@ -3,6 +3,7 @@
 
 CMakeFiles/test.dir/tests/test.cpp.o: ../src/Singleton.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../src/log.h
+CMakeFiles/test.dir/tests/test.cpp.o: ../src/noncoptable.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../src/thread.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../src/util.h
 CMakeFiles/test.dir/tests/test.cpp.o: ../tests/test.cpp

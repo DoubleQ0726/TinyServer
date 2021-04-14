@@ -8,6 +8,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o
  ../src/fiber.h
  ../src/iomanager.h
  ../src/log.h
+ ../src/noncoptable.h
  ../src/scheduler.h
  ../src/thread.h
  ../src/timer.h

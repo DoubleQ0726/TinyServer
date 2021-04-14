@@ -6,6 +6,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/TinyServer.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/config.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/fiber.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/log.h
+CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/noncoptable.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/scheduler.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/thread.h
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o: ../src/util.h
