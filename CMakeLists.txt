@@ -8,6 +8,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
 
 set(LIB_SRC
+    src/address.cpp
     src/fiber.cpp
     src/log.cpp
     src/util.cpp
@@ -68,6 +69,11 @@ add_executable(test_hook tests/test_hook.cpp)
 add_dependencies(test_hook TinyServer)
 force_redefine_file_macro_for_sources(test_hook)
 target_link_libraries(test_hook TinyServer yaml-cpp pthread dl)
+
+add_executable(test_address tests/test_address.cpp)
+add_dependencies(test_address TinyServer)
+force_redefine_file_macro_for_sources(test_address)
+target_link_libraries(test_address TinyServer yaml-cpp pthread dl)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
