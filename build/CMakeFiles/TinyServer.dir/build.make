@@ -60,9 +60,22 @@ include CMakeFiles/TinyServer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TinyServer.dir/flags.make
 
+CMakeFiles/TinyServer.dir/src/address.cpp.o: CMakeFiles/TinyServer.dir/flags.make
+CMakeFiles/TinyServer.dir/src/address.cpp.o: ../src/address.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TinyServer.dir/src/address.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/address.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/address.cpp.o -c /home/szq/Work/TinyServer/src/address.cpp
+
+CMakeFiles/TinyServer.dir/src/address.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyServer.dir/src/address.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/address.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szq/Work/TinyServer/src/address.cpp > CMakeFiles/TinyServer.dir/src/address.cpp.i
+
+CMakeFiles/TinyServer.dir/src/address.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyServer.dir/src/address.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/address.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szq/Work/TinyServer/src/address.cpp -o CMakeFiles/TinyServer.dir/src/address.cpp.s
+
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/fiber.cpp.o: ../src/fiber.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/fiber.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/fiber.cpp.o -c /home/szq/Work/TinyServer/src/fiber.cpp
 
 CMakeFiles/TinyServer.dir/src/fiber.cpp.i: cmake_force
@@ -75,7 +88,7 @@ CMakeFiles/TinyServer.dir/src/fiber.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/log.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/log.cpp.o: ../src/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TinyServer.dir/src/log.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TinyServer.dir/src/log.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/log.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/log.cpp.o -c /home/szq/Work/TinyServer/src/log.cpp
 
 CMakeFiles/TinyServer.dir/src/log.cpp.i: cmake_force
@@ -88,7 +101,7 @@ CMakeFiles/TinyServer.dir/src/log.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/util.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/util.cpp.o: ../src/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TinyServer.dir/src/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TinyServer.dir/src/util.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/util.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/util.cpp.o -c /home/szq/Work/TinyServer/src/util.cpp
 
 CMakeFiles/TinyServer.dir/src/util.cpp.i: cmake_force
@@ -101,7 +114,7 @@ CMakeFiles/TinyServer.dir/src/util.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/config.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TinyServer.dir/src/config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TinyServer.dir/src/config.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/config.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/config.cpp.o -c /home/szq/Work/TinyServer/src/config.cpp
 
 CMakeFiles/TinyServer.dir/src/config.cpp.i: cmake_force
@@ -114,7 +127,7 @@ CMakeFiles/TinyServer.dir/src/config.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/scheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/scheduler.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/scheduler.cpp.o -c /home/szq/Work/TinyServer/src/scheduler.cpp
 
 CMakeFiles/TinyServer.dir/src/scheduler.cpp.i: cmake_force
@@ -127,7 +140,7 @@ CMakeFiles/TinyServer.dir/src/scheduler.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TinyServer.dir/src/thread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TinyServer.dir/src/thread.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/thread.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/thread.cpp.o -c /home/szq/Work/TinyServer/src/thread.cpp
 
 CMakeFiles/TinyServer.dir/src/thread.cpp.i: cmake_force
@@ -140,7 +153,7 @@ CMakeFiles/TinyServer.dir/src/thread.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o: ../src/iomanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TinyServer.dir/src/iomanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TinyServer.dir/src/iomanager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/iomanager.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/iomanager.cpp.o -c /home/szq/Work/TinyServer/src/iomanager.cpp
 
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.i: cmake_force
@@ -153,7 +166,7 @@ CMakeFiles/TinyServer.dir/src/iomanager.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/timer.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TinyServer.dir/src/timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TinyServer.dir/src/timer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/timer.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/timer.cpp.o -c /home/szq/Work/TinyServer/src/timer.cpp
 
 CMakeFiles/TinyServer.dir/src/timer.cpp.i: cmake_force
@@ -166,7 +179,7 @@ CMakeFiles/TinyServer.dir/src/timer.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/hook.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/hook.cpp.o: ../src/hook.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TinyServer.dir/src/hook.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TinyServer.dir/src/hook.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/hook.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/hook.cpp.o -c /home/szq/Work/TinyServer/src/hook.cpp
 
 CMakeFiles/TinyServer.dir/src/hook.cpp.i: cmake_force
@@ -179,7 +192,7 @@ CMakeFiles/TinyServer.dir/src/hook.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o: ../src/fd_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/fd_manager.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o -c /home/szq/Work/TinyServer/src/fd_manager.cpp
 
 CMakeFiles/TinyServer.dir/src/fd_manager.cpp.i: cmake_force
@@ -192,6 +205,7 @@ CMakeFiles/TinyServer.dir/src/fd_manager.cpp.s: cmake_force
 
 # Object files for target TinyServer
 TinyServer_OBJECTS = \
+"CMakeFiles/TinyServer.dir/src/address.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/fiber.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/log.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/util.cpp.o" \
@@ -206,6 +220,7 @@ TinyServer_OBJECTS = \
 # External object files for target TinyServer
 TinyServer_EXTERNAL_OBJECTS =
 
+../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/address.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/fiber.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/log.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/util.cpp.o
@@ -218,7 +233,7 @@ TinyServer_EXTERNAL_OBJECTS =
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/build.make
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library ../lib/libTinyServer.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ../lib/libTinyServer.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TinyServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -153,6 +153,19 @@ test_scheduler/fast:
 .PHONY : test_scheduler/fast
 
 #=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -229,6 +242,33 @@ TinyServer: cmake_check_build_system
 TinyServer/fast:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/build
 .PHONY : TinyServer/fast
+
+src/address.o: src/address.cpp.o
+
+.PHONY : src/address.o
+
+# target to build an object file
+src/address.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/address.cpp.o
+.PHONY : src/address.cpp.o
+
+src/address.i: src/address.cpp.i
+
+.PHONY : src/address.i
+
+# target to preprocess a source file
+src/address.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/address.cpp.i
+.PHONY : src/address.cpp.i
+
+src/address.s: src/address.cpp.s
+
+.PHONY : src/address.s
+
+# target to generate assembly for a file
+src/address.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/address.cpp.s
+.PHONY : src/address.cpp.s
 
 src/config.o: src/config.cpp.o
 
@@ -527,6 +567,33 @@ tests/test.cpp.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.s
 .PHONY : tests/test.cpp.s
 
+tests/test_address.o: tests/test_address.cpp.o
+
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cpp.o:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.o
+.PHONY : tests/test_address.cpp.o
+
+tests/test_address.i: tests/test_address.cpp.i
+
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cpp.i:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.i
+.PHONY : tests/test_address.cpp.i
+
+tests/test_address.s: tests/test_address.cpp.s
+
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cpp.s:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.s
+.PHONY : tests/test_address.cpp.s
+
 tests/test_config.o: tests/test_config.cpp.o
 
 .PHONY : tests/test_config.o
@@ -725,6 +792,7 @@ help:
 	@echo "... test_hook"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
+	@echo "... test_address"
 	@echo "... test_fiber"
 	@echo "... rebuild_cache"
 	@echo "... test_util"
@@ -733,6 +801,9 @@ help:
 	@echo "... test_thread"
 	@echo "... test"
 	@echo "... TinyServer"
+	@echo "... src/address.o"
+	@echo "... src/address.i"
+	@echo "... src/address.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
@@ -766,6 +837,9 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"

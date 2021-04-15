@@ -8,6 +8,8 @@ CXX_DEFINES = -DTinyServer_EXPORTS
 
 CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include 
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/address.cpp.o_DEFINES = __FILE__="src/address.cpp"
+
 # Custom defines: CMakeFiles/TinyServer.dir/src/fiber.cpp.o_DEFINES = __FILE__="src/fiber.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/log.cpp.o_DEFINES = __FILE__="src/log.cpp"

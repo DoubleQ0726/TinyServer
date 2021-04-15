@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../lib/libTinyServer.pdb"
   "../lib/libTinyServer.so"
+  "CMakeFiles/TinyServer.dir/src/address.cpp.o"
   "CMakeFiles/TinyServer.dir/src/config.cpp.o"
   "CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o"
   "CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
