@@ -19,6 +19,7 @@ set(LIB_SRC
     src/timer.cpp
     src/hook.cpp
     src/fd_manager.cpp
+    src/socket.cpp
     )
 
 include_directories(${PROJECT_SOURCE_DIR}/src 
@@ -74,6 +75,11 @@ add_executable(test_address tests/test_address.cpp)
 add_dependencies(test_address TinyServer)
 force_redefine_file_macro_for_sources(test_address)
 target_link_libraries(test_address TinyServer yaml-cpp pthread dl)
+
+add_executable(test_socket tests/test_socket.cpp)
+add_dependencies(test_socket TinyServer)
+force_redefine_file_macro_for_sources(test_socket)
+target_link_libraries(test_socket TinyServer yaml-cpp pthread dl)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

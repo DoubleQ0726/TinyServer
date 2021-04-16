@@ -206,6 +206,22 @@ CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/scheduler.h
 CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/scheduler.cpp.o: ../src/util.h
 
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/address.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/fd_manager.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/fiber.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/hook.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/iomanager.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/macro.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/scheduler.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/socket.cpp
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/socket.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/timer.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/util.h
+
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/Singleton.h
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/thread.cpp.o: ../src/noncoptable.h

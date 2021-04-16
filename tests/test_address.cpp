@@ -32,7 +32,7 @@ void test_iface()
 
 void test_ipv4()
 {
-    auto addr = IPAddress::Create("www.sylar.top");
+    auto addr = IPAddress::Create("www.baidu.com");
     if (addr)
     {   
         TINY_LOG_INFO(logger) << addr->toString();
@@ -42,7 +42,7 @@ void test_ipv4()
 int main()
 {
     //test();
-    test_iface();
-    //test_ipv4();
+    //test_iface();
+    test_ipv4();
     return 0;
 }

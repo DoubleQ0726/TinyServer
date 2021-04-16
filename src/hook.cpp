@@ -13,16 +13,6 @@ namespace TinyServer
 static Ref<ConfigVar<int>> tcp_connect_timeout = Config::Lookup("tcp.connect.timeout", 5000, "tcp connect timeout");
 static thread_local bool t_hook_enable = false;
 
-bool is_hook_enable()
-{
-    return t_hook_enable;
-}
-
-void set_hook_enable(bool flag)
-{
-    t_hook_enable = flag;
-}
-
 #define HOOK_FUN(XX) \
     XX(sleep) \
     XX(usleep) \
@@ -44,8 +34,7 @@ void set_hook_enable(bool flag)
     XX(fcntl) \
     XX(ioctl) \
     XX(getsockopt) \
-    XX(setsockopt) \
-
+    XX(setsockopt)
 
 void hook_init()
 {
@@ -73,6 +62,16 @@ struct HookIniter
 
 static HookIniter s_hook_initer;
 
+bool is_hook_enable()
+{
+    return t_hook_enable;
+}
+
+void set_hook_enable(bool flag)
+{
+    t_hook_enable = flag;
+}
+
 }
 
 struct timer_info
@@ -81,14 +80,14 @@ struct timer_info
 };
 
 template<typename OriginalFun, typename ... Args>
-ssize_t do_io(int fd, OriginalFun fun, const char* hook_fun_name, uint32_t event, int timeout_so, Args&& ...args)
+static ssize_t do_io(int fd, OriginalFun fun, const char* hook_fun_name, uint32_t event, int timeout_so, Args&& ...args)
 {
     if (!TinyServer::t_hook_enable)
         return fun(fd, std::forward<Args>(args)...);
     
     //TINY_LOG_DEBUG(logger) << "do_io<" << hook_fun_name << ">";
 
-    Ref<TinyServer::FdCtx> ctx(new TinyServer::FdCtx(fd));
+    Ref<TinyServer::FdCtx> ctx = TinyServer::FdMgr::GetInstance()->get(fd);
     if (!ctx)
         return fun(fd, std::forward<Args>(args)...);
     
@@ -162,7 +161,6 @@ extern "C"
     HOOK_FUN(XX)
 #undef XX
 
-
 unsigned int sleep(unsigned int seconds)
 {
     if (!TinyServer::t_hook_enable)
@@ -212,16 +210,13 @@ int socket(int domain, int type, int protocol)
     return fd;
 }
 
-    typedef int (*connect_fun)(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
-    extern connect_fun connect_f;
-
  int accept(int s, struct sockaddr *addr, socklen_t *addrlen)
  {
-     int fd = do_io(s, accept_f, "accept", TinyServer::IOManager::READ, SO_RCVTIMEO, addr, addrlen);
-     if (fd >= 0)
-     {
-         TinyServer::FdMgr::GetInstance()->get(fd, true);
-     }
+    int fd = do_io(s, accept_f, "accept", TinyServer::IOManager::READ, SO_RCVTIMEO, addr, addrlen);
+    if (fd >= 0)
+    {
+        TinyServer::FdMgr::GetInstance()->get(fd, true);
+    }
     return fd;
  }
 
@@ -229,20 +224,29 @@ int socket(int domain, int type, int protocol)
  {
     if (!TinyServer::t_hook_enable)
         return connect_f(sockfd, addr, addrlen);
-    Ref<TinyServer::FdCtx> ctx = TinyServer::FdMgr::GetInstance()->get(sockfd, true);
+    Ref<TinyServer::FdCtx> ctx = TinyServer::FdMgr::GetInstance()->get(sockfd);
     if (!ctx || ctx->isClose())
     {
         errno = EBADF;
         return -1;
+    }
+
+    if(!ctx->isSocket()) 
+    {
+        return connect_f(sockfd, addr, addrlen);
     }
     if (ctx->getUserNonblock())
         return connect_f(sockfd, addr, addrlen);
 
     int n = connect_f(sockfd, addr, addrlen);
     if (n == 0)
+    {
         return 0;
+    }
     else if (n != -1 || errno != EINPROGRESS)
+    {
         return n;
+    }
     
     TinyServer::IOManager* iom = TinyServer::IOManager::GetThis();
     Ref<TinyServer::Timer> timer;
@@ -278,8 +282,8 @@ int socket(int domain, int type, int protocol)
         if (timer)
         {
             timer->cancle();
-            TINY_LOG_ERROR(logger) << "connect addEvent(" << sockfd <<", WRITE) error";
         }
+        TINY_LOG_ERROR(logger) << "connect addEvent(" << sockfd <<", WRITE) error";
     }
     int error = 0;
     socklen_t len = sizeof(int);
@@ -362,8 +366,10 @@ int close(int fd)
     {
         auto iom = TinyServer::IOManager::GetThis();
         if (iom)
+        {
             iom->cancelAll(fd);
-        TinyServer::FdMgr::GetInstance()->del(fd);
+            TinyServer::FdMgr::GetInstance()->del(fd);
+        }
     }
     return close_f(fd);
 }
@@ -480,7 +486,7 @@ int setsockopt(int sockfd, int level, int optname,
                       const void *optval, socklen_t optlen)
 {
     if (!TinyServer::t_hook_enable)
-        setsockopt_f(sockfd, level, optname, optval, optlen);
+        return setsockopt_f(sockfd, level, optname, optval, optlen);
     if (level == SOL_SOCKET)
     {
         if (optname == SO_RCVTIMEO || optname == SO_SNDTIMEO)

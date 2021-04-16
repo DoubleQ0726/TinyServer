@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_socket.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_socket.dir/tests/test_socket.cpp.o -c /home/szq/Work/TinyServer/tests/test_socket.cpp",
+  "file": "/home/szq/Work/TinyServer/tests/test_socket.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_hook.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_hook.dir/tests/test_hook.cpp.o -c /home/szq/Work/TinyServer/tests/test_hook.cpp",
   "file": "/home/szq/Work/TinyServer/tests/test_hook.cpp"
 },
@@ -98,5 +103,10 @@
   "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/fd_manager.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o -c /home/szq/Work/TinyServer/src/fd_manager.cpp",
   "file": "/home/szq/Work/TinyServer/src/fd_manager.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/socket.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/socket.cpp.o -c /home/szq/Work/TinyServer/src/socket.cpp",
+  "file": "/home/szq/Work/TinyServer/src/socket.cpp"
 }
 ]

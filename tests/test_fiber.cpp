@@ -7,9 +7,9 @@ Ref<Logger> logger = TINY_LOG_ROOT;
 void run_in_fiber()
 {
     TINY_LOG_INFO(logger) << "run_in_fiber begin";
-    Fiber::YieldToReady();
+    Fiber::YieldToHold();
     TINY_LOG_INFO(logger) << "run_in_fiber end";
-    Fiber::YieldToReady();
+    Fiber::YieldToHold();
 }
 
 void test_fiber()

@@ -1,0 +1,22 @@
+2021-04-16 16:22:38	Hello Root Log
+2021-04-16 16:22:38	name = class.map description = system person typename = St3mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE6PersonSt4lessIS5_ESaISt4pairIKS5_S6_EEE value = 
+2021-04-16 16:22:38	name = class.person description = system person typename = 6Person value = name: ""
+age: 0
+sex: false
+2021-04-16 16:22:38	name = fiber.stack.size description = fiber stack size typename = j value = 1048576
+2021-04-16 16:22:38	name = logs description = defalut logs config typename = St3setIN10TinyServer9LogDefineESt4lessIS1_ESaIS1_EE value = - name: root
+  level: INFO
+  formatter: "%d%T%m%n"
+  appenders:
+    - type: FileLog
+      file: root.txt
+    - type: ConsoleLog
+- name: system
+  level: DEBUG
+  formatter: "%d%T%m%n"
+  appenders:
+    - type: FileLog
+      file: system.txt
+      formatter: "%d%T[%p]%T%m%n"
+    - type: ConsoleLog
+2021-04-16 16:22:38	name = tcp.connect.timeout description = tcp connect timeout typename = i value = 5000

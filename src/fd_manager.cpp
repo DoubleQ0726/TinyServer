@@ -29,6 +29,7 @@ bool FdCtx::init()
     if (-1 == fstat(m_fd, &fd_stat))
     {
         m_isInit = false;
+        m_isSocket = false;
     }
     else
     {
@@ -40,7 +41,7 @@ bool FdCtx::init()
         int flag = fcntl(m_fd, F_GETFL, 0);
         if (!(flag & O_NONBLOCK))
         {
-            fcntl(m_fd, F_SETFL, O_NONBLOCK);
+            fcntl(m_fd, F_SETFL, flag | O_NONBLOCK);
         }
         m_sysNonblock = true;
     }
@@ -76,21 +77,30 @@ FdManager::FdManager()
 
 Ref<FdCtx> FdManager::get(int fd, bool auto_create)
 {
+    if (fd == -1)
+        return nullptr;
+
     RWMutexType::ReadLockGuard lock(m_mutex);
     if ((int)m_datas.size() <= fd)
     {
-        if (!auto_create)
+        if (auto_create == false)
             return nullptr;
     }
     else
     {
         if (m_datas[fd] || !auto_create)
+        {
             return m_datas[fd];
+        }
     }
     lock.unlock();
 
     RWMutexType::WriteLockGuard lock2(m_mutex);
     Ref<FdCtx> ctx(new FdCtx(fd));
+    if(fd >= (int)m_datas.size()) 
+    {
+        m_datas.resize(fd * 1.5);
+    }
     m_datas[fd] = ctx;
     return ctx;
 }
@@ -98,10 +108,12 @@ Ref<FdCtx> FdManager::get(int fd, bool auto_create)
 void FdManager::del(int fd)
 {
     RWMutexType::WriteLockGuard lock(m_mutex);
-    if ((int)m_datas.size() < fd)
+    if ((int)m_datas.size() <= fd)
+    {
         return;
+    }
     m_datas[fd].reset();
+    return;
 }
-
 
 }

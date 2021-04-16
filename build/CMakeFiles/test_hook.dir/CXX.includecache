@@ -33,6 +33,8 @@ sys/ioctl.h
 -
 fcntl.h
 -
+stdint.h
+-
 
 ../src/iomanager.h
 scheduler.h

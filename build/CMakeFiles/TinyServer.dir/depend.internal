@@ -206,6 +206,22 @@ CMakeFiles/TinyServer.dir/src/scheduler.cpp.o
  /home/szq/Work/TinyServer/src/scheduler.h
  /home/szq/Work/TinyServer/src/thread.h
  /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/socket.cpp.o
+ /home/szq/Work/TinyServer/src/Singleton.h
+ /home/szq/Work/TinyServer/src/address.h
+ /home/szq/Work/TinyServer/src/fd_manager.h
+ /home/szq/Work/TinyServer/src/fiber.h
+ /home/szq/Work/TinyServer/src/hook.h
+ /home/szq/Work/TinyServer/src/iomanager.h
+ /home/szq/Work/TinyServer/src/log.h
+ /home/szq/Work/TinyServer/src/macro.h
+ /home/szq/Work/TinyServer/src/noncoptable.h
+ /home/szq/Work/TinyServer/src/scheduler.h
+ /home/szq/Work/TinyServer/src/socket.cpp
+ /home/szq/Work/TinyServer/src/socket.h
+ /home/szq/Work/TinyServer/src/thread.h
+ /home/szq/Work/TinyServer/src/timer.h
+ /home/szq/Work/TinyServer/src/util.h
 CMakeFiles/TinyServer.dir/src/thread.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h
  /home/szq/Work/TinyServer/src/log.h

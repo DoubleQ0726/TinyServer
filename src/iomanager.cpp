@@ -224,8 +224,7 @@ bool IOManager::cancelAll(int fd)
     RWMutexType::ReadLockGuard lock(m_mutex);
     if ((int)m_fdEvents.size() <= fd)
         return false;
-    FdEvent* fd_event = nullptr;
-    fd_event = m_fdEvents[fd];
+    FdEvent* fd_event = m_fdEvents[fd];
     lock.unlock();
 
     FdEvent::MutexType::MutexLockGuard lock2(fd_event->mutex);
@@ -245,13 +244,13 @@ bool IOManager::cancelAll(int fd)
         return false;
     }
 
-    if (fd_event->et == READ)
+    if (fd_event->et & READ)
     {
         //FdEvent::Event& event = fd_event->getEvent(READ);
         fd_event->triggerEvent(READ);
         --m_pendingEventCount;
     }
-    if (fd_event->et == WRITE)
+    if (fd_event->et & WRITE)
     {
         //FdEvent::Event& event = fd_event->getEvent(WRITE);
         fd_event->triggerEvent(WRITE);
@@ -350,23 +349,23 @@ void IOManager::idle()
             FdEvent::MutexType::MutexLockGuard lock(fd_event->mutex);
             if (epevent.events & (EPOLLERR | EPOLLHUP))
             {
-                epevent.events |= (EPOLLIN | EPOLLOUT); 
+                epevent.events |= (EPOLLIN | EPOLLOUT) & fd_event->et; 
             }
-            EventType real_event_type = NONE;
+            int real_event_type = NONE;
             if (epevent.events & EPOLLIN)
             {
-                real_event_type = READ;  
+                real_event_type |= READ;  
             }
             if (epevent.events & EPOLLOUT)
             {
-                real_event_type = WRITE;
+                real_event_type |= WRITE;
             }
             if ((real_event_type & fd_event->et) == NONE)
                 continue;
             
             EventType left_type = (EventType)(fd_event->et & ~real_event_type);
             int op = left_type ? EPOLL_CTL_MOD :EPOLL_CTL_DEL;
-            epevent.events |= (EPOLLET | left_type);
+            epevent.events = (EPOLLET | left_type);
 
             int res2 = epoll_ctl(m_epollfd, op, fd_event->fd, &epevent);
             if (res2)
