@@ -19,6 +19,8 @@ thread.h
 ../src/thread.h
 fiber.h
 ../src/fiber.h
+macro.h
+../src/macro.h
 scheduler.h
 ../src/scheduler.h
 

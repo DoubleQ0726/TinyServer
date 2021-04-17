@@ -8,6 +8,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/config.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/fiber.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/iomanager.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/log.h
+CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/macro.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/noncoptable.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/scheduler.h
 CMakeFiles/test_socket.dir/tests/test_socket.cpp.o: ../src/socket.h

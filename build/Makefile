@@ -114,121 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_socket
+# Target rules for targets named TinyServer
 
 # Build rule for target.
-test_socket: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_socket
-.PHONY : test_socket
+TinyServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TinyServer
+.PHONY : TinyServer
 
 # fast build rule for target.
-test_socket/fast:
-	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
-.PHONY : test_socket/fast
-
-#=============================================================================
-# Target rules for targets named test_hook
-
-# Build rule for target.
-test_hook: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_hook
-.PHONY : test_hook
-
-# fast build rule for target.
-test_hook/fast:
-	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
-.PHONY : test_hook/fast
-
-#=============================================================================
-# Target rules for targets named test_iomanager
-
-# Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
-
-# fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
-
-#=============================================================================
-# Target rules for targets named test_scheduler
-
-# Build rule for target.
-test_scheduler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
-.PHONY : test_scheduler
-
-# fast build rule for target.
-test_scheduler/fast:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-.PHONY : test_scheduler/fast
-
-#=============================================================================
-# Target rules for targets named test_address
-
-# Build rule for target.
-test_address: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_address
-.PHONY : test_address
-
-# fast build rule for target.
-test_address/fast:
-	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
-.PHONY : test_address/fast
-
-#=============================================================================
-# Target rules for targets named test_fiber
-
-# Build rule for target.
-test_fiber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
-.PHONY : test_fiber
-
-# fast build rule for target.
-test_fiber/fast:
-	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
-.PHONY : test_fiber/fast
-
-#=============================================================================
-# Target rules for targets named test_util
-
-# Build rule for target.
-test_util: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_util
-.PHONY : test_util
-
-# fast build rule for target.
-test_util/fast:
-	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-.PHONY : test_util/fast
-
-#=============================================================================
-# Target rules for targets named test_config
-
-# Build rule for target.
-test_config: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_config
-.PHONY : test_config
-
-# fast build rule for target.
-test_config/fast:
-	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-.PHONY : test_config/fast
-
-#=============================================================================
-# Target rules for targets named test_thread
-
-# Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
-
-# fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
+TinyServer/fast:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/build
+.PHONY : TinyServer/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -244,17 +140,134 @@ test/fast:
 .PHONY : test/fast
 
 #=============================================================================
-# Target rules for targets named TinyServer
+# Target rules for targets named test_thread
 
 # Build rule for target.
-TinyServer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TinyServer
-.PHONY : TinyServer
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
 
 # fast build rule for target.
-TinyServer/fast:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/build
-.PHONY : TinyServer/fast
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
+# Target rules for targets named test_scheduler
+
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
+
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
+
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
 
 src/address.o: src/address.cpp.o
 
@@ -282,6 +295,33 @@ src/address.s: src/address.cpp.s
 src/address.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/address.cpp.s
 .PHONY : src/address.cpp.s
+
+src/bytearray.o: src/bytearray.cpp.o
+
+.PHONY : src/bytearray.o
+
+# target to build an object file
+src/bytearray.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/bytearray.cpp.o
+.PHONY : src/bytearray.cpp.o
+
+src/bytearray.i: src/bytearray.cpp.i
+
+.PHONY : src/bytearray.i
+
+# target to preprocess a source file
+src/bytearray.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/bytearray.cpp.i
+.PHONY : src/bytearray.cpp.i
+
+src/bytearray.s: src/bytearray.cpp.s
+
+.PHONY : src/bytearray.s
+
+# target to generate assembly for a file
+src/bytearray.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/bytearray.cpp.s
+.PHONY : src/bytearray.cpp.s
 
 src/config.o: src/config.cpp.o
 
@@ -634,6 +674,33 @@ tests/test_address.cpp.s:
 	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.s
 .PHONY : tests/test_address.cpp.s
 
+tests/test_bytearray.o: tests/test_bytearray.cpp.o
+
+.PHONY : tests/test_bytearray.o
+
+# target to build an object file
+tests/test_bytearray.cpp.o:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o
+.PHONY : tests/test_bytearray.cpp.o
+
+tests/test_bytearray.i: tests/test_bytearray.cpp.i
+
+.PHONY : tests/test_bytearray.i
+
+# target to preprocess a source file
+tests/test_bytearray.cpp.i:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.i
+.PHONY : tests/test_bytearray.cpp.i
+
+tests/test_bytearray.s: tests/test_bytearray.cpp.s
+
+.PHONY : tests/test_bytearray.s
+
+# target to generate assembly for a file
+tests/test_bytearray.cpp.s:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.s
+.PHONY : tests/test_bytearray.cpp.s
+
 tests/test_config.o: tests/test_config.cpp.o
 
 .PHONY : tests/test_config.o
@@ -856,22 +923,26 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test_socket"
-	@echo "... test_hook"
-	@echo "... test_iomanager"
-	@echo "... test_scheduler"
-	@echo "... test_address"
-	@echo "... test_fiber"
-	@echo "... rebuild_cache"
-	@echo "... test_util"
-	@echo "... test_config"
-	@echo "... edit_cache"
-	@echo "... test_thread"
-	@echo "... test"
 	@echo "... TinyServer"
+	@echo "... test"
+	@echo "... test_thread"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test_config"
+	@echo "... test_bytearray"
+	@echo "... test_util"
+	@echo "... test_fiber"
+	@echo "... test_address"
+	@echo "... test_scheduler"
+	@echo "... test_iomanager"
+	@echo "... test_hook"
+	@echo "... test_socket"
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
+	@echo "... src/bytearray.o"
+	@echo "... src/bytearray.i"
+	@echo "... src/bytearray.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
@@ -911,6 +982,9 @@ help:
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
 	@echo "... tests/test_address.s"
+	@echo "... tests/test_bytearray.o"
+	@echo "... tests/test_bytearray.i"
+	@echo "... tests/test_bytearray.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"

@@ -9,6 +9,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cpp.o
  ../src/fiber.h
  ../src/iomanager.h
  ../src/log.h
+ ../src/macro.h
  ../src/noncoptable.h
  ../src/scheduler.h
  ../src/socket.h

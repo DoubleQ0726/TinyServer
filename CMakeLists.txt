@@ -20,6 +20,7 @@ set(LIB_SRC
     src/hook.cpp
     src/fd_manager.cpp
     src/socket.cpp
+    src/bytearray.cpp
     )
 
 include_directories(${PROJECT_SOURCE_DIR}/src 
@@ -80,6 +81,11 @@ add_executable(test_socket tests/test_socket.cpp)
 add_dependencies(test_socket TinyServer)
 force_redefine_file_macro_for_sources(test_socket)
 target_link_libraries(test_socket TinyServer yaml-cpp pthread dl)
+
+add_executable(test_bytearray tests/test_bytearray.cpp)
+add_dependencies(test_bytearray TinyServer)
+force_redefine_file_macro_for_sources(test_bytearray)
+target_link_libraries(test_bytearray TinyServer yaml-cpp pthread dl)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

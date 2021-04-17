@@ -10,6 +10,15 @@ CMakeFiles/TinyServer.dir/src/address.cpp.o: ../src/noncoptable.h
 CMakeFiles/TinyServer.dir/src/address.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/address.cpp.o: ../src/util.h
 
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/bytearray.cpp
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/bytearray.h
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/myendian.h
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/bytearray.cpp.o: ../src/util.h
+
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/binary.h
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/dll.h
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/emitter.h
