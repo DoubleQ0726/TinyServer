@@ -1,8 +1,8 @@
+/home/szq/Work/TinyServer/build/CMakeFiles/rebuild_cache.dir
+/home/szq/Work/TinyServer/build/CMakeFiles/edit_cache.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_thread.dir
-/home/szq/Work/TinyServer/build/CMakeFiles/rebuild_cache.dir
-/home/szq/Work/TinyServer/build/CMakeFiles/edit_cache.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_config.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_bytearray.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_util.dir
@@ -12,3 +12,4 @@
 /home/szq/Work/TinyServer/build/CMakeFiles/test_iomanager.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_hook.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_socket.dir
+/home/szq/Work/TinyServer/build/CMakeFiles/test_http.dir

@@ -269,6 +269,19 @@ test_socket/fast:
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
 .PHONY : test_socket/fast
 
+#=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
+
 src/address.o: src/address.cpp.o
 
 .PHONY : src/address.o
@@ -430,6 +443,33 @@ src/hook.s: src/hook.cpp.s
 src/hook.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/hook.cpp.s
 .PHONY : src/hook.cpp.s
+
+src/http/http.o: src/http/http.cpp.o
+
+.PHONY : src/http/http.o
+
+# target to build an object file
+src/http/http.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http.cpp.o
+.PHONY : src/http/http.cpp.o
+
+src/http/http.i: src/http/http.cpp.i
+
+.PHONY : src/http/http.i
+
+# target to preprocess a source file
+src/http/http.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http.cpp.i
+.PHONY : src/http/http.cpp.i
+
+src/http/http.s: src/http/http.cpp.s
+
+.PHONY : src/http/http.s
+
+# target to generate assembly for a file
+src/http/http.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http.cpp.s
+.PHONY : src/http/http.cpp.s
 
 src/iomanager.o: src/iomanager.cpp.o
 
@@ -782,6 +822,33 @@ tests/test_hook.cpp.s:
 	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.s
 .PHONY : tests/test_hook.cpp.s
 
+tests/test_http.o: tests/test_http.cpp.o
+
+.PHONY : tests/test_http.o
+
+# target to build an object file
+tests/test_http.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.o
+.PHONY : tests/test_http.cpp.o
+
+tests/test_http.i: tests/test_http.cpp.i
+
+.PHONY : tests/test_http.i
+
+# target to preprocess a source file
+tests/test_http.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.i
+.PHONY : tests/test_http.cpp.i
+
+tests/test_http.s: tests/test_http.cpp.s
+
+.PHONY : tests/test_http.s
+
+# target to generate assembly for a file
+tests/test_http.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.s
+.PHONY : tests/test_http.cpp.s
+
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 
 .PHONY : tests/test_iomanager.o
@@ -923,11 +990,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... TinyServer"
 	@echo "... test"
 	@echo "... test_thread"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test_config"
 	@echo "... test_bytearray"
 	@echo "... test_util"
@@ -937,6 +1004,7 @@ help:
 	@echo "... test_iomanager"
 	@echo "... test_hook"
 	@echo "... test_socket"
+	@echo "... test_http"
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
@@ -955,6 +1023,9 @@ help:
 	@echo "... src/hook.o"
 	@echo "... src/hook.i"
 	@echo "... src/hook.s"
+	@echo "... src/http/http.o"
+	@echo "... src/http/http.i"
+	@echo "... src/http/http.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -994,6 +1065,9 @@ help:
 	@echo "... tests/test_hook.o"
 	@echo "... tests/test_hook.i"
 	@echo "... tests/test_hook.s"
+	@echo "... tests/test_http.o"
+	@echo "... tests/test_http.i"
+	@echo "... tests/test_http.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"

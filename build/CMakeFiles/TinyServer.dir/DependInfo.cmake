@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/szq/Work/TinyServer/src/fd_manager.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o"
   "/home/szq/Work/TinyServer/src/fiber.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
   "/home/szq/Work/TinyServer/src/hook.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/hook.cpp.o"
+  "/home/szq/Work/TinyServer/src/http/http.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/http/http.cpp.o"
   "/home/szq/Work/TinyServer/src/iomanager.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/iomanager.cpp.o"
   "/home/szq/Work/TinyServer/src/log.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/log.cpp.o"
   "/home/szq/Work/TinyServer/src/scheduler.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"

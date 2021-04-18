@@ -21,6 +21,7 @@ set(LIB_SRC
     src/fd_manager.cpp
     src/socket.cpp
     src/bytearray.cpp
+    src/http/http.cpp
     )
 
 include_directories(${PROJECT_SOURCE_DIR}/src 
@@ -86,6 +87,11 @@ add_executable(test_bytearray tests/test_bytearray.cpp)
 add_dependencies(test_bytearray TinyServer)
 force_redefine_file_macro_for_sources(test_bytearray)
 target_link_libraries(test_bytearray TinyServer yaml-cpp pthread dl)
+
+add_executable(test_http tests/test_http.cpp)
+add_dependencies(test_http TinyServer)
+force_redefine_file_macro_for_sources(test_http)
+target_link_libraries(test_http TinyServer yaml-cpp pthread dl)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

@@ -153,6 +153,9 @@ CMakeFiles/TinyServer.dir/src/hook.cpp.o
  /home/szq/Work/TinyServer/src/thread.h
  /home/szq/Work/TinyServer/src/timer.h
  /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/http/http.cpp.o
+ /home/szq/Work/TinyServer/src/http/http.cpp
+ /home/szq/Work/TinyServer/src/http/http.h
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h
  /home/szq/Work/TinyServer/src/fiber.h

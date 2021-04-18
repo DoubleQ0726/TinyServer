@@ -34,3 +34,5 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/bytearray.cpp.o_DEFINES = __FILE__="src/bytearray.cpp"
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/http/http.cpp.o_DEFINES = __FILE__="src/http/http.cpp"
+

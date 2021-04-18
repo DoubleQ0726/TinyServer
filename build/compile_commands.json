@@ -66,6 +66,11 @@
 },
 {
   "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http.cpp.o -c /home/szq/Work/TinyServer/src/http/http.cpp",
+  "file": "/home/szq/Work/TinyServer/src/http/http.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test.dir/tests/test.cpp.o -c /home/szq/Work/TinyServer/tests/test.cpp",
   "file": "/home/szq/Work/TinyServer/tests/test.cpp"
 },
@@ -118,5 +123,10 @@
   "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_socket.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_socket.dir/tests/test_socket.cpp.o -c /home/szq/Work/TinyServer/tests/test_socket.cpp",
   "file": "/home/szq/Work/TinyServer/tests/test_socket.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_http.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_http.dir/tests/test_http.cpp.o -c /home/szq/Work/TinyServer/tests/test_http.cpp",
+  "file": "/home/szq/Work/TinyServer/tests/test_http.cpp"
 }
 ]
