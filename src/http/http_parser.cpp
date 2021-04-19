@@ -56,19 +56,19 @@ void on_request_uri(void *data, const char *at, size_t length)
 void on_request_fragment(void *data, const char *at, size_t length)
 {
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
-    parser->getData()->setFragment(at);
+    parser->getData()->setFragment(std::string(at, length));
 }
 
 void on_request_path(void *data, const char *at, size_t length)
 {
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
-    parser->getData()->setPath(at);
+    parser->getData()->setPath(std::string(at, length));
 }
 
 void on_request_query(void *data, const char *at, size_t length)
 {
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
-    parser->getData()->setQuery(at);
+    parser->getData()->setQuery(std::string(at, length));
 }
 
 void on_request_version(void *data, const char *at, size_t length)
@@ -128,7 +128,7 @@ HttpRequestParser::HttpRequestParser()
 size_t HttpRequestParser::execute(char *data, size_t len)
 {
     size_t offset = http_parser_execute(&m_parser, data, len, 0);
-    memmove(data, data + offset, len - offset);
+    memmove(data, data + offset, (len - offset));
     return offset;
 }
 
@@ -140,6 +140,11 @@ int HttpRequestParser::isFinished()
 int HttpRequestParser::hasError()
 {
     return m_error || http_parser_has_error(&m_parser);
+}
+
+uint64_t HttpRequestParser::getContentLength()
+{
+    return m_data->getHeaderAs<uint64_t>("content-length", 0);
 }
 
 //Response
@@ -201,6 +206,7 @@ void on_response_http_field(void *data, const char *field, size_t flen, const ch
 }
 
 HttpResponseParser::HttpResponseParser()
+    : m_error(0)
 {
     m_data.reset(new HttpResponse);
     httpclient_parser_init(&m_parser);
@@ -231,7 +237,10 @@ int HttpResponseParser::hasError()
     return m_error || httpclient_parser_has_error(&m_parser);
 }
 
-
+uint64_t HttpResponseParser::getContentLength()
+{
+    return m_data->getHeaderAs<uint64_t>("content-length", 0);
+}
 
 }
 }

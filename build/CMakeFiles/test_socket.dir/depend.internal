@@ -47,4 +47,4 @@ CMakeFiles/test_socket.dir/tests/test_socket.cpp.o
  ../vendor/yaml-cpp/include/yaml-cpp/stlemitter.h
  ../vendor/yaml-cpp/include/yaml-cpp/traits.h
  ../vendor/yaml-cpp/include/yaml-cpp/yaml.h
- /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_socket.cpp
+ /home/szq/Work/TinyServer/tests/test_socket.cpp

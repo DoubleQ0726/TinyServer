@@ -68,11 +68,11 @@ vector
 string
 -
 
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/test.cpp
+/home/szq/Work/TinyServer/tests/test.cpp
 iostream
 -
 log.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/log.h
+/home/szq/Work/TinyServer/tests/log.h
 util.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/util.h
+/home/szq/Work/TinyServer/tests/util.h
 

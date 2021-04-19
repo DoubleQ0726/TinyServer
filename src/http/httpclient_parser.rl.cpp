@@ -39,14 +39,15 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <cerrno>
 #include <string.h>
+#include <cerrno>
 //#include "dbg.h"
 
 #define LEN(AT, FPC) (FPC - buffer - parser->AT)
 #define MARK(M,FPC) (parser->M = (FPC) - buffer)
 #define PTR_TO(F) (buffer + parser->F)
 #define check(A, M, ...) if(!(A)) { /*log_err(M, ##__VA_ARGS__);*/ errno=0; goto error; }
+
 
 /** machine **/
 
@@ -3295,10 +3296,10 @@ case 119:
     check(parser->field_len <= len, "field has length longer than whole buffer");
     check(parser->field_start < len, "field starts after buffer end");
 
-    if(parser->body_start) {
+    //if(parser->body_start) {
         /* final \r\n combo encountered so stop right here */
-        parser->nread++;
-    }
+        //parser->nread++;
+    //}
 
     return(parser->nread);
 

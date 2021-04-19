@@ -43,4 +43,4 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o
  ../vendor/yaml-cpp/include/yaml-cpp/stlemitter.h
  ../vendor/yaml-cpp/include/yaml-cpp/traits.h
  ../vendor/yaml-cpp/include/yaml-cpp/yaml.h
- /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_util.cpp
+ /home/szq/Work/TinyServer/tests/test_util.cpp

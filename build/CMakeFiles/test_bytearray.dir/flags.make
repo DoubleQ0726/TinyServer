@@ -6,7 +6,7 @@ CXX_FLAGS =  -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Wer
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include 
+CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include 
 
 # Custom defines: CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o_DEFINES = __FILE__="tests/test_bytearray.cpp"
 

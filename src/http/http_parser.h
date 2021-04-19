@@ -17,6 +17,7 @@ public:
     int isFinished();
     int hasError();
     void setError(int v) { m_error = v; }
+    uint64_t getContentLength();
 
     Ref<HttpRequest> getData() const { return m_data; }
 private:
@@ -39,6 +40,8 @@ public:
     int hasError();
     Ref<HttpResponse> getData() const { return m_data; }
     void setError(int v) { m_error = v; }
+
+    uint64_t getContentLength();
 private:
     httpclient_parser m_parser;
     Ref<HttpResponse> m_data;

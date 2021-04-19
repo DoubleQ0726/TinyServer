@@ -162,7 +162,7 @@ template<typename MapType, typename T>
     }
 
     template<typename MapType, typename T>
-    bool getAs(const MapType& m, const std::string& key, const T& def = T())
+    T getAs(const MapType& m, const std::string& key, const T& def = T())
     {
         auto iter = m.find(key);
         if (iter == m.end())
@@ -227,37 +227,37 @@ public:
     bool hasCookie(const std::string& key, std::string* val = nullptr);
 
     template<typename T>
-    bool checkHeaderAs(const std::string& key, T& val, T& def = "")
+    bool checkHeaderAs(const std::string& key, T& val, T& def = T())
     {
         return checkGetAs(m_headers, key, val, def);
     }
 
     template<typename T>
-    T getHeaderAs(const std::string& key, T& def = "")
+    T getHeaderAs(const std::string& key, const T& def = T())
     {
         return getAs(m_headers, key, def);
     }
 
     template<typename T>
-    bool checkParamAs(const std::string& key, T& val, T& def = "")
+    bool checkParamAs(const std::string& key, T& val, T& def = T())
     {
         return checkGetAs(m_headers, key, val, def);
     }
 
     template<typename T>
-    T getParamAs(const std::string& key, T& def = "")
+    T getParamAs(const std::string& key, T& def = T())
     {
         return getAs(m_headers, key, def);
     }
 
     template<typename T>
-    bool checkCookieAs(const std::string& key, T& val, T& def = "")
+    bool checkCookieAs(const std::string& key, T& val, T& def = T())
     {
         return checkGetAs(m_headers, key, val, def);
     }
 
     template<typename T>
-    T getCookieAs(const std::string& key, T& def = "")
+    T getCookieAs(const std::string& key, T& def = T())
     {
         return getAs(m_headers, key, def);
     }
@@ -308,37 +308,37 @@ public:
     void delHeader(const std::string& key);
 
     template<typename T>
-    bool checkHeaderAs(const std::string& key, T& val, T& def = "")
+    bool checkHeaderAs(const std::string& key, T& val, T& def = T())
     {
         return checkGetAs(m_headers, key, val, def);
     }
 
     template<typename T>
-    T getHeaderAs(const std::string& key, T& def = "")
+    T getHeaderAs(const std::string& key, const T& def = T())
     {
         return getAs(m_headers, key, def);
     }
 
     template<typename T>
-    bool checkParamAs(const std::string& key, T& val, T& def = "")
+    bool checkParamAs(const std::string& key, T& val, T& def = T())
     {
         return checkGetAs(m_headers, key, val, def);
     }
 
     template<typename T>
-    T getParamAs(const std::string& key, T& def = "")
+    T getParamAs(const std::string& key, T& def = T())
     {
         return getAs(m_headers, key, def);
     }
 
     template<typename T>
-    bool checkCookieAs(const std::string& key, T& val, T& def = "")
+    bool checkCookieAs(const std::string& key, T& val, T& def = T())
     {
         return checkGetAs(m_headers, key, val, def);
     }
 
     template<typename T>
-    T getCookieAs(const std::string& key, T& def = "")
+    T getCookieAs(const std::string& key, T& def = T())
     {
         return getAs(m_headers, key, def);
     }

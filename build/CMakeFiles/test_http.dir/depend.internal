@@ -8,4 +8,4 @@ CMakeFiles/test_http.dir/tests/test_http.cpp.o
  ../src/noncoptable.h
  ../src/thread.h
  ../src/util.h
- /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_http.cpp
+ /home/szq/Work/TinyServer/tests/test_http.cpp

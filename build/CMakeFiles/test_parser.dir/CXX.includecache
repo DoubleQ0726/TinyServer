@@ -98,11 +98,11 @@ vector
 string
 -
 
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_parser.cpp
+/home/szq/Work/TinyServer/tests/test_parser.cpp
 http/http.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/http/http.h
+/home/szq/Work/TinyServer/tests/http/http.h
 http/http_parser.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/http/http_parser.h
+/home/szq/Work/TinyServer/tests/http/http_parser.h
 log.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/log.h
+/home/szq/Work/TinyServer/tests/log.h
 

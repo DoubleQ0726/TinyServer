@@ -432,13 +432,13 @@ yaml-cpp/node/parse.h
 yaml-cpp/node/emit.h
 ../vendor/yaml-cpp/include/yaml-cpp/yaml-cpp/node/emit.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_config.cpp
+/home/szq/Work/TinyServer/tests/test_config.cpp
 log.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/log.h
+/home/szq/Work/TinyServer/tests/log.h
 config.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/config.h
+/home/szq/Work/TinyServer/tests/config.h
 yaml-cpp/yaml.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/yaml-cpp/yaml.h
+/home/szq/Work/TinyServer/tests/yaml-cpp/yaml.h
 iostream
 -
 

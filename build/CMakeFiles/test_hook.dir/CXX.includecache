@@ -120,11 +120,11 @@ vector
 string
 -
 
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_hook.cpp
+/home/szq/Work/TinyServer/tests/test_hook.cpp
 hook.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/hook.h
+/home/szq/Work/TinyServer/tests/hook.h
 iomanager.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/iomanager.h
+/home/szq/Work/TinyServer/tests/iomanager.h
 sys/types.h
 -
 sys/socket.h

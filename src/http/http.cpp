@@ -1,4 +1,5 @@
 #include "http.h"
+#include <iostream>
 
 
 namespace TinyServer
@@ -13,7 +14,7 @@ bool CaseInsensitiveLess::operator()(const std::string& lhs, const std::string& 
 HttpMethod StringToHttpMethod(const std::string& n)
 {
 #define XX(num, name, string) \
-    if (strcmp(name, n.c_str())) \
+    if (strcmp(name, n.c_str()) == 0) \
     { \
         return HttpMethod::name; \
     } \
@@ -25,10 +26,10 @@ HttpMethod StringToHttpMethod(const std::string& n)
 HttpMethod CharsToHttpMethod(const char* n)
 {
 #define XX(num, name, string) \
-    if (strcmp(name, n)) \
+    if (strncmp(#string, n, strlen(#string)) == 0) \
     { \
         return HttpMethod::name; \
-    } \
+    }   //此处不要加 \ 否则宏展开会出错
     HTTP_METHOD_MAP(XX);
 #undef XX
     return HttpMethod::HTTP_METHOD_INVALID;

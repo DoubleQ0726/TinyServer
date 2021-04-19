@@ -516,11 +516,11 @@ yaml-cpp/node/parse.h
 yaml-cpp/node/emit.h
 ../vendor/yaml-cpp/include/yaml-cpp/yaml-cpp/node/emit.h
 
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_socket.cpp
+/home/szq/Work/TinyServer/tests/test_socket.cpp
 TinyServer.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/TinyServer.h
+/home/szq/Work/TinyServer/tests/TinyServer.h
 socket.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/socket.h
+/home/szq/Work/TinyServer/tests/socket.h
 iomanager.h
-/mnt/c/Users/QQ/Desktop/TinyServer/tests/iomanager.h
+/home/szq/Work/TinyServer/tests/iomanager.h
 
