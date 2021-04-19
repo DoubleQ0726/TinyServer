@@ -22,6 +22,8 @@ set(LIB_SRC
     src/socket.cpp
     src/bytearray.cpp
     src/http/http.cpp
+    src/http/http11_parser.rl.cpp
+    src/http/httpclient_parser.rl.cpp
     )
 
 include_directories(${PROJECT_SOURCE_DIR}/src 

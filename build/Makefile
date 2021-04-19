@@ -471,6 +471,60 @@ src/http/http.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http.cpp.s
 .PHONY : src/http/http.cpp.s
 
+src/http/http11_parser.rl.o: src/http/http11_parser.rl.cpp.o
+
+.PHONY : src/http/http11_parser.rl.o
+
+# target to build an object file
+src/http/http11_parser.rl.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o
+.PHONY : src/http/http11_parser.rl.cpp.o
+
+src/http/http11_parser.rl.i: src/http/http11_parser.rl.cpp.i
+
+.PHONY : src/http/http11_parser.rl.i
+
+# target to preprocess a source file
+src/http/http11_parser.rl.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.i
+.PHONY : src/http/http11_parser.rl.cpp.i
+
+src/http/http11_parser.rl.s: src/http/http11_parser.rl.cpp.s
+
+.PHONY : src/http/http11_parser.rl.s
+
+# target to generate assembly for a file
+src/http/http11_parser.rl.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.s
+.PHONY : src/http/http11_parser.rl.cpp.s
+
+src/http/httpclient_parser.rl.o: src/http/httpclient_parser.rl.cpp.o
+
+.PHONY : src/http/httpclient_parser.rl.o
+
+# target to build an object file
+src/http/httpclient_parser.rl.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o
+.PHONY : src/http/httpclient_parser.rl.cpp.o
+
+src/http/httpclient_parser.rl.i: src/http/httpclient_parser.rl.cpp.i
+
+.PHONY : src/http/httpclient_parser.rl.i
+
+# target to preprocess a source file
+src/http/httpclient_parser.rl.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.i
+.PHONY : src/http/httpclient_parser.rl.cpp.i
+
+src/http/httpclient_parser.rl.s: src/http/httpclient_parser.rl.cpp.s
+
+.PHONY : src/http/httpclient_parser.rl.s
+
+# target to generate assembly for a file
+src/http/httpclient_parser.rl.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.s
+.PHONY : src/http/httpclient_parser.rl.cpp.s
+
 src/iomanager.o: src/iomanager.cpp.o
 
 .PHONY : src/iomanager.o
@@ -1026,6 +1080,12 @@ help:
 	@echo "... src/http/http.o"
 	@echo "... src/http/http.i"
 	@echo "... src/http/http.s"
+	@echo "... src/http/http11_parser.rl.o"
+	@echo "... src/http/http11_parser.rl.i"
+	@echo "... src/http/http11_parser.rl.s"
+	@echo "... src/http/httpclient_parser.rl.o"
+	@echo "... src/http/httpclient_parser.rl.i"
+	@echo "... src/http/httpclient_parser.rl.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"

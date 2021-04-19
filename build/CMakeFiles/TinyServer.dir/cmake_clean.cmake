@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
   "CMakeFiles/TinyServer.dir/src/hook.cpp.o"
   "CMakeFiles/TinyServer.dir/src/http/http.cpp.o"
+  "CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o"
+  "CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o"
   "CMakeFiles/TinyServer.dir/src/iomanager.cpp.o"
   "CMakeFiles/TinyServer.dir/src/log.cpp.o"
   "CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"

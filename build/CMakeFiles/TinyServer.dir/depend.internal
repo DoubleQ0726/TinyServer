@@ -156,6 +156,14 @@ CMakeFiles/TinyServer.dir/src/hook.cpp.o
 CMakeFiles/TinyServer.dir/src/http/http.cpp.o
  /home/szq/Work/TinyServer/src/http/http.cpp
  /home/szq/Work/TinyServer/src/http/http.h
+CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o
+ /home/szq/Work/TinyServer/src/http/http11_common.h
+ /home/szq/Work/TinyServer/src/http/http11_parser.h
+ /home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp
+CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o
+ /home/szq/Work/TinyServer/src/http/http11_common.h
+ /home/szq/Work/TinyServer/src/http/httpclient_parser.h
+ /home/szq/Work/TinyServer/src/http/httpclient_parser.rl.cpp
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h
  /home/szq/Work/TinyServer/src/fiber.h
