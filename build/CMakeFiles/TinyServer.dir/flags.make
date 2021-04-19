@@ -6,7 +6,7 @@ CXX_FLAGS =  -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Wer
 
 CXX_DEFINES = -DTinyServer_EXPORTS
 
-CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include 
+CXX_INCLUDES = -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include 
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/address.cpp.o_DEFINES = __FILE__="src/address.cpp"
 
@@ -35,6 +35,8 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 # Custom defines: CMakeFiles/TinyServer.dir/src/bytearray.cpp.o_DEFINES = __FILE__="src/bytearray.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http.cpp.o_DEFINES = __FILE__="src/http/http.cpp"
+
+# Custom defines: CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o_DEFINES = __FILE__="src/http/http_parser.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o_DEFINES = __FILE__="src/http/http11_parser.rl.cpp"
 

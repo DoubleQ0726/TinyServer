@@ -22,6 +22,7 @@ set(LIB_SRC
     src/socket.cpp
     src/bytearray.cpp
     src/http/http.cpp
+    src/http/http_parser.cpp
     src/http/http11_parser.rl.cpp
     src/http/httpclient_parser.rl.cpp
     )
@@ -94,6 +95,11 @@ add_executable(test_http tests/test_http.cpp)
 add_dependencies(test_http TinyServer)
 force_redefine_file_macro_for_sources(test_http)
 target_link_libraries(test_http TinyServer yaml-cpp pthread dl)
+
+add_executable(test_parser tests/test_parser.cpp)
+add_dependencies(test_parser TinyServer)
+force_redefine_file_macro_for_sources(test_parser)
+target_link_libraries(test_parser TinyServer yaml-cpp pthread dl)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

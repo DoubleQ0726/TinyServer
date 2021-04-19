@@ -1,142 +1,152 @@
 [
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/address.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/address.cpp.o -c /home/szq/Work/TinyServer/src/address.cpp",
-  "file": "/home/szq/Work/TinyServer/src/address.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/address.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/address.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/address.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/address.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/fiber.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/fiber.cpp.o -c /home/szq/Work/TinyServer/src/fiber.cpp",
-  "file": "/home/szq/Work/TinyServer/src/fiber.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/fiber.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/fiber.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/fiber.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/fiber.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/log.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/log.cpp.o -c /home/szq/Work/TinyServer/src/log.cpp",
-  "file": "/home/szq/Work/TinyServer/src/log.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/log.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/log.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/log.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/log.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/util.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/util.cpp.o -c /home/szq/Work/TinyServer/src/util.cpp",
-  "file": "/home/szq/Work/TinyServer/src/util.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/util.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/util.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/util.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/util.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/config.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/config.cpp.o -c /home/szq/Work/TinyServer/src/config.cpp",
-  "file": "/home/szq/Work/TinyServer/src/config.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/config.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/config.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/config.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/config.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/scheduler.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/scheduler.cpp.o -c /home/szq/Work/TinyServer/src/scheduler.cpp",
-  "file": "/home/szq/Work/TinyServer/src/scheduler.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/scheduler.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/scheduler.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/scheduler.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/thread.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/thread.cpp.o -c /home/szq/Work/TinyServer/src/thread.cpp",
-  "file": "/home/szq/Work/TinyServer/src/thread.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/thread.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/thread.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/thread.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/thread.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/iomanager.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/iomanager.cpp.o -c /home/szq/Work/TinyServer/src/iomanager.cpp",
-  "file": "/home/szq/Work/TinyServer/src/iomanager.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/iomanager.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/iomanager.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/iomanager.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/iomanager.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/timer.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/timer.cpp.o -c /home/szq/Work/TinyServer/src/timer.cpp",
-  "file": "/home/szq/Work/TinyServer/src/timer.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/timer.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/timer.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/timer.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/timer.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/hook.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/hook.cpp.o -c /home/szq/Work/TinyServer/src/hook.cpp",
-  "file": "/home/szq/Work/TinyServer/src/hook.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/hook.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/hook.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/hook.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/hook.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/fd_manager.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o -c /home/szq/Work/TinyServer/src/fd_manager.cpp",
-  "file": "/home/szq/Work/TinyServer/src/fd_manager.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/fd_manager.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/fd_manager.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/fd_manager.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/socket.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/socket.cpp.o -c /home/szq/Work/TinyServer/src/socket.cpp",
-  "file": "/home/szq/Work/TinyServer/src/socket.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/socket.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/socket.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/socket.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/socket.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/bytearray.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/bytearray.cpp.o -c /home/szq/Work/TinyServer/src/bytearray.cpp",
-  "file": "/home/szq/Work/TinyServer/src/bytearray.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/bytearray.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/bytearray.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/bytearray.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/bytearray.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http.cpp.o -c /home/szq/Work/TinyServer/src/http/http.cpp",
-  "file": "/home/szq/Work/TinyServer/src/http/http.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/http/http.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/http/http.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http11_parser.rl.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o -c /home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp",
-  "file": "/home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http_parser.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/http/http_parser.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/http/http_parser.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/httpclient_parser.rl.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o -c /home/szq/Work/TinyServer/src/http/httpclient_parser.rl.cpp",
-  "file": "/home/szq/Work/TinyServer/src/http/httpclient_parser.rl.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http11_parser.rl.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/http/http11_parser.rl.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/http/http11_parser.rl.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test.dir/tests/test.cpp.o -c /home/szq/Work/TinyServer/tests/test.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/httpclient_parser.rl.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/src/http/httpclient_parser.rl.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/src/http/httpclient_parser.rl.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_thread.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_thread.dir/tests/test_thread.cpp.o -c /home/szq/Work/TinyServer/tests/test_thread.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_thread.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test.dir/tests/test.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_config.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_config.dir/tests/test_config.cpp.o -c /home/szq/Work/TinyServer/tests/test_config.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_config.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_thread.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_thread.dir/tests/test_thread.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_thread.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_thread.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_bytearray.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o -c /home/szq/Work/TinyServer/tests/test_bytearray.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_bytearray.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_config.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_config.dir/tests/test_config.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_config.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_config.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_util.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_util.dir/tests/test_util.cpp.o -c /home/szq/Work/TinyServer/tests/test_util.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_util.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_bytearray.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_bytearray.dir/tests/test_bytearray.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_bytearray.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_bytearray.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_fiber.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o -c /home/szq/Work/TinyServer/tests/test_fiber.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_fiber.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_util.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_util.dir/tests/test_util.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_util.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_util.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_address.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_address.dir/tests/test_address.cpp.o -c /home/szq/Work/TinyServer/tests/test_address.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_address.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_fiber.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_fiber.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_fiber.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_scheduler.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o -c /home/szq/Work/TinyServer/tests/test_scheduler.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_scheduler.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_address.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_address.dir/tests/test_address.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_address.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_address.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_iomanager.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o -c /home/szq/Work/TinyServer/tests/test_iomanager.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_iomanager.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_scheduler.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_scheduler.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_scheduler.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_hook.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_hook.dir/tests/test_hook.cpp.o -c /home/szq/Work/TinyServer/tests/test_hook.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_hook.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_iomanager.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_iomanager.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_iomanager.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_socket.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_socket.dir/tests/test_socket.cpp.o -c /home/szq/Work/TinyServer/tests/test_socket.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_socket.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_hook.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_hook.dir/tests/test_hook.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_hook.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_hook.cpp"
 },
 {
-  "directory": "/home/szq/Work/TinyServer/build",
-  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_http.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_http.dir/tests/test_http.cpp.o -c /home/szq/Work/TinyServer/tests/test_http.cpp",
-  "file": "/home/szq/Work/TinyServer/tests/test_http.cpp"
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_parser.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_parser.dir/tests/test_parser.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_parser.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_parser.cpp"
+},
+{
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_socket.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_socket.dir/tests/test_socket.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_socket.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_socket.cpp"
+},
+{
+  "directory": "/mnt/c/Users/QQ/Desktop/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_http.cpp\\\" -I/mnt/c/Users/QQ/Desktop/TinyServer/src -I/mnt/c/Users/QQ/Desktop/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_http.dir/tests/test_http.cpp.o -c /mnt/c/Users/QQ/Desktop/TinyServer/tests/test_http.cpp",
+  "file": "/mnt/c/Users/QQ/Desktop/TinyServer/tests/test_http.cpp"
 }
 ]

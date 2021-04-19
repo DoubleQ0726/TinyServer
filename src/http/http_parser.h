@@ -13,13 +13,18 @@ class HttpRequestParser
 public:
     HttpRequestParser();
 
-    size_t execute(const char *data, size_t len, size_t off);
-    int isFinished() const;
-    int hasError() const;
+    size_t execute(char *data, size_t len);
+    int isFinished();
+    int hasError();
+    void setError(int v) { m_error = v; }
 
+    Ref<HttpRequest> getData() const { return m_data; }
 private:
     http_parser m_parser;
-    Ref<HttpResponse> m_data;
+    Ref<HttpRequest> m_data;
+    //1000:invalid request method
+    //1001:invalid http version
+    //1002:invalid http field
     int m_error;
 };
 
@@ -29,10 +34,11 @@ class HttpResponseParser
 public:
     HttpResponseParser();
 
-    size_t execute(const char *data, size_t len, size_t off);
-    int isFinished() const;
-    int hasError() const;
-
+    size_t execute(char *data, size_t len);
+    int isFinished();
+    int hasError();
+    Ref<HttpResponse> getData() const { return m_data; }
+    void setError(int v) { m_error = v; }
 private:
     httpclient_parser m_parser;
     Ref<HttpResponse> m_data;

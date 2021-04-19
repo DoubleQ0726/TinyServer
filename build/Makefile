@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/szq/Work/TinyServer
+CMAKE_SOURCE_DIR = /mnt/c/Users/QQ/Desktop/TinyServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/szq/Work/TinyServer/build
+CMAKE_BINARY_DIR = /mnt/c/Users/QQ/Desktop/TinyServer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/szq/Work/TinyServer/build/CMakeFiles /home/szq/Work/TinyServer/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles /mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/szq/Work/TinyServer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/QQ/Desktop/TinyServer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -255,6 +255,19 @@ test_hook: cmake_check_build_system
 test_hook/fast:
 	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
 .PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_parser
+
+# Build rule for target.
+test_parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_parser
+.PHONY : test_parser
+
+# fast build rule for target.
+test_parser/fast:
+	$(MAKE) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/build
+.PHONY : test_parser/fast
 
 #=============================================================================
 # Target rules for targets named test_socket
@@ -497,6 +510,33 @@ src/http/http11_parser.rl.s: src/http/http11_parser.rl.cpp.s
 src/http/http11_parser.rl.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.s
 .PHONY : src/http/http11_parser.rl.cpp.s
+
+src/http/http_parser.o: src/http/http_parser.cpp.o
+
+.PHONY : src/http/http_parser.o
+
+# target to build an object file
+src/http/http_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o
+.PHONY : src/http/http_parser.cpp.o
+
+src/http/http_parser.i: src/http/http_parser.cpp.i
+
+.PHONY : src/http/http_parser.i
+
+# target to preprocess a source file
+src/http/http_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.i
+.PHONY : src/http/http_parser.cpp.i
+
+src/http/http_parser.s: src/http/http_parser.cpp.s
+
+.PHONY : src/http/http_parser.s
+
+# target to generate assembly for a file
+src/http/http_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.s
+.PHONY : src/http/http_parser.cpp.s
 
 src/http/httpclient_parser.rl.o: src/http/httpclient_parser.rl.cpp.o
 
@@ -930,6 +970,33 @@ tests/test_iomanager.cpp.s:
 	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.s
 .PHONY : tests/test_iomanager.cpp.s
 
+tests/test_parser.o: tests/test_parser.cpp.o
+
+.PHONY : tests/test_parser.o
+
+# target to build an object file
+tests/test_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/tests/test_parser.cpp.o
+.PHONY : tests/test_parser.cpp.o
+
+tests/test_parser.i: tests/test_parser.cpp.i
+
+.PHONY : tests/test_parser.i
+
+# target to preprocess a source file
+tests/test_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/tests/test_parser.cpp.i
+.PHONY : tests/test_parser.cpp.i
+
+tests/test_parser.s: tests/test_parser.cpp.s
+
+.PHONY : tests/test_parser.s
+
+# target to generate assembly for a file
+tests/test_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/test_parser.dir/build.make CMakeFiles/test_parser.dir/tests/test_parser.cpp.s
+.PHONY : tests/test_parser.cpp.s
+
 tests/test_scheduler.o: tests/test_scheduler.cpp.o
 
 .PHONY : tests/test_scheduler.o
@@ -1057,6 +1124,7 @@ help:
 	@echo "... test_scheduler"
 	@echo "... test_iomanager"
 	@echo "... test_hook"
+	@echo "... test_parser"
 	@echo "... test_socket"
 	@echo "... test_http"
 	@echo "... src/address.o"
@@ -1083,6 +1151,9 @@ help:
 	@echo "... src/http/http11_parser.rl.o"
 	@echo "... src/http/http11_parser.rl.i"
 	@echo "... src/http/http11_parser.rl.s"
+	@echo "... src/http/http_parser.o"
+	@echo "... src/http/http_parser.i"
+	@echo "... src/http/http_parser.s"
 	@echo "... src/http/httpclient_parser.rl.o"
 	@echo "... src/http/httpclient_parser.rl.i"
 	@echo "... src/http/httpclient_parser.rl.s"
@@ -1131,6 +1202,9 @@ help:
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
+	@echo "... tests/test_parser.o"
+	@echo "... tests/test_parser.i"
+	@echo "... tests/test_parser.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
