@@ -224,7 +224,7 @@ int Address::getFamily() const
     return getAddr()->sa_family;
 }
 
-std::string Address::toString()
+std::string Address::toString() const
 {
     std::stringstream ss;
     insert(ss);
@@ -534,7 +534,7 @@ const sockaddr* UnixAddress::getAddr() const
 
 const socklen_t UnixAddress::getAddrLen() const
 {
-    return sizeof(m_addr);
+    return m_length;
 }
 
 void UnixAddress::setAddrLen(uint32_t value)
@@ -589,6 +589,11 @@ std::ostream& UnknowAddress::insert(std::ostream& os) const
 {
     os << "[UnknownAddress" << m_addr.sa_family << "]";
     return os;
+}
+
+std::ostream& operator<<(std::ostream& os, const Address& addr)
+{
+    return addr.insert(os);
 }
 
 }

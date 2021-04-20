@@ -2,6 +2,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sys/socket.h>
+#include "hook.h"
 
 namespace TinyServer
 {
@@ -38,10 +39,11 @@ bool FdCtx::init()
     }
     if (m_isSocket)
     {
-        int flag = fcntl(m_fd, F_GETFL, 0);
+        //使用fcntl_f，如果时fcntl会出现死锁，hook可能有问题
+        int flag = fcntl_f(m_fd, F_GETFL, 0);
         if (!(flag & O_NONBLOCK))
         {
-            fcntl(m_fd, F_SETFL, flag | O_NONBLOCK);
+            fcntl_f(m_fd, F_SETFL, flag | O_NONBLOCK);
         }
         m_sysNonblock = true;
     }
@@ -77,9 +79,6 @@ FdManager::FdManager()
 
 Ref<FdCtx> FdManager::get(int fd, bool auto_create)
 {
-    if (fd == -1)
-        return nullptr;
-
     RWMutexType::ReadLockGuard lock(m_mutex);
     if ((int)m_datas.size() <= fd)
     {
@@ -97,10 +96,6 @@ Ref<FdCtx> FdManager::get(int fd, bool auto_create)
 
     RWMutexType::WriteLockGuard lock2(m_mutex);
     Ref<FdCtx> ctx(new FdCtx(fd));
-    if(fd >= (int)m_datas.size()) 
-    {
-        m_datas.resize(fd * 1.5);
-    }
     m_datas[fd] = ctx;
     return ctx;
 }

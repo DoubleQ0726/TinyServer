@@ -17,7 +17,7 @@ int main()
 {
     TINY_LOG_INFO(logger) << "main begin";
     Scheduler sc(3, false, "test");
-    sc.start();                 //开启线程
+    sc.start();                 //开启多线程多协程
     sleep(2);
     sc.schedule(test_fiber);    //注册协程任务
     sc.stop();                  //在此函数中执行协程函数

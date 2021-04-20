@@ -115,7 +115,7 @@ private:
     size_t m_baseSize;
     size_t m_position;
     size_t m_capacity;
-    size_t m_size;
+    size_t m_size;  //记录目前链表中m_position的位置
     int8_t m_endian;
 
     Node* m_root;

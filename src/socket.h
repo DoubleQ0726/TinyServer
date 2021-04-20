@@ -110,7 +110,7 @@ private:
     Ref<Address> m_remoteAddress;
 };
 
-
+std::ostream& operator<<(std::ostream& os, const Socket& sock);
 
 
 

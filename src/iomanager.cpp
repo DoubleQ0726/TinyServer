@@ -32,7 +32,7 @@ IOManager::IOManager(size_t threads, bool use_call, const std::string& name)
     TINY_ASSERT(res == 0);
 
     eventResize(32);
-    start();
+    start(); //开启多线程多协程
 }
 
 IOManager::~IOManager()
@@ -102,7 +102,7 @@ void IOManager::eventResize(size_t size)
 // 0 success, -1 error
 int IOManager::addEvent(int fd, EventType et, std::function<void()> cb)
 {
-    TINY_LOG_INFO(logger) << "addEvent";
+    //TINY_LOG_INFO(logger) << "addEvent";
     FdEvent* fd_event = nullptr;
     RWMutexType::ReadLockGuard lock(m_mutex);
     if ((int)m_fdEvents.size() > fd)
@@ -325,6 +325,7 @@ void IOManager::idle()
             }
         } while (true);
 
+        //------定时器任务------
         std::vector<std::function<void()>> cbs;
         listExpireCB(cbs);
         if (!cbs.empty())
@@ -332,7 +333,8 @@ void IOManager::idle()
             schedule(cbs.begin(), cbs.end());
             cbs.clear();
         }
-
+        //---------------------
+        
         for (int i = 0; i < res; ++i)
         {
             epoll_event& epevent = epevents[i];

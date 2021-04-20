@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/TinyServer.dir/src/log.cpp.o"
   "CMakeFiles/TinyServer.dir/src/scheduler.cpp.o"
   "CMakeFiles/TinyServer.dir/src/socket.cpp.o"
+  "CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o"
   "CMakeFiles/TinyServer.dir/src/thread.cpp.o"
   "CMakeFiles/TinyServer.dir/src/timer.cpp.o"
   "CMakeFiles/TinyServer.dir/src/util.cpp.o"

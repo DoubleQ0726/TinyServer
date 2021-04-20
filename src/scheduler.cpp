@@ -14,7 +14,7 @@ Scheduler::Scheduler(size_t threads, bool use_call, const std::string& name)
 {
     if (use_call)
     {
-        //使用当前构造Scheduler的线程
+        //创建主协程main_fiber
         Fiber::GetThis();
         --threads;
         TINY_ASSERT(GetThis() == nullptr);        

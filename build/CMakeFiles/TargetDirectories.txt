@@ -1,5 +1,7 @@
 /home/szq/Work/TinyServer/build/CMakeFiles/rebuild_cache.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/edit_cache.dir
+/home/szq/Work/TinyServer/build/CMakeFiles/echo_server.dir
+/home/szq/Work/TinyServer/build/CMakeFiles/test_tcp_server.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_thread.dir

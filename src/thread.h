@@ -93,11 +93,11 @@ public:
 
     void unlock()
     {
-        //if (m_locked)
-        //{
+        if (m_locked)
+        {
             m_mutex.unlock();
             m_locked = false;
-        //}
+        }
     }
 
 private:

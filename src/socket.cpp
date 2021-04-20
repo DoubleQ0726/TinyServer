@@ -119,8 +119,8 @@ bool Socket::setOption(int level, int option, const void* result, size_t length)
     int  res = setsockopt(m_sock, level, option, result, length);
     if (res)
     {
-        TINY_LOG_DEBUG(logger) << "getOption sock = " << m_sock << " level = " << level
-            << " option = " << option << " errno = " << errno << "errstr = " << strerror(errno);
+        TINY_LOG_DEBUG(logger) << "setOption sock = " << m_sock << " level = " << level
+            << " option = " << option << " errno = " << errno << " errstr = " << strerror(errno);
         return false;
     }
     return true;
@@ -169,7 +169,7 @@ bool Socket::bind(const Ref<Address> addr)
     }
     if (::bind(m_sock, addr->getAddr(), addr->getAddrLen()))
     {
-        TINY_LOG_ERROR(logger) << "bind error errno = " << errno << " strerr" << strerror(errno);
+        TINY_LOG_ERROR(logger) << "bind error errno = " << errno << " strerr = " << strerror(errno);
         return false;
     }
     getLocalAddress();
@@ -348,23 +348,25 @@ Ref<Address> Socket::getRemoteAddress()
         break;
     case AF_INET6:
         result.reset(new IPv6Address());
+        break;
     case AF_UNIX:
         result.reset(new UnixAddress());
+        break;
     default:
         result.reset(new UnknowAddress(m_family));
         break;
     }
     socklen_t addrLen = result->getAddrLen();
-    if (m_family == AF_UNIX)
-    {
-        Ref<UnixAddress> addr = std::dynamic_pointer_cast<UnixAddress>(result);
-        addr->setAddrLen(addrLen);
-    }
     if (getpeername(m_sock, result->getAddr(), &addrLen))
     {
         TINY_LOG_ERROR(logger) << "getpeername error sock = " << m_sock << " errno = "
             << errno <<" errstr = " << strerror(errno);
         return Ref<UnknowAddress>(new UnknowAddress(m_family)); 
+    }
+    if (m_family == AF_UNIX)
+    {
+        Ref<UnixAddress> addr = std::dynamic_pointer_cast<UnixAddress>(result);
+        addr->setAddrLen(addrLen);
     }
     m_remoteAddress = result;
     return m_remoteAddress;
@@ -372,8 +374,8 @@ Ref<Address> Socket::getRemoteAddress()
 
 Ref<Address> Socket::getLocalAddress()
 {
-    if (m_remoteAddress)
-        return m_remoteAddress;
+    if (m_localAddress)
+        return m_localAddress;
     Ref<Address> result;
     switch (m_family)
     {
@@ -382,23 +384,25 @@ Ref<Address> Socket::getLocalAddress()
         break;
     case AF_INET6:
         result.reset(new IPv6Address());
+        break;
     case AF_UNIX:
         result.reset(new UnixAddress());
+        break;
     default:
         result.reset(new UnknowAddress(m_family));
         break;
     }
     socklen_t addrLen = result->getAddrLen();
-    if (m_family == AF_UNIX)
-    {
-        Ref<UnixAddress> addr = std::dynamic_pointer_cast<UnixAddress>(result);
-        addr->setAddrLen(addrLen);
-    }
-    if (getsockname(m_sock, result->getAddr(), &addrLen))
+    if (getsockname(m_sock, result->getAddr(), &addrLen))   //通过当前的socket句柄得到其地址和长度信息
     {
         TINY_LOG_ERROR(logger) << "getpeername error sock = " << m_sock << " errno = "
             << errno <<" errstr = " << strerror(errno);
         return Ref<UnknowAddress>(new UnknowAddress(m_family)); 
+    }
+    if (m_family == AF_UNIX)
+    {
+        Ref<UnixAddress> addr = std::dynamic_pointer_cast<UnixAddress>(result);    
+        addr->setAddrLen(addrLen);
     }
     m_localAddress = result;
     return m_localAddress;
@@ -425,7 +429,7 @@ std::ostream& Socket::dump(std::ostream& os) const
 {
     os << "[Socket sock = " << m_sock << " is_connected = " << m_isConnected
        << " family = " << m_family << " type = " << m_type
-       << "protocol = " << m_protocol;
+       << " protocol = " << m_protocol;
     if (m_localAddress)
     {
         os << " local_address = " << m_localAddress->toString();
@@ -476,6 +480,11 @@ void Socket::newSock()
         TINY_LOG_ERROR(logger) << "socket(" << m_family << ", " << m_type << ", " << m_protocol
             << ") errno = " << errno << "errstr = " << strerror(errno);
     }
+}
+
+std::ostream& operator<<(std::ostream& os, const Socket& sock)
+{
+    return sock.dump(os);
 }
 
 }

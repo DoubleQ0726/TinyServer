@@ -1,6 +1,16 @@
 [
 {
   "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"examples/echo_server.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/echo_server.dir/examples/echo_server.cpp.o -c /home/szq/Work/TinyServer/examples/echo_server.cpp",
+  "file": "/home/szq/Work/TinyServer/examples/echo_server.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_tcp_server.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cpp.o -c /home/szq/Work/TinyServer/tests/test_tcp_server.cpp",
+  "file": "/home/szq/Work/TinyServer/tests/test_tcp_server.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/address.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/address.cpp.o -c /home/szq/Work/TinyServer/src/address.cpp",
   "file": "/home/szq/Work/TinyServer/src/address.cpp"
 },
@@ -63,6 +73,11 @@
   "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/bytearray.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/bytearray.cpp.o -c /home/szq/Work/TinyServer/src/bytearray.cpp",
   "file": "/home/szq/Work/TinyServer/src/bytearray.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/tcp_server.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o -c /home/szq/Work/TinyServer/src/tcp_server.cpp",
+  "file": "/home/szq/Work/TinyServer/src/tcp_server.cpp"
 },
 {
   "directory": "/home/szq/Work/TinyServer/build",
