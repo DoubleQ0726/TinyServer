@@ -205,6 +205,24 @@ CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o
  /home/szq/Work/TinyServer/src/http/http_parser.cpp
  /home/szq/Work/TinyServer/src/http/http_parser.h
  /home/szq/Work/TinyServer/src/http/httpclient_parser.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o
+ ../src/Singleton.h
+ ../src/address.h
+ ../src/bytearray.h
+ ../src/http/http.h
+ ../src/http/http11_common.h
+ ../src/http/http11_parser.h
+ ../src/http/http_parser.h
+ ../src/http/httpclient_parser.h
+ ../src/log.h
+ ../src/noncoptable.h
+ ../src/socket.h
+ ../src/socket_stream.h
+ ../src/stream.h
+ ../src/thread.h
+ ../src/util.h
+ /home/szq/Work/TinyServer/src/http/http_session.cpp
+ /home/szq/Work/TinyServer/src/http/http_session.h
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o
  /home/szq/Work/TinyServer/src/http/http11_common.h
  /home/szq/Work/TinyServer/src/http/httpclient_parser.h
@@ -286,6 +304,27 @@ CMakeFiles/TinyServer.dir/src/socket.cpp.o
  /home/szq/Work/TinyServer/src/socket.h
  /home/szq/Work/TinyServer/src/thread.h
  /home/szq/Work/TinyServer/src/timer.h
+ /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o
+ /home/szq/Work/TinyServer/src/Singleton.h
+ /home/szq/Work/TinyServer/src/address.h
+ /home/szq/Work/TinyServer/src/bytearray.h
+ /home/szq/Work/TinyServer/src/log.h
+ /home/szq/Work/TinyServer/src/noncoptable.h
+ /home/szq/Work/TinyServer/src/socket.h
+ /home/szq/Work/TinyServer/src/socket_stream.cpp
+ /home/szq/Work/TinyServer/src/socket_stream.h
+ /home/szq/Work/TinyServer/src/stream.h
+ /home/szq/Work/TinyServer/src/thread.h
+ /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o
+ /home/szq/Work/TinyServer/src/Singleton.h
+ /home/szq/Work/TinyServer/src/bytearray.h
+ /home/szq/Work/TinyServer/src/log.h
+ /home/szq/Work/TinyServer/src/noncoptable.h
+ /home/szq/Work/TinyServer/src/stream.cpp
+ /home/szq/Work/TinyServer/src/stream.h
+ /home/szq/Work/TinyServer/src/thread.h
  /home/szq/Work/TinyServer/src/util.h
 CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o
  ../vendor/yaml-cpp/include/yaml-cpp/binary.h

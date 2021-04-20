@@ -20,6 +20,11 @@ public:
     uint64_t getContentLength();
 
     Ref<HttpRequest> getData() const { return m_data; }
+
+public:
+    static uint64_t GetHttpRequestBufferSize();
+    static uint64_t GetHttpRequestMaxBodyLength();
+
 private:
     http_parser m_parser;
     Ref<HttpRequest> m_data;
@@ -42,6 +47,8 @@ public:
     void setError(int v) { m_error = v; }
 
     uint64_t getContentLength();
+public:
+
 private:
     httpclient_parser m_parser;
     Ref<HttpResponse> m_data;

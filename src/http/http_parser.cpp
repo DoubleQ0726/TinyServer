@@ -16,6 +16,8 @@ static Ref<ConfigVar<uint64_t>> http_request_max_body_size =
 static uint64_t s_http_request_buffer_size = 0;
 static uint64_t s_http_request_max_body_size = 0;
 
+namespace
+{
 struct RequestSizeIniter
 {
     RequestSizeIniter()
@@ -34,6 +36,17 @@ struct RequestSizeIniter
 };
 
 static RequestSizeIniter __requestSize_initer;
+}
+
+uint64_t HttpRequestParser::GetHttpRequestBufferSize()
+{
+    return s_http_request_buffer_size;
+}
+
+uint64_t HttpRequestParser::GetHttpRequestMaxBodyLength()
+{
+    return s_http_request_max_body_size;
+}
 
 void on_request_method(void *data, const char *at, size_t length)
 {

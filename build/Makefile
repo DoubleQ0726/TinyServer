@@ -591,6 +591,33 @@ src/http/http_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.s
 .PHONY : src/http/http_parser.cpp.s
 
+src/http/http_session.o: src/http/http_session.cpp.o
+
+.PHONY : src/http/http_session.o
+
+# target to build an object file
+src/http/http_session.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o
+.PHONY : src/http/http_session.cpp.o
+
+src/http/http_session.i: src/http/http_session.cpp.i
+
+.PHONY : src/http/http_session.i
+
+# target to preprocess a source file
+src/http/http_session.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_session.cpp.i
+.PHONY : src/http/http_session.cpp.i
+
+src/http/http_session.s: src/http/http_session.cpp.s
+
+.PHONY : src/http/http_session.s
+
+# target to generate assembly for a file
+src/http/http_session.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_session.cpp.s
+.PHONY : src/http/http_session.cpp.s
+
 src/http/httpclient_parser.rl.o: src/http/httpclient_parser.rl.cpp.o
 
 .PHONY : src/http/httpclient_parser.rl.o
@@ -725,6 +752,60 @@ src/socket.s: src/socket.cpp.s
 src/socket.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/socket.cpp.s
 .PHONY : src/socket.cpp.s
+
+src/socket_stream.o: src/socket_stream.cpp.o
+
+.PHONY : src/socket_stream.o
+
+# target to build an object file
+src/socket_stream.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o
+.PHONY : src/socket_stream.cpp.o
+
+src/socket_stream.i: src/socket_stream.cpp.i
+
+.PHONY : src/socket_stream.i
+
+# target to preprocess a source file
+src/socket_stream.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/socket_stream.cpp.i
+.PHONY : src/socket_stream.cpp.i
+
+src/socket_stream.s: src/socket_stream.cpp.s
+
+.PHONY : src/socket_stream.s
+
+# target to generate assembly for a file
+src/socket_stream.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/socket_stream.cpp.s
+.PHONY : src/socket_stream.cpp.s
+
+src/stream.o: src/stream.cpp.o
+
+.PHONY : src/stream.o
+
+# target to build an object file
+src/stream.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/stream.cpp.o
+.PHONY : src/stream.cpp.o
+
+src/stream.i: src/stream.cpp.i
+
+.PHONY : src/stream.i
+
+# target to preprocess a source file
+src/stream.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/stream.cpp.i
+.PHONY : src/stream.cpp.i
+
+src/stream.s: src/stream.cpp.s
+
+.PHONY : src/stream.s
+
+# target to generate assembly for a file
+src/stream.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/stream.cpp.s
+.PHONY : src/stream.cpp.s
 
 src/tcp_server.o: src/tcp_server.cpp.o
 
@@ -1266,6 +1347,9 @@ help:
 	@echo "... src/http/http_parser.o"
 	@echo "... src/http/http_parser.i"
 	@echo "... src/http/http_parser.s"
+	@echo "... src/http/http_session.o"
+	@echo "... src/http/http_session.i"
+	@echo "... src/http/http_session.s"
 	@echo "... src/http/httpclient_parser.rl.o"
 	@echo "... src/http/httpclient_parser.rl.i"
 	@echo "... src/http/httpclient_parser.rl.s"
@@ -1281,6 +1365,12 @@ help:
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
+	@echo "... src/socket_stream.o"
+	@echo "... src/socket_stream.i"
+	@echo "... src/socket_stream.s"
+	@echo "... src/stream.o"
+	@echo "... src/stream.i"
+	@echo "... src/stream.s"
 	@echo "... src/tcp_server.o"
 	@echo "... src/tcp_server.i"
 	@echo "... src/tcp_server.s"

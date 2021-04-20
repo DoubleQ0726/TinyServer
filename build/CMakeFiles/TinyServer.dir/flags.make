@@ -28,6 +28,10 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/hook.cpp.o_DEFINES = __FILE__="src/hook.cpp"
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/stream.cpp.o_DEFINES = __FILE__="src/stream.cpp"
+
+# Custom defines: CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o_DEFINES = __FILE__="src/socket_stream.cpp"
+
 # Custom defines: CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o_DEFINES = __FILE__="src/fd_manager.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/socket.cpp.o_DEFINES = __FILE__="src/socket.cpp"
@@ -39,6 +43,8 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http.cpp.o_DEFINES = __FILE__="src/http/http.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o_DEFINES = __FILE__="src/http/http_parser.cpp"
+
+# Custom defines: CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o_DEFINES = __FILE__="src/http/http_session.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o_DEFINES = __FILE__="src/http/http11_parser.rl.cpp"
 

@@ -18,12 +18,15 @@ set(LIB_SRC
     src/iomanager.cpp
     src/timer.cpp
     src/hook.cpp
+    src/stream.cpp
+    src/socket_stream.cpp
     src/fd_manager.cpp
     src/socket.cpp
     src/bytearray.cpp
     src/tcp_server.cpp
     src/http/http.cpp
     src/http/http_parser.cpp
+    src/http/http_session.cpp
     src/http/http11_parser.rl.cpp
     src/http/httpclient_parser.rl.cpp
     )

@@ -244,5 +244,15 @@ std::string HttpResponse::toString() const
     return ss.str();
 }
 
+std::ostream& operator<<(std::ostream& os, const HttpRequest& v)
+{
+    return v.dump(os);
+}
+
+std::ostream& operator<<(std::ostream& os, const HttpResponse& v)
+{
+    return v.dump(os);
+}
+
 }
 }

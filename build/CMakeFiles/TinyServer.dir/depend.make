@@ -205,6 +205,24 @@ CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o: ../src/http/http_parser.cp
 CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o: ../src/http/http_parser.h
 CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o: ../src/http/httpclient_parser.h
 
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/address.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/bytearray.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/http.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/http11_common.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/http11_parser.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/http_parser.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/httpclient_parser.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/socket.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/socket_stream.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/stream.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/util.h
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/http_session.cpp
+CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o: ../src/http/http_session.h
+
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o: ../src/http/http11_common.h
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o: ../src/http/httpclient_parser.h
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o: ../src/http/httpclient_parser.rl.cpp
@@ -286,6 +304,27 @@ CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/socket.h
 CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/timer.h
 CMakeFiles/TinyServer.dir/src/socket.cpp.o: ../src/util.h
+
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/address.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/bytearray.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/socket.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/socket_stream.cpp
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/socket_stream.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/stream.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/socket_stream.cpp.o: ../src/util.h
+
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/bytearray.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/stream.cpp
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/stream.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/stream.cpp.o: ../src/util.h
 
 CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/binary.h
 CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/dll.h

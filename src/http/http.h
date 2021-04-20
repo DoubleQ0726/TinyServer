@@ -355,6 +355,8 @@ private:
     MapType m_headers;
 };
 
+std::ostream& operator<<(std::ostream& os, const HttpRequest& v);
+std::ostream& operator<<(std::ostream& os, const HttpResponse& v);
 
 
 }   //namespace http
