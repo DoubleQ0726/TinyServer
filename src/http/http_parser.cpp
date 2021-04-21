@@ -10,11 +10,19 @@ static Ref<Logger> logger = TINY_LOG_NAME("system");
 static Ref<ConfigVar<uint64_t>> http_request_buffer_size = 
     Config::Lookup("http.request.buffer_size", (uint64_t)4 * 1024, "http request buffer size"); 
 
+static Ref<ConfigVar<uint64_t>> http_response_buffer_size = 
+    Config::Lookup("http.response.buffer_size", (uint64_t)4 * 1024, "http response buffer size"); 
+
 static Ref<ConfigVar<uint64_t>> http_request_max_body_size = 
     Config::Lookup("http.request.max_body_size", (uint64_t)64 * 1024 * 1024, "http request max body size"); 
 
+static Ref<ConfigVar<uint64_t>> http_response_max_body_size = 
+    Config::Lookup("http.response.max_body_size", (uint64_t)64 * 1024 * 1024, "http response max body size"); 
+
 static uint64_t s_http_request_buffer_size = 0;
+static uint64_t s_http_response_buffer_size = 0;
 static uint64_t s_http_request_max_body_size = 0;
+static uint64_t s_http_response_max_body_size = 0;
 
 namespace
 {
@@ -23,7 +31,9 @@ struct RequestSizeIniter
     RequestSizeIniter()
     {
         s_http_request_buffer_size = http_request_buffer_size->getValue();
+        s_http_response_buffer_size = http_response_buffer_size->getValue();
         s_http_request_max_body_size = http_request_max_body_size->getValue();
+        s_http_response_max_body_size = http_response_buffer_size->getValue();
 
         http_request_buffer_size->setCallBack([](const uint64_t& old_value, const uint64_t& new_value){
             s_http_request_buffer_size = new_value;
@@ -31,6 +41,14 @@ struct RequestSizeIniter
 
         http_request_max_body_size->setCallBack([](const uint64_t& old_value, const uint64_t& new_value){
             s_http_request_max_body_size = new_value;
+        });
+
+        http_response_buffer_size->setCallBack([](const uint64_t& old_value, const uint64_t& new_value){
+            s_http_response_buffer_size = new_value;
+        });
+
+        http_response_max_body_size->setCallBack([](const uint64_t& old_value, const uint64_t& new_value){
+            s_http_response_max_body_size = new_value;
         });
     }
 };
@@ -46,6 +64,16 @@ uint64_t HttpRequestParser::GetHttpRequestBufferSize()
 uint64_t HttpRequestParser::GetHttpRequestMaxBodyLength()
 {
     return s_http_request_max_body_size;
+}
+
+uint64_t HttpResponseParser::GetHttpResponseBufferSize()
+{
+    return s_http_response_buffer_size;
+}
+
+uint64_t HttpResponseParser::GetHttpResponseMaxBodyLength()
+{
+    return s_http_response_max_body_size;
 }
 
 void on_request_method(void *data, const char *at, size_t length)

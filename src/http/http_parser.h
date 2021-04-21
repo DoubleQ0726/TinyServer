@@ -48,6 +48,8 @@ public:
 
     uint64_t getContentLength();
 public:
+    static uint64_t GetHttpResponseBufferSize();
+    static uint64_t GetHttpResponseMaxBodyLength();
 
 private:
     httpclient_parser m_parser;

@@ -231,6 +231,19 @@ test_fiber/fast:
 .PHONY : test_fiber/fast
 
 #=============================================================================
+# Target rules for targets named test_http_server
+
+# Build rule for target.
+test_http_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_server
+.PHONY : test_http_server
+
+# fast build rule for target.
+test_http_server/fast:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+.PHONY : test_http_server/fast
+
+#=============================================================================
 # Target rules for targets named test_address
 
 # Build rule for target.
@@ -564,6 +577,33 @@ src/http/http11_parser.rl.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.s
 .PHONY : src/http/http11_parser.rl.cpp.s
 
+src/http/http_connection.o: src/http/http_connection.cpp.o
+
+.PHONY : src/http/http_connection.o
+
+# target to build an object file
+src/http/http_connection.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o
+.PHONY : src/http/http_connection.cpp.o
+
+src/http/http_connection.i: src/http/http_connection.cpp.i
+
+.PHONY : src/http/http_connection.i
+
+# target to preprocess a source file
+src/http/http_connection.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.i
+.PHONY : src/http/http_connection.cpp.i
+
+src/http/http_connection.s: src/http/http_connection.cpp.s
+
+.PHONY : src/http/http_connection.s
+
+# target to generate assembly for a file
+src/http/http_connection.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.s
+.PHONY : src/http/http_connection.cpp.s
+
 src/http/http_parser.o: src/http/http_parser.cpp.o
 
 .PHONY : src/http/http_parser.o
@@ -590,6 +630,33 @@ src/http/http_parser.s: src/http/http_parser.cpp.s
 src/http/http_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.s
 .PHONY : src/http/http_parser.cpp.s
+
+src/http/http_server.o: src/http/http_server.cpp.o
+
+.PHONY : src/http/http_server.o
+
+# target to build an object file
+src/http/http_server.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o
+.PHONY : src/http/http_server.cpp.o
+
+src/http/http_server.i: src/http/http_server.cpp.i
+
+.PHONY : src/http/http_server.i
+
+# target to preprocess a source file
+src/http/http_server.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_server.cpp.i
+.PHONY : src/http/http_server.cpp.i
+
+src/http/http_server.s: src/http/http_server.cpp.s
+
+.PHONY : src/http/http_server.s
+
+# target to generate assembly for a file
+src/http/http_server.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/http_server.cpp.s
+.PHONY : src/http/http_server.cpp.s
 
 src/http/http_session.o: src/http/http_session.cpp.o
 
@@ -644,6 +711,33 @@ src/http/httpclient_parser.rl.s: src/http/httpclient_parser.rl.cpp.s
 src/http/httpclient_parser.rl.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.s
 .PHONY : src/http/httpclient_parser.rl.cpp.s
+
+src/http/servlet.o: src/http/servlet.cpp.o
+
+.PHONY : src/http/servlet.o
+
+# target to build an object file
+src/http/servlet.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o
+.PHONY : src/http/servlet.cpp.o
+
+src/http/servlet.i: src/http/servlet.cpp.i
+
+.PHONY : src/http/servlet.i
+
+# target to preprocess a source file
+src/http/servlet.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/servlet.cpp.i
+.PHONY : src/http/servlet.cpp.i
+
+src/http/servlet.s: src/http/servlet.cpp.s
+
+.PHONY : src/http/servlet.s
+
+# target to generate assembly for a file
+src/http/servlet.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/http/servlet.cpp.s
+.PHONY : src/http/servlet.cpp.s
 
 src/iomanager.o: src/iomanager.cpp.o
 
@@ -1104,6 +1198,33 @@ tests/test_http.cpp.s:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.s
 .PHONY : tests/test_http.cpp.s
 
+tests/test_http_server.o: tests/test_http_server.cpp.o
+
+.PHONY : tests/test_http_server.o
+
+# target to build an object file
+tests/test_http_server.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o
+.PHONY : tests/test_http_server.cpp.o
+
+tests/test_http_server.i: tests/test_http_server.cpp.i
+
+.PHONY : tests/test_http_server.i
+
+# target to preprocess a source file
+tests/test_http_server.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.i
+.PHONY : tests/test_http_server.cpp.i
+
+tests/test_http_server.s: tests/test_http_server.cpp.s
+
+.PHONY : tests/test_http_server.s
+
+# target to generate assembly for a file
+tests/test_http_server.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.s
+.PHONY : tests/test_http_server.cpp.s
+
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 
 .PHONY : tests/test_iomanager.o
@@ -1310,6 +1431,7 @@ help:
 	@echo "... test_bytearray"
 	@echo "... test_util"
 	@echo "... test_fiber"
+	@echo "... test_http_server"
 	@echo "... test_address"
 	@echo "... test_scheduler"
 	@echo "... test_iomanager"
@@ -1344,15 +1466,24 @@ help:
 	@echo "... src/http/http11_parser.rl.o"
 	@echo "... src/http/http11_parser.rl.i"
 	@echo "... src/http/http11_parser.rl.s"
+	@echo "... src/http/http_connection.o"
+	@echo "... src/http/http_connection.i"
+	@echo "... src/http/http_connection.s"
 	@echo "... src/http/http_parser.o"
 	@echo "... src/http/http_parser.i"
 	@echo "... src/http/http_parser.s"
+	@echo "... src/http/http_server.o"
+	@echo "... src/http/http_server.i"
+	@echo "... src/http/http_server.s"
 	@echo "... src/http/http_session.o"
 	@echo "... src/http/http_session.i"
 	@echo "... src/http/http_session.s"
 	@echo "... src/http/httpclient_parser.rl.o"
 	@echo "... src/http/httpclient_parser.rl.i"
 	@echo "... src/http/httpclient_parser.rl.s"
+	@echo "... src/http/servlet.o"
+	@echo "... src/http/servlet.i"
+	@echo "... src/http/servlet.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -1404,6 +1535,9 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_server.o"
+	@echo "... tests/test_http_server.i"
+	@echo "... tests/test_http_server.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"

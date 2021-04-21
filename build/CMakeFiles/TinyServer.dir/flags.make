@@ -46,6 +46,12 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o_DEFINES = __FILE__="src/http/http_session.cpp"
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o_DEFINES = __FILE__="src/http/http_connection.cpp"
+
+# Custom defines: CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o_DEFINES = __FILE__="src/http/http_server.cpp"
+
+# Custom defines: CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o_DEFINES = __FILE__="src/http/servlet.cpp"
+
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o_DEFINES = __FILE__="src/http/http11_parser.rl.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o_DEFINES = __FILE__="src/http/httpclient_parser.rl.cpp"

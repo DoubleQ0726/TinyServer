@@ -307,9 +307,48 @@ CMakeFiles/TinyServer.dir/src/http/http_session.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyServer.dir/src/http/http_session.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/http_session.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szq/Work/TinyServer/src/http/http_session.cpp -o CMakeFiles/TinyServer.dir/src/http/http_session.cpp.s
 
+CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: CMakeFiles/TinyServer.dir/flags.make
+CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/http/http_connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/http/http_connection.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o -c /home/szq/Work/TinyServer/src/http/http_connection.cpp
+
+CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/http_connection.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szq/Work/TinyServer/src/http/http_connection.cpp > CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.i
+
+CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/http_connection.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szq/Work/TinyServer/src/http/http_connection.cpp -o CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.s
+
+CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o: CMakeFiles/TinyServer.dir/flags.make
+CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o: ../src/http/http_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/http/http_server.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o -c /home/szq/Work/TinyServer/src/http/http_server.cpp
+
+CMakeFiles/TinyServer.dir/src/http/http_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyServer.dir/src/http/http_server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/http_server.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szq/Work/TinyServer/src/http/http_server.cpp > CMakeFiles/TinyServer.dir/src/http/http_server.cpp.i
+
+CMakeFiles/TinyServer.dir/src/http/http_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyServer.dir/src/http/http_server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/http_server.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szq/Work/TinyServer/src/http/http_server.cpp -o CMakeFiles/TinyServer.dir/src/http/http_server.cpp.s
+
+CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o: CMakeFiles/TinyServer.dir/flags.make
+CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o: ../src/http/servlet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/http/servlet.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o -c /home/szq/Work/TinyServer/src/http/servlet.cpp
+
+CMakeFiles/TinyServer.dir/src/http/servlet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyServer.dir/src/http/servlet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/servlet.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/szq/Work/TinyServer/src/http/servlet.cpp > CMakeFiles/TinyServer.dir/src/http/servlet.cpp.i
+
+CMakeFiles/TinyServer.dir/src/http/servlet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyServer.dir/src/http/servlet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"src/http/servlet.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/szq/Work/TinyServer/src/http/servlet.cpp -o CMakeFiles/TinyServer.dir/src/http/servlet.cpp.s
+
 CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o: ../src/http/http11_parser.rl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/http/http11_parser.rl.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o -c /home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp
 
 CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.i: cmake_force
@@ -322,7 +361,7 @@ CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.s: cmake_force
 
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o: CMakeFiles/TinyServer.dir/flags.make
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o: ../src/http/httpclient_parser.rl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"src/http/httpclient_parser.rl.cpp\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o -c /home/szq/Work/TinyServer/src/http/httpclient_parser.rl.cpp
 
 CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.i: cmake_force
@@ -354,6 +393,9 @@ TinyServer_OBJECTS = \
 "CMakeFiles/TinyServer.dir/src/http/http.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o" \
+"CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o" \
+"CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o" \
+"CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o" \
 "CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o"
 
@@ -379,11 +421,14 @@ TinyServer_EXTERNAL_OBJECTS =
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/http.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o
+../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o
+../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o
+../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/build.make
 ../lib/libTinyServer.so: CMakeFiles/TinyServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX shared library ../lib/libTinyServer.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/szq/Work/TinyServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX shared library ../lib/libTinyServer.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TinyServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

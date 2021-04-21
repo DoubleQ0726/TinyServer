@@ -19,7 +19,6 @@ Ref<HttpRequest> HttpSession::recvRequest()
     std::shared_ptr<char> buffers(new char[buffer_size], [](char* ptr){
         delete[] ptr;
     });
-
     char* data = buffers.get();
     size_t offset = 0;
     do
@@ -31,7 +30,7 @@ Ref<HttpRequest> HttpSession::recvRequest()
         size_t nparser = parser->execute(data, len);
         if (parser->hasError())
             return nullptr;
-        offset = len - nparser;     //???
+        offset = len - nparser;
         if (offset == buffer_size)
             return nullptr;
         if (parser->isFinished())
@@ -44,19 +43,22 @@ Ref<HttpRequest> HttpSession::recvRequest()
     if (length > 0)
     {
         std::string body;
-        body.reserve(length);
+        body.resize(length);
+        int len = 0;
         if (length >= (int)offset)
         {
-            body.append(data, offset);
+            memcpy(&body[0], data, offset);
+            len = offset;
         }
         else
         {
-            body.append(data, length);
+            memcpy(&body[0], data, length);
+            len = length;
         }
         length -= offset;
         if (length > 0)
         {
-            if (readFixSize(&body[body.size()], length) <= 0)
+            if (readFixSize(&body[len], length) <= 0)
                 return nullptr;
         }
         parser->getData()->setBody(body);

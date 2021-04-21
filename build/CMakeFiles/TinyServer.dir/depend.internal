@@ -161,6 +161,24 @@ CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o
  /home/szq/Work/TinyServer/src/http/http11_common.h
  /home/szq/Work/TinyServer/src/http/http11_parser.h
  /home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp
+CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o
+ ../src/Singleton.h
+ ../src/address.h
+ ../src/bytearray.h
+ ../src/http/http.h
+ ../src/http/http11_common.h
+ ../src/http/http11_parser.h
+ ../src/http/http_parser.h
+ ../src/http/httpclient_parser.h
+ ../src/log.h
+ ../src/noncoptable.h
+ ../src/socket.h
+ ../src/socket_stream.h
+ ../src/stream.h
+ ../src/thread.h
+ ../src/util.h
+ /home/szq/Work/TinyServer/src/http/http_connection.cpp
+ /home/szq/Work/TinyServer/src/http/http_connection.h
 CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o
  ../src/Singleton.h
  ../src/config.h
@@ -205,6 +223,27 @@ CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o
  /home/szq/Work/TinyServer/src/http/http_parser.cpp
  /home/szq/Work/TinyServer/src/http/http_parser.h
  /home/szq/Work/TinyServer/src/http/httpclient_parser.h
+CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o
+ ../src/Singleton.h
+ ../src/address.h
+ ../src/bytearray.h
+ ../src/fiber.h
+ ../src/http/http.h
+ ../src/http/http_session.h
+ ../src/http/servlet.h
+ ../src/iomanager.h
+ ../src/log.h
+ ../src/noncoptable.h
+ ../src/scheduler.h
+ ../src/socket.h
+ ../src/socket_stream.h
+ ../src/stream.h
+ ../src/tcp_server.h
+ ../src/thread.h
+ ../src/timer.h
+ ../src/util.h
+ /home/szq/Work/TinyServer/src/http/http_server.cpp
+ /home/szq/Work/TinyServer/src/http/http_server.h
 CMakeFiles/TinyServer.dir/src/http/http_session.cpp.o
  ../src/Singleton.h
  ../src/address.h
@@ -227,6 +266,21 @@ CMakeFiles/TinyServer.dir/src/http/httpclient_parser.rl.cpp.o
  /home/szq/Work/TinyServer/src/http/http11_common.h
  /home/szq/Work/TinyServer/src/http/httpclient_parser.h
  /home/szq/Work/TinyServer/src/http/httpclient_parser.rl.cpp
+CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o
+ ../src/Singleton.h
+ ../src/address.h
+ ../src/bytearray.h
+ ../src/http/http.h
+ ../src/http/http_session.h
+ ../src/http/servlet.h
+ ../src/log.h
+ ../src/noncoptable.h
+ ../src/socket.h
+ ../src/socket_stream.h
+ ../src/stream.h
+ ../src/thread.h
+ ../src/util.h
+ /home/szq/Work/TinyServer/src/http/servlet.cpp
 CMakeFiles/TinyServer.dir/src/iomanager.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h
  /home/szq/Work/TinyServer/src/fiber.h

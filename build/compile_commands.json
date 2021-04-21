@@ -106,6 +106,21 @@
 },
 {
   "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http_connection.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o -c /home/szq/Work/TinyServer/src/http/http_connection.cpp",
+  "file": "/home/szq/Work/TinyServer/src/http/http_connection.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http_server.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http_server.cpp.o -c /home/szq/Work/TinyServer/src/http/http_server.cpp",
+  "file": "/home/szq/Work/TinyServer/src/http/http_server.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/servlet.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/servlet.cpp.o -c /home/szq/Work/TinyServer/src/http/servlet.cpp",
+  "file": "/home/szq/Work/TinyServer/src/http/servlet.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/http/http11_parser.rl.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/http/http11_parser.rl.cpp.o -c /home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp",
   "file": "/home/szq/Work/TinyServer/src/http/http11_parser.rl.cpp"
 },
@@ -143,6 +158,11 @@
   "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_fiber.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.o -c /home/szq/Work/TinyServer/tests/test_fiber.cpp",
   "file": "/home/szq/Work/TinyServer/tests/test_fiber.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_http_server.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_http_server.dir/tests/test_http_server.cpp.o -c /home/szq/Work/TinyServer/tests/test_http_server.cpp",
+  "file": "/home/szq/Work/TinyServer/tests/test_http_server.cpp"
 },
 {
   "directory": "/home/szq/Work/TinyServer/build",

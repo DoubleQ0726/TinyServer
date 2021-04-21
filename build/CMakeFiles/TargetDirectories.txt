@@ -9,6 +9,7 @@
 /home/szq/Work/TinyServer/build/CMakeFiles/test_bytearray.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_util.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_fiber.dir
+/home/szq/Work/TinyServer/build/CMakeFiles/test_http_server.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_address.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_scheduler.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_iomanager.dir
