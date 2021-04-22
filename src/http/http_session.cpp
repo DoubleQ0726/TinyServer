@@ -25,7 +25,10 @@ Ref<HttpRequest> HttpSession::recvRequest()
     {
         int len = read(data + offset, buffer_size - offset);
         if (len <= 0)
+        {
+            close();
             return nullptr;
+        }
         len += offset;
         size_t nparser = parser->execute(data, len);
         if (parser->hasError())
@@ -59,7 +62,10 @@ Ref<HttpRequest> HttpSession::recvRequest()
         if (length > 0)
         {
             if (readFixSize(&body[len], length) <= 0)
+            {
+                close();
                 return nullptr;
+            }
         }
         parser->getData()->setBody(body);
     }

@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_http_connection
+
+# Build rule for target.
+test_http_connection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
+
+# fast build rule for target.
+test_http_connection/fast:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
+
+#=============================================================================
 # Target rules for targets named echo_server
 
 # Build rule for target.
@@ -1198,6 +1211,33 @@ tests/test_http.cpp.s:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cpp.s
 .PHONY : tests/test_http.cpp.s
 
+tests/test_http_connection.o: tests/test_http_connection.cpp.o
+
+.PHONY : tests/test_http_connection.o
+
+# target to build an object file
+tests/test_http_connection.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.o
+.PHONY : tests/test_http_connection.cpp.o
+
+tests/test_http_connection.i: tests/test_http_connection.cpp.i
+
+.PHONY : tests/test_http_connection.i
+
+# target to preprocess a source file
+tests/test_http_connection.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.i
+.PHONY : tests/test_http_connection.cpp.i
+
+tests/test_http_connection.s: tests/test_http_connection.cpp.s
+
+.PHONY : tests/test_http_connection.s
+
+# target to generate assembly for a file
+tests/test_http_connection.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.s
+.PHONY : tests/test_http_connection.cpp.s
+
 tests/test_http_server.o: tests/test_http_server.cpp.o
 
 .PHONY : tests/test_http_server.o
@@ -1422,6 +1462,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_http_connection"
 	@echo "... echo_server"
 	@echo "... test_tcp_server"
 	@echo "... TinyServer"
@@ -1535,6 +1576,9 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_connection.o"
+	@echo "... tests/test_http_connection.i"
+	@echo "... tests/test_http_connection.s"
 	@echo "... tests/test_http_server.o"
 	@echo "... tests/test_http_server.i"
 	@echo "... tests/test_http_server.s"

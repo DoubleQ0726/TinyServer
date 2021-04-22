@@ -43,7 +43,7 @@ void test_response()
 {
     http::HttpResponseParser parser;
     std::string tmp = test_response_data;
-    size_t res = parser.execute(&tmp[0], tmp.size());
+    size_t res = parser.execute(&tmp[0], tmp.size(), false);
      TINY_LOG_INFO(logger) << "execute res = " << res << " has_error = " << parser.hasError()
                            << " is_finished = " << parser.isFinished() << " total = " 
                            << tmp.size() << " content-length = " << parser.getContentLength()

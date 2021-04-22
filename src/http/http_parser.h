@@ -20,6 +20,7 @@ public:
     uint64_t getContentLength();
 
     Ref<HttpRequest> getData() const { return m_data; }
+    const http_parser& getParser() const { return m_parser; }
 
 public:
     static uint64_t GetHttpRequestBufferSize();
@@ -40,13 +41,14 @@ class HttpResponseParser
 public:
     HttpResponseParser();
 
-    size_t execute(char *data, size_t len);
+    size_t execute(char *data, size_t len, bool chunck);
     int isFinished();
     int hasError();
     Ref<HttpResponse> getData() const { return m_data; }
     void setError(int v) { m_error = v; }
 
     uint64_t getContentLength();
+    const httpclient_parser& getClientParser() const { return m_parser; }
 public:
     static uint64_t GetHttpResponseBufferSize();
     static uint64_t GetHttpResponseMaxBodyLength();

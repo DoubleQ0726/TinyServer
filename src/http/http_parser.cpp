@@ -96,6 +96,7 @@ void on_request_uri(void *data, const char *at, size_t length)
 
 void on_request_fragment(void *data, const char *at, size_t length)
 {
+    TINY_LOG_INFO(logger) << "on_request_fragment: fragment";
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(data);
     parser->getData()->setFragment(std::string(at, length));
 }
@@ -141,7 +142,7 @@ void on_request_http_field(void *data, const char *field, size_t flen, const cha
     if (flen == 0)
     {
         TINY_LOG_WARN(logger) << "invalid http request field length == 0";
-        parser->setError(1002);
+        //parser->setError(1002);
         return;
     }
     parser->getData()->setHeader(std::string(field, flen), std::string(value, vlen));
@@ -240,7 +241,7 @@ void on_response_http_field(void *data, const char *field, size_t flen, const ch
     if (flen == 0)
     {
         TINY_LOG_WARN(logger) << "invalid http request field length == 0";
-        parser->setError(1002);
+        //parser->setError(1002);
         return;
     }
     parser->getData()->setHeader(std::string(field, flen), std::string(value, vlen));
@@ -261,8 +262,12 @@ HttpResponseParser::HttpResponseParser()
     m_parser.data = this;
 }
 
-size_t HttpResponseParser::execute(char *data, size_t len)
+size_t HttpResponseParser::execute(char *data, size_t len, bool chunck)
 {
+    if (chunck)
+    {
+        httpclient_parser_init(&m_parser);
+    }
     size_t offset = httpclient_parser_execute(&m_parser, data, len, 0);
     memmove(data, data + offset, len - offset);
     return offset;

@@ -16,7 +16,7 @@ Ref<HttpResponse> HttpConnection::recvResponse()
 {
     Ref<HttpResponseParser> parser(new HttpResponseParser);
     uint64_t buffer_size = HttpResponseParser::GetHttpResponseBufferSize();
-    std::shared_ptr<char> buffers(new char[buffer_size], [](char* ptr){
+    std::shared_ptr<char> buffers(new char[buffer_size + 1], [](char* ptr){
         delete[] ptr;
     });
     char* data = buffers.get();
@@ -25,9 +25,13 @@ Ref<HttpResponse> HttpConnection::recvResponse()
     {
         int len = read(data + offset, buffer_size - offset);
         if (len <= 0)
+        {
+            close();
             return nullptr;
+        }
         len += offset;
-        size_t nparser = parser->execute(data, len);
+        data[len] = '\0';
+        size_t nparser = parser->execute(data, len, false);
         if (parser->hasError())
             return nullptr;
         offset = len - nparser;
@@ -38,31 +42,89 @@ Ref<HttpResponse> HttpConnection::recvResponse()
             break;
         }
     } while (true);
-    
-    int length = parser->getContentLength();
-    if (length > 0)
+    //此处必须为引用，赋值逻辑上错误
+    auto& client_parser = parser->getClientParser();
+    if (client_parser.chunked)
     {
         std::string body;
-        body.resize(length);
-        int len = 0;
-        if (length >= (int)offset)
+        int len = offset;
+        do
         {
-            memcpy(&body[0], data, offset);
-            len = offset;
-        }
-        else
-        {
-            memcpy(&body[0], data, length);
-            len = length;
-        }
-        length -= offset;
-        if (length > 0)
-        {
-            if (readFixSize(&body[len], length) <= 0)
-                return nullptr;
-        }
+            do
+            {
+                int res = read(data + len, buffer_size - len);
+                if (res <= 0)
+                {
+                    close();
+                    return nullptr;
+                }
+                len += res;
+                data[len] = '\0';
+                size_t nparse = parser->execute(data, len, true);
+                if (parser->hasError())
+                    return nullptr;
+                len -= nparse;
+                if (len == (int)buffer_size)
+                    return nullptr;
+            } while (!parser->isFinished());
+            len -= 2;
+            if (client_parser.content_len <= len)
+            {
+                body.append(data, client_parser.content_len);//????
+                memmove(data, data + client_parser.content_len, len - client_parser.content_len);
+                len -= client_parser.content_len;
+            }
+            else
+            {
+                body.append(data, len);
+                int left = client_parser.content_len - len;
+                while (left > 0)
+                {
+                    int res = read(data, left > (int)buffer_size ? (int)buffer_size : left);
+                    if (res <= 0)
+                    {
+                        close();
+                        return nullptr;
+                    }
+                    body.append(data, res);
+                    left -= res;
+                }
+                len = 0;
+            }
+        } while (!client_parser.chunks_done);  
         parser->getData()->setBody(body);
     }
+    else
+    {
+        int length = parser->getContentLength();
+        if (length > 0)
+        {
+            std::string body;
+            body.resize(length);
+            int len = 0;
+            if (length >= (int)offset)
+            {
+                memcpy(&body[0], data, offset);
+                len = offset;
+            }
+            else
+            {
+                memcpy(&body[0], data, length);
+                len = length;
+            }
+            length -= offset;
+            if (length > 0)
+            {
+                if (readFixSize(&body[len], length) <= 0)
+                {
+                    close();
+                    return nullptr;
+                }
+            }
+            parser->getData()->setBody(body);
+        }
+    }
+    
     return parser->getData();
 }
 
