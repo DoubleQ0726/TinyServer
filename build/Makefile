@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_uri
+
+# Build rule for target.
+test_uri: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_uri
+.PHONY : test_uri
+
+# fast build rule for target.
+test_uri/fast:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
+.PHONY : test_uri/fast
+
+#=============================================================================
 # Target rules for targets named test_http_connection
 
 # Build rule for target.
@@ -995,6 +1008,33 @@ src/timer.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
 
+src/uri.o: src/uri.cpp.o
+
+.PHONY : src/uri.o
+
+# target to build an object file
+src/uri.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/uri.cpp.o
+.PHONY : src/uri.cpp.o
+
+src/uri.i: src/uri.cpp.i
+
+.PHONY : src/uri.i
+
+# target to preprocess a source file
+src/uri.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/uri.cpp.i
+.PHONY : src/uri.cpp.i
+
+src/uri.s: src/uri.cpp.s
+
+.PHONY : src/uri.s
+
+# target to generate assembly for a file
+src/uri.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/uri.cpp.s
+.PHONY : src/uri.cpp.s
+
 src/util.o: src/util.cpp.o
 
 .PHONY : src/util.o
@@ -1427,6 +1467,33 @@ tests/test_thread.cpp.s:
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cpp.s
 .PHONY : tests/test_thread.cpp.s
 
+tests/test_uri.o: tests/test_uri.cpp.o
+
+.PHONY : tests/test_uri.o
+
+# target to build an object file
+tests/test_uri.cpp.o:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cpp.o
+.PHONY : tests/test_uri.cpp.o
+
+tests/test_uri.i: tests/test_uri.cpp.i
+
+.PHONY : tests/test_uri.i
+
+# target to preprocess a source file
+tests/test_uri.cpp.i:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cpp.i
+.PHONY : tests/test_uri.cpp.i
+
+tests/test_uri.s: tests/test_uri.cpp.s
+
+.PHONY : tests/test_uri.s
+
+# target to generate assembly for a file
+tests/test_uri.cpp.s:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cpp.s
+.PHONY : tests/test_uri.cpp.s
+
 tests/test_util.o: tests/test_util.cpp.o
 
 .PHONY : tests/test_util.o
@@ -1462,6 +1529,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_uri"
 	@echo "... test_http_connection"
 	@echo "... echo_server"
 	@echo "... test_tcp_server"
@@ -1552,6 +1620,9 @@ help:
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
+	@echo "... src/uri.o"
+	@echo "... src/uri.i"
+	@echo "... src/uri.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"
@@ -1600,6 +1671,9 @@ help:
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
+	@echo "... tests/test_uri.o"
+	@echo "... tests/test_uri.i"
+	@echo "... tests/test_uri.s"
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"

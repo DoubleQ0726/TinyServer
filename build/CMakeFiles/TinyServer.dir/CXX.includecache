@@ -130,6 +130,14 @@ atomic
 noncoptable.h
 ../src/noncoptable.h
 
+../src/uri.h
+memory
+-
+string
+-
+address.h
+../src/address.h
+
 ../src/util.h
 pthread.h
 -
@@ -151,10 +159,20 @@ http_connection.h
 /home/szq/Work/TinyServer/src/http/http_connection.h
 http/http_parser.h
 /home/szq/Work/TinyServer/src/http/http/http_parser.h
+log.h
+/home/szq/Work/TinyServer/src/http/log.h
+functional
+-
 
 /home/szq/Work/TinyServer/src/http/http_connection.h
 socket_stream.h
 /home/szq/Work/TinyServer/src/http/socket_stream.h
 http/http.h
 /home/szq/Work/TinyServer/src/http/http/http.h
+uri.h
+/home/szq/Work/TinyServer/src/http/uri.h
+thread.h
+/home/szq/Work/TinyServer/src/http/thread.h
+memory
+-
 

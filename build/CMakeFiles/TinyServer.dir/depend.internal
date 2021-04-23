@@ -176,6 +176,7 @@ CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o
  ../src/socket_stream.h
  ../src/stream.h
  ../src/thread.h
+ ../src/uri.h
  ../src/util.h
  /home/szq/Work/TinyServer/src/http/http_connection.cpp
  /home/szq/Work/TinyServer/src/http/http_connection.h
@@ -440,6 +441,15 @@ CMakeFiles/TinyServer.dir/src/timer.cpp.o
  /home/szq/Work/TinyServer/src/thread.h
  /home/szq/Work/TinyServer/src/timer.cpp
  /home/szq/Work/TinyServer/src/timer.h
+ /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o
+ /home/szq/Work/TinyServer/src/Singleton.h
+ /home/szq/Work/TinyServer/src/address.h
+ /home/szq/Work/TinyServer/src/log.h
+ /home/szq/Work/TinyServer/src/noncoptable.h
+ /home/szq/Work/TinyServer/src/thread.h
+ /home/szq/Work/TinyServer/src/uri.cpp
+ /home/szq/Work/TinyServer/src/uri.h
  /home/szq/Work/TinyServer/src/util.h
 CMakeFiles/TinyServer.dir/src/util.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h

@@ -5,6 +5,15 @@ using namespace TinyServer;
 
 static Ref<Logger> logger = TINY_LOG_ROOT;
 
+void test_pool()
+{
+    Ref<http::HttpConnectionPool> pool(new http::HttpConnectionPool("www.sylar.top", "", 80, 10, 1000 * 3, 5));
+    IOManager::GetThis()->addTimer(1000, [pool](){
+        auto r = pool->doGet("/", 300);
+        TINY_LOG_INFO(logger) << r->toString();
+    }, true);
+}
+
 void run()
 {
     Ref<Address> addr = Address::LookupIPAddress("www.sylar.top:80");
@@ -34,6 +43,14 @@ void run()
         return;
     }
     TINY_LOG_INFO(logger) << "rsp:" << std::endl <<*rsp;
+    TINY_LOG_INFO(logger) << "=========================";
+
+    auto r = http::HttpConnection::DoGet("http://www.sylar.top/blog/", 300);
+    TINY_LOG_INFO(logger) << "result = " << r->result
+                          << " error = " << r->error
+                          << " rsp = " << (r->response ? r->response->toString() : "");
+    TINY_LOG_INFO(logger) << "=========================";
+    test_pool();
 }
 
 

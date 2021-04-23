@@ -59,6 +59,12 @@ socket_stream.h
 ../src/http/socket_stream.h
 http/http.h
 ../src/http/http/http.h
+uri.h
+../src/http/uri.h
+thread.h
+../src/http/thread.h
+memory
+-
 
 ../src/iomanager.h
 scheduler.h
@@ -147,6 +153,14 @@ thread.h
 ../src/thread.h
 log.h
 ../src/log.h
+
+../src/uri.h
+memory
+-
+string
+-
+address.h
+../src/address.h
 
 ../src/util.h
 pthread.h

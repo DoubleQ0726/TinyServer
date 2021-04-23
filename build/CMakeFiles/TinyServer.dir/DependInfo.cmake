@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/szq/Work/TinyServer/src/tcp_server.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o"
   "/home/szq/Work/TinyServer/src/thread.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/thread.cpp.o"
   "/home/szq/Work/TinyServer/src/timer.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/timer.cpp.o"
+  "/home/szq/Work/TinyServer/src/uri.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/uri.cpp.o"
   "/home/szq/Work/TinyServer/src/util.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

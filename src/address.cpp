@@ -402,7 +402,7 @@ Ref<IPv6Address> IPv6Address::Create(const char* address, uint16_t port)
     int result = inet_pton(AF_INET6, address, &res->m_addr.sin6_addr);
     if (result <= 0)
     {
-        TINY_LOG_ERROR(logger) << "IPv4Address::Create(" << address << ", "
+        TINY_LOG_ERROR(logger) << "IPv6Address::Create(" << address << ", "
             << port << ") result = " << result << " errno = " << errno << " strerror = " << strerror(errno);
         return nullptr;
     }

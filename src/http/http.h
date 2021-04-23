@@ -227,6 +227,7 @@ public:
     bool hasCookie(const std::string& key, std::string* val = nullptr);
 
     bool isClose() const { return m_close; }
+    void setClose(bool v) { m_close = v; }
 
     template<typename T>
     bool checkHeaderAs(const std::string& key, T& val, T& def = T())

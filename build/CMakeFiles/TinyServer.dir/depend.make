@@ -175,6 +175,7 @@ CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/socket.h
 CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/socket_stream.h
 CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/stream.h
 CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/uri.h
 CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/util.h
 CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/http/http_connection.cpp
 CMakeFiles/TinyServer.dir/src/http/http_connection.cpp.o: ../src/http/http_connection.h
@@ -440,6 +441,15 @@ CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/timer.h
 CMakeFiles/TinyServer.dir/src/timer.cpp.o: ../src/util.h
+
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/address.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/uri.cpp
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/uri.h
+CMakeFiles/TinyServer.dir/src/uri.cpp.o: ../src/util.h
 
 CMakeFiles/TinyServer.dir/src/util.cpp.o: ../src/Singleton.h
 CMakeFiles/TinyServer.dir/src/util.cpp.o: ../src/fiber.h

@@ -17,5 +17,6 @@ CMakeFiles/test_http_connection.dir/tests/test_http_connection.cpp.o
  ../src/stream.h
  ../src/thread.h
  ../src/timer.h
+ ../src/uri.h
  ../src/util.h
  /home/szq/Work/TinyServer/tests/test_http_connection.cpp

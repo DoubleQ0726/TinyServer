@@ -40,6 +40,8 @@ CXX_INCLUDES = -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendo
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/tcp_server.cpp.o_DEFINES = __FILE__="src/tcp_server.cpp"
 
+# Custom defines: CMakeFiles/TinyServer.dir/src/uri.cpp.o_DEFINES = __FILE__="src/uri.cpp"
+
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http.cpp.o_DEFINES = __FILE__="src/http/http.cpp"
 
 # Custom defines: CMakeFiles/TinyServer.dir/src/http/http_parser.cpp.o_DEFINES = __FILE__="src/http/http_parser.cpp"

@@ -24,6 +24,7 @@ set(LIB_SRC
     src/socket.cpp
     src/bytearray.cpp
     src/tcp_server.cpp
+    src/uri.cpp
     src/http/http.cpp
     src/http/http_parser.cpp
     src/http/http_session.cpp
@@ -65,6 +66,7 @@ TinyServer_Add_Executable(test_tcp_server "tests/test_tcp_server.cpp" TinyServer
 TinyServer_Add_Executable(echo_server "examples/echo_server.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(test_http_server "tests/test_http_server.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(test_http_connection "tests/test_http_connection.cpp" TinyServer "${LIBS}")
+TinyServer_Add_Executable(test_uri "tests/test_uri.cpp" TinyServer "${LIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
