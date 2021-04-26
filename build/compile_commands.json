@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"samples/my_http_server.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/my_http_server.dir/samples/my_http_server.cpp.o -c /home/szq/Work/TinyServer/samples/my_http_server.cpp",
+  "file": "/home/szq/Work/TinyServer/samples/my_http_server.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_uri.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_uri.dir/tests/test_uri.cpp.o -c /home/szq/Work/TinyServer/tests/test_uri.cpp",
   "file": "/home/szq/Work/TinyServer/tests/test_uri.cpp"
 },

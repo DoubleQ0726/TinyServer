@@ -159,8 +159,7 @@ bool IOManager::delEvent(int fd, EventType et)
     RWMutexType::ReadLockGuard lock(m_mutex);
     if ((int)m_fdEvents.size() <= fd)
         return false;
-    FdEvent* fd_event = nullptr;
-    fd_event = m_fdEvents[fd];
+    FdEvent* fd_event = m_fdEvents[fd];
     lock.unlock();
 
     FdEvent::MutexType::MutexLockGuard lock2(fd_event->mutex);
@@ -192,8 +191,7 @@ bool IOManager::cancelEvent(int fd, EventType et)
     RWMutexType::ReadLockGuard lock(m_mutex);
     if ((int)m_fdEvents.size() <= fd)
         return false;
-    FdEvent* fd_event = nullptr;
-    fd_event = m_fdEvents[fd];
+    FdEvent* fd_event = m_fdEvents[fd];
     lock.unlock();
 
     FdEvent::MutexType::MutexLockGuard lock2(fd_event->mutex);
@@ -351,7 +349,7 @@ void IOManager::idle()
             FdEvent::MutexType::MutexLockGuard lock(fd_event->mutex);
             if (epevent.events & (EPOLLERR | EPOLLHUP))
             {
-                epevent.events |= (EPOLLIN | EPOLLOUT) & fd_event->et; 
+                epevent.events |= EPOLLIN | EPOLLOUT; 
             }
             int real_event_type = NONE;
             if (epevent.events & EPOLLIN)
@@ -365,8 +363,8 @@ void IOManager::idle()
             if ((real_event_type & fd_event->et) == NONE)
                 continue;
             
-            EventType left_type = (EventType)(fd_event->et & ~real_event_type);
-            int op = left_type ? EPOLL_CTL_MOD :EPOLL_CTL_DEL;
+            int left_type = (fd_event->et & ~real_event_type);
+            int op = left_type ? EPOLL_CTL_MOD : EPOLL_CTL_DEL;
             epevent.events = (EPOLLET | left_type);
 
             int res2 = epoll_ctl(m_epollfd, op, fd_event->fd, &epevent);

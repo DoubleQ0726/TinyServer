@@ -36,6 +36,16 @@ log.h
 sys/uio.h
 -
 
+../src/fiber.h
+ucontext.h
+-
+memory
+-
+functional
+-
+log.h
+../src/log.h
+
 ../src/http/http.h
 memory
 -
@@ -44,27 +54,31 @@ boost/lexical_cast.hpp
 map
 -
 
-../src/http/http11_common.h
-sys/types.h
+../src/http/http_session.h
+socket_stream.h
+../src/http/socket_stream.h
+http/http.h
+../src/http/http/http.h
+
+../src/http/servlet.h
+memory
+-
+functional
+-
+http/http.h
+../src/http/http/http.h
+http/http_session.h
+../src/http/http/http_session.h
+thread.h
+../src/http/thread.h
+unordered_map
 -
 
-../src/http/http11_parser.h
-http11_common.h
-../src/http/http11_common.h
-
-../src/http/http_parser.h
-http.h
-../src/http/http.h
-http11_parser.h
-../src/http/http11_parser.h
-httpclient_parser.h
-../src/http/httpclient_parser.h
-log.h
-../src/http/log.h
-
-../src/http/httpclient_parser.h
-http11_common.h
-../src/http/http11_common.h
+../src/iomanager.h
+scheduler.h
+../src/scheduler.h
+timer.h
+../src/timer.h
 
 ../src/log.h
 string
@@ -94,6 +108,12 @@ thread.h
 
 ../src/noncoptable.h
 
+../src/scheduler.h
+memory
+-
+fiber.h
+../src/fiber.h
+
 ../src/socket.h
 log.h
 ../src/log.h
@@ -114,6 +134,20 @@ memory
 bytearray.h
 ../src/bytearray.h
 
+../src/tcp_server.h
+memory
+-
+functional
+-
+address.h
+../src/address.h
+socket.h
+../src/socket.h
+iomanager.h
+../src/iomanager.h
+noncoptable.h
+../src/noncoptable.h
+
 ../src/thread.h
 memory
 -
@@ -130,13 +164,17 @@ atomic
 noncoptable.h
 ../src/noncoptable.h
 
-../src/uri.h
+../src/timer.h
 memory
 -
-string
+set
 -
-address.h
-../src/address.h
+vector
+-
+thread.h
+../src/thread.h
+log.h
+../src/log.h
 
 ../src/util.h
 pthread.h
@@ -154,25 +192,17 @@ vector
 string
 -
 
-/home/szq/Work/TinyServer/src/http/http_connection.cpp
-http_connection.h
-/home/szq/Work/TinyServer/src/http/http_connection.h
-http/http_parser.h
-/home/szq/Work/TinyServer/src/http/http/http_parser.h
+/home/szq/Work/TinyServer/src/http/http_server.cpp
+http_server.h
+/home/szq/Work/TinyServer/src/http/http_server.h
 log.h
 /home/szq/Work/TinyServer/src/http/log.h
-functional
--
 
-/home/szq/Work/TinyServer/src/http/http_connection.h
-socket_stream.h
-/home/szq/Work/TinyServer/src/http/socket_stream.h
-http/http.h
-/home/szq/Work/TinyServer/src/http/http/http.h
-uri.h
-/home/szq/Work/TinyServer/src/http/uri.h
-thread.h
-/home/szq/Work/TinyServer/src/http/thread.h
-memory
--
+/home/szq/Work/TinyServer/src/http/http_server.h
+tcp_server.h
+/home/szq/Work/TinyServer/src/http/tcp_server.h
+http/http_session.h
+/home/szq/Work/TinyServer/src/http/http/http_session.h
+http/servlet.h
+/home/szq/Work/TinyServer/src/http/http/servlet.h
 

@@ -67,6 +67,7 @@ TinyServer_Add_Executable(echo_server "examples/echo_server.cpp" TinyServer "${L
 TinyServer_Add_Executable(test_http_server "tests/test_http_server.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(test_http_connection "tests/test_http_connection.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(test_uri "tests/test_uri.cpp" TinyServer "${LIBS}")
+TinyServer_Add_Executable(my_http_server "samples/my_http_server.cpp" TinyServer "${LIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

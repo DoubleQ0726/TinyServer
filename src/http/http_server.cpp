@@ -26,12 +26,15 @@ void HttpServer::handleClient(Ref<Socket> client)
             break;
         }
         Ref<HttpResponse> rsp(new HttpResponse(req->getVersion(), req->isClose() || !m_isKeepalive));
+        rsp->setHeader("Server", getName());
         m_dispatch->handle(req, rsp, session);
-        //rsp->setBody("hello sylar");
-        //TINY_LOG_INFO(logger) << "req = \n" << *req;
-        //TINY_LOG_INFO(logger) << "rsp = \n" << *rsp;
         session->sendResponse(rsp);
-    } while (m_isKeepalive);
+        
+        if(!m_isKeepalive || req->isClose()) 
+        {
+            break;
+        }
+    } while (true);
     
 }
 
