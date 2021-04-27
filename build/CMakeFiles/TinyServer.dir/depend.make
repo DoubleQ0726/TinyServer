@@ -53,6 +53,7 @@ CMakeFiles/TinyServer.dir/src/config.cpp.o: ../vendor/yaml-cpp/include/yaml-cpp/
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/Singleton.h
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/config.cpp
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/config.h
+CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/env.h
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/noncoptable.h
 CMakeFiles/TinyServer.dir/src/config.cpp.o: ../src/thread.h
@@ -97,6 +98,14 @@ CMakeFiles/TinyServer.dir/src/daemon.cpp.o: ../src/log.h
 CMakeFiles/TinyServer.dir/src/daemon.cpp.o: ../src/noncoptable.h
 CMakeFiles/TinyServer.dir/src/daemon.cpp.o: ../src/thread.h
 CMakeFiles/TinyServer.dir/src/daemon.cpp.o: ../src/util.h
+
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/Singleton.h
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/env.cpp
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/env.h
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/log.h
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/noncoptable.h
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/thread.h
+CMakeFiles/TinyServer.dir/src/env.cpp.o: ../src/util.h
 
 CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o: ../src/Singleton.h
 CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o: ../src/fd_manager.cpp

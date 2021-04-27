@@ -1,0 +1,2 @@
+2021-04-27 20:20:38	46128	UNKNOW	0	[INFO]	[system]	src/config.cpp:76	LoadConfFile file = /home/szq/Work/TinyServer/bin/config/test1.yml ok
+2021-04-27 20:20:38	46128	UNKNOW	0	[INFO]	[root]	src/log.cpp:557	ON Log Config Change Event

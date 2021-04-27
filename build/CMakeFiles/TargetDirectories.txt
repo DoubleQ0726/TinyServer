@@ -11,6 +11,7 @@
 /home/szq/Work/TinyServer/build/CMakeFiles/test_thread.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_config.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_bytearray.dir
+/home/szq/Work/TinyServer/build/CMakeFiles/test_env.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_util.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_fiber.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/test_http_server.dir

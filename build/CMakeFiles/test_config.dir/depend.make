@@ -3,6 +3,7 @@
 
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: ../src/Singleton.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: ../src/config.h
+CMakeFiles/test_config.dir/tests/test_config.cpp.o: ../src/env.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: ../src/log.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: ../src/noncoptable.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: ../src/thread.h

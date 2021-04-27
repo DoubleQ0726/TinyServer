@@ -257,6 +257,19 @@ test_bytearray/fast:
 .PHONY : test_bytearray/fast
 
 #=============================================================================
+# Target rules for targets named test_env
+
+# Build rule for target.
+test_env: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_env
+.PHONY : test_env
+
+# fast build rule for target.
+test_env/fast:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/build
+.PHONY : test_env/fast
+
+#=============================================================================
 # Target rules for targets named test_util
 
 # Build rule for target.
@@ -547,6 +560,33 @@ src/daemon.s: src/daemon.cpp.s
 src/daemon.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/daemon.cpp.s
 .PHONY : src/daemon.cpp.s
+
+src/env.o: src/env.cpp.o
+
+.PHONY : src/env.o
+
+# target to build an object file
+src/env.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/env.cpp.o
+.PHONY : src/env.cpp.o
+
+src/env.i: src/env.cpp.i
+
+.PHONY : src/env.i
+
+# target to preprocess a source file
+src/env.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/env.cpp.i
+.PHONY : src/env.cpp.i
+
+src/env.s: src/env.cpp.s
+
+.PHONY : src/env.s
+
+# target to generate assembly for a file
+src/env.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/env.cpp.s
+.PHONY : src/env.cpp.s
 
 src/fd_manager.o: src/fd_manager.cpp.o
 
@@ -1277,6 +1317,33 @@ tests/test_daemon.cpp.s:
 	$(MAKE) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cpp.s
 .PHONY : tests/test_daemon.cpp.s
 
+tests/test_env.o: tests/test_env.cpp.o
+
+.PHONY : tests/test_env.o
+
+# target to build an object file
+tests/test_env.cpp.o:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cpp.o
+.PHONY : tests/test_env.cpp.o
+
+tests/test_env.i: tests/test_env.cpp.i
+
+.PHONY : tests/test_env.i
+
+# target to preprocess a source file
+tests/test_env.cpp.i:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cpp.i
+.PHONY : tests/test_env.cpp.i
+
+tests/test_env.s: tests/test_env.cpp.s
+
+.PHONY : tests/test_env.s
+
+# target to generate assembly for a file
+tests/test_env.cpp.s:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cpp.s
+.PHONY : tests/test_env.cpp.s
+
 tests/test_fiber.o: tests/test_fiber.cpp.o
 
 .PHONY : tests/test_fiber.o
@@ -1647,6 +1714,7 @@ help:
 	@echo "... test_thread"
 	@echo "... test_config"
 	@echo "... test_bytearray"
+	@echo "... test_env"
 	@echo "... test_util"
 	@echo "... test_fiber"
 	@echo "... test_http_server"
@@ -1675,6 +1743,9 @@ help:
 	@echo "... src/daemon.o"
 	@echo "... src/daemon.i"
 	@echo "... src/daemon.s"
+	@echo "... src/env.o"
+	@echo "... src/env.i"
+	@echo "... src/env.s"
 	@echo "... src/fd_manager.o"
 	@echo "... src/fd_manager.i"
 	@echo "... src/fd_manager.s"
@@ -1756,6 +1827,9 @@ help:
 	@echo "... tests/test_daemon.o"
 	@echo "... tests/test_daemon.i"
 	@echo "... tests/test_daemon.s"
+	@echo "... tests/test_env.o"
+	@echo "... tests/test_env.i"
+	@echo "... tests/test_env.s"
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"

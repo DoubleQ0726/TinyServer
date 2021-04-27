@@ -4,6 +4,7 @@
 CMakeFiles/test_config.dir/tests/test_config.cpp.o
  ../src/Singleton.h
  ../src/config.h
+ ../src/env.h
  ../src/log.h
  ../src/noncoptable.h
  ../src/thread.h

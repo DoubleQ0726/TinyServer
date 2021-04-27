@@ -615,7 +615,7 @@ struct LogIniter
                 {
                     //新数据里没有而老数据里面有，触发删除
                     auto logger = TINY_LOG_NAME(item.name);
-                    logger->setLevel((LogLevel::Level)100);
+                    logger->setLevel((LogLevel::Level)0);
                     logger->clearAppenders();
                 }
             }

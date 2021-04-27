@@ -344,7 +344,8 @@ public:
         {
             YAML::Node n;
             n["name"] = item.name;
-            n["level"] = LogLevel::ToString(item.level);
+            if(item.level != LogLevel::UNKNOW)
+                n["level"] = LogLevel::ToString(item.level);
             if (!item.formatter.empty())
             {
                 n["formatter"] = item.formatter;
@@ -464,7 +465,6 @@ private:
         {
             //m_val = boost::lexical_cast<T>(val);
             setValue(FromStr()(val));
-            return true;
         }
         catch(const std::exception& e)
         {
@@ -531,6 +531,8 @@ public:
     }
 
     static void LoadFromYaml(YAML::Node& root);
+
+    static void LoadFromConfDir(const std::string& path);
 
     static Ref<ConfigVarBase> LookupBase(const std::string& name);
 

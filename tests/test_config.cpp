@@ -2,9 +2,10 @@
 #include "config.h"
 #include "yaml-cpp/yaml.h"
 #include <iostream>
+#include "env.h"
 using namespace TinyServer;
 
-#if 0
+#if 1
 Ref<ConfigVar<int>> int_config = Config::Lookup("system.port", int(8080), "system port");
 Ref<ConfigVar<float>> int_configx = Config::Lookup("system.port", float(8080), "system port");
 Ref<ConfigVar<float>> float_config = Config::Lookup("system.value", float(13.14f), "system value");
@@ -93,7 +94,7 @@ void test_config()
     XX_M(map_str_int_config, str_int_map, after)
     XX_M(umap_str_int_config, str_int_umap, after)
 }
-#endif
+
 class Person
 {
 public:
@@ -198,14 +199,25 @@ void test_log_config()
     system_log->setFormatter("%d - %m%n");
     TINY_LOG_INFO(system_log) << "Hello System Log";
 }
+#endif
 
-int main()
+void test_loadconf()
+{
+    Config::LoadFromConfDir("config");
+}
+
+int main(int argc, char** argv)
 {
     //test_yaml();
     //test_config();
     //test_class();
-    test_log_config();
-
+    //test_log_config();
+    EnvMgr::GetInstance()->init(argc, argv);
+    test_loadconf();
+    std::cout << "=======" << std::endl;
+    sleep(10);
+    test_loadconf();
+    return 0;
     Config::Visit([](Ref<ConfigVarBase> var){
         TINY_LOG_INFO(TINY_LOG_ROOT) << "name = " << var->getName()
             << " description = " << var->getDescription()

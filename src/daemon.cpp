@@ -31,6 +31,7 @@ static int real_start(int argc, char** argv, std::function<int(int argc, char** 
 
 static int real_daemon(int argc, char** argv, std::function<int(int argc, char** argv)> main_cb)
 {
+    daemon(1, 0);   //守护进程，关闭终端
     ProcessInfoMgr::GetInstance()->parent_id = getpid();
     ProcessInfoMgr::GetInstance()->parent_start_time = time(0);
     while (true)

@@ -54,6 +54,7 @@ CMakeFiles/TinyServer.dir/src/config.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h
  /home/szq/Work/TinyServer/src/config.cpp
  /home/szq/Work/TinyServer/src/config.h
+ /home/szq/Work/TinyServer/src/env.h
  /home/szq/Work/TinyServer/src/log.h
  /home/szq/Work/TinyServer/src/noncoptable.h
  /home/szq/Work/TinyServer/src/thread.h
@@ -94,6 +95,14 @@ CMakeFiles/TinyServer.dir/src/daemon.cpp.o
  /home/szq/Work/TinyServer/src/config.h
  /home/szq/Work/TinyServer/src/daemon.cpp
  /home/szq/Work/TinyServer/src/daemon.h
+ /home/szq/Work/TinyServer/src/log.h
+ /home/szq/Work/TinyServer/src/noncoptable.h
+ /home/szq/Work/TinyServer/src/thread.h
+ /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/env.cpp.o
+ /home/szq/Work/TinyServer/src/Singleton.h
+ /home/szq/Work/TinyServer/src/env.cpp
+ /home/szq/Work/TinyServer/src/env.h
  /home/szq/Work/TinyServer/src/log.h
  /home/szq/Work/TinyServer/src/noncoptable.h
  /home/szq/Work/TinyServer/src/thread.h

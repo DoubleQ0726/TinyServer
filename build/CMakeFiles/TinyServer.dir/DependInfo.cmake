@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/szq/Work/TinyServer/src/bytearray.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/bytearray.cpp.o"
   "/home/szq/Work/TinyServer/src/config.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/config.cpp.o"
   "/home/szq/Work/TinyServer/src/daemon.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/daemon.cpp.o"
+  "/home/szq/Work/TinyServer/src/env.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/env.cpp.o"
   "/home/szq/Work/TinyServer/src/fd_manager.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/fd_manager.cpp.o"
   "/home/szq/Work/TinyServer/src/fiber.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/fiber.cpp.o"
   "/home/szq/Work/TinyServer/src/hook.cpp" "/home/szq/Work/TinyServer/build/CMakeFiles/TinyServer.dir/src/hook.cpp.o"
