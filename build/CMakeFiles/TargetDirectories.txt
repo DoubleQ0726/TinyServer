@@ -1,3 +1,4 @@
+/home/szq/Work/TinyServer/build/CMakeFiles/test_daemon.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/my_http_server.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/rebuild_cache.dir
 /home/szq/Work/TinyServer/build/CMakeFiles/edit_cache.dir

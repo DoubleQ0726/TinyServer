@@ -21,5 +21,7 @@ uint64_t GetCurrentMs();
 
 uint64_t GetCurrentUs();
 
+std::string TimeToStr(time_t ts = time(0), const std::string& format = "%Y-%m-%d %H:%M:%S");
+
 } // namespace TinyServer
 

@@ -1,5 +1,5 @@
 #pragma once
-
+#include <memory>
 namespace TinyServer
 {
 template<typename T, class X = void, int N = 0>
