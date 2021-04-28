@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_application.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_application.dir/tests/test_application.cpp.o -c /home/szq/Work/TinyServer/tests/test_application.cpp",
+  "file": "/home/szq/Work/TinyServer/tests/test_application.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++   -D__FILE__=\\\"tests/test_daemon.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined   -o CMakeFiles/test_daemon.dir/tests/test_daemon.cpp.o -c /home/szq/Work/TinyServer/tests/test_daemon.cpp",
   "file": "/home/szq/Work/TinyServer/tests/test_daemon.cpp"
 },
@@ -123,6 +128,11 @@
   "directory": "/home/szq/Work/TinyServer/build",
   "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/env.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/env.cpp.o -c /home/szq/Work/TinyServer/src/env.cpp",
   "file": "/home/szq/Work/TinyServer/src/env.cpp"
+},
+{
+  "directory": "/home/szq/Work/TinyServer/build",
+  "command": "/usr/bin/c++  -DTinyServer_EXPORTS -D__FILE__=\\\"src/application.cpp\\\" -I/home/szq/Work/TinyServer/src -I/home/szq/Work/TinyServer/vendor/yaml-cpp/include   -rdynamic -o0 -ggdb -std=c++11 -lpthread -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC   -o CMakeFiles/TinyServer.dir/src/application.cpp.o -c /home/szq/Work/TinyServer/src/application.cpp",
+  "file": "/home/szq/Work/TinyServer/src/application.cpp"
 },
 {
   "directory": "/home/szq/Work/TinyServer/build",

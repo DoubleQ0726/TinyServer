@@ -27,6 +27,7 @@ set(LIB_SRC
     src/uri.cpp
     src/daemon.cpp
     src/env.cpp
+    src/application.cpp
     src/http/http.cpp
     src/http/http_parser.cpp
     src/http/http_session.cpp
@@ -72,6 +73,7 @@ TinyServer_Add_Executable(test_uri "tests/test_uri.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(my_http_server "samples/my_http_server.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(test_daemon "tests/test_daemon.cpp" TinyServer "${LIBS}")
 TinyServer_Add_Executable(test_env "tests/test_env.cpp" TinyServer "${LIBS}")
+TinyServer_Add_Executable(test_application "tests/test_application.cpp" TinyServer "${LIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

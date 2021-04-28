@@ -10,6 +10,62 @@ CMakeFiles/TinyServer.dir/src/address.cpp.o
  /home/szq/Work/TinyServer/src/noncoptable.h
  /home/szq/Work/TinyServer/src/thread.h
  /home/szq/Work/TinyServer/src/util.h
+CMakeFiles/TinyServer.dir/src/application.cpp.o
+ ../src/address.h
+ ../src/bytearray.h
+ ../src/fiber.h
+ ../src/http/http.h
+ ../src/http/http_session.h
+ ../src/http/servlet.h
+ ../src/iomanager.h
+ ../src/scheduler.h
+ ../src/socket.h
+ ../src/socket_stream.h
+ ../src/stream.h
+ ../src/tcp_server.h
+ ../src/timer.h
+ ../vendor/yaml-cpp/include/yaml-cpp/binary.h
+ ../vendor/yaml-cpp/include/yaml-cpp/dll.h
+ ../vendor/yaml-cpp/include/yaml-cpp/emitter.h
+ ../vendor/yaml-cpp/include/yaml-cpp/emitterdef.h
+ ../vendor/yaml-cpp/include/yaml-cpp/emittermanip.h
+ ../vendor/yaml-cpp/include/yaml-cpp/emitterstyle.h
+ ../vendor/yaml-cpp/include/yaml-cpp/exceptions.h
+ ../vendor/yaml-cpp/include/yaml-cpp/mark.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/convert.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/impl.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/iterator.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/iterator_fwd.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/memory.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/node.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/node_data.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/node_iterator.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/detail/node_ref.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/emit.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/impl.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/iterator.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/node.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/parse.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/ptr.h
+ ../vendor/yaml-cpp/include/yaml-cpp/node/type.h
+ ../vendor/yaml-cpp/include/yaml-cpp/noexcept.h
+ ../vendor/yaml-cpp/include/yaml-cpp/null.h
+ ../vendor/yaml-cpp/include/yaml-cpp/ostream_wrapper.h
+ ../vendor/yaml-cpp/include/yaml-cpp/parser.h
+ ../vendor/yaml-cpp/include/yaml-cpp/stlemitter.h
+ ../vendor/yaml-cpp/include/yaml-cpp/traits.h
+ ../vendor/yaml-cpp/include/yaml-cpp/yaml.h
+ /home/szq/Work/TinyServer/src/Singleton.h
+ /home/szq/Work/TinyServer/src/application.cpp
+ /home/szq/Work/TinyServer/src/application.h
+ /home/szq/Work/TinyServer/src/config.h
+ /home/szq/Work/TinyServer/src/daemon.h
+ /home/szq/Work/TinyServer/src/env.h
+ /home/szq/Work/TinyServer/src/http/http_server.h
+ /home/szq/Work/TinyServer/src/log.h
+ /home/szq/Work/TinyServer/src/noncoptable.h
+ /home/szq/Work/TinyServer/src/thread.h
+ /home/szq/Work/TinyServer/src/util.h
 CMakeFiles/TinyServer.dir/src/bytearray.cpp.o
  /home/szq/Work/TinyServer/src/Singleton.h
  /home/szq/Work/TinyServer/src/bytearray.cpp

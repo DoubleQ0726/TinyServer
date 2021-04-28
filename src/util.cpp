@@ -5,6 +5,10 @@
 #include <sys/time.h>
 #include <dirent.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <signal.h>
+
 
 namespace TinyServer
 {
@@ -108,6 +112,126 @@ void FSUtil::ListAllFile(std::vector<std::string>& files, const std::string& pat
     }
     closedir(dir);
 }
+
+static int __lstat(const char* file, struct stat* st = nullptr) 
+{
+    struct stat lst;
+    int ret = lstat(file, &lst);
+    if(st) {
+        *st = lst;
+    }
+    return ret;
+}
+
+static int __mkdir(const char* dirname) 
+{
+    if(access(dirname, F_OK) == 0) 
+    {
+        return 0;
+    }
+    return mkdir(dirname, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+}
+
+bool FSUtil::Mkdir(const std::string& dirname)
+{
+    if (__lstat(dirname.c_str()) == 0)
+    {
+        return true;
+    }
+    char* path = strdup(dirname.c_str());
+    char* ptr = strchr(path + 1, '/');
+    do {
+        for (; ptr; *ptr = '/', ptr = strchr(ptr + 1, '/')) 
+        {
+            *ptr = '\0';
+            if (__mkdir(path) != 0) 
+                break;
+        }
+        if (ptr != nullptr) 
+            break;
+        else if (__mkdir(path) != 0) 
+            break;
+        free(path);
+        return true;
+    } while(0);
+
+    free(path);
+    return false;
+}
+
+bool FSUtil::IsRunningPidfile(const std::string& pidfile)
+{
+    if (__lstat(pidfile.c_str()) != 0) 
+    {
+        return false;
+    }
+    std::ifstream ifs(pidfile);
+    std::string line;
+    if (!ifs || !std::getline(ifs, line)) 
+    {
+        return false;
+    }
+    if (line.empty()) 
+    {
+        return false;
+    }
+    pid_t pid = atoi(line.c_str());
+    if (pid <= 1) 
+    {
+        return false;
+    }
+    if (kill(pid, 0) != 0) 
+    {
+        return false;
+    }
+    return true;
+}
+
+bool FSUtil::Rm(const std::string& path)
+{
+    return false;
+}
+
+bool FSUtil::Mv(const std::string& from, const std::string& to)
+{
+    return false;
+}
+
+bool FSUtil::Realpath(const std::string& path, std::string& rpath)
+{
+    return false;
+}
+
+bool FSUtil::Symlink(const std::string& frm, const std::string& to)
+{
+    return false;
+}
+
+bool FSUtil::Unlink(const std::string& filename, bool exist)
+{
+    return false;
+}
+
+std::string FSUtil::Dirname(const std::string& filename)
+{
+    return "";
+}
+
+std::string FSUtil::Basename(const std::string& filename)
+{
+    return "";
+}
+
+bool FSUtil::OpenForRead(std::ifstream& ifs, const std::string& filename, std::ios_base::openmode mode)
+{
+    return false;
+}
+
+bool FSUtil::OpenForWrite(std::ofstream& ofs, const std::string& filename, std::ios_base::openmode mode)
+{
+    return false;
+}
+
 
 }
 

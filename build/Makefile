@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_application
+
+# Build rule for target.
+test_application: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_application
+.PHONY : test_application
+
+# fast build rule for target.
+test_application/fast:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/build
+.PHONY : test_application/fast
+
+#=============================================================================
 # Target rules for targets named test_daemon
 
 # Build rule for target.
@@ -479,6 +492,33 @@ src/address.s: src/address.cpp.s
 src/address.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/address.cpp.s
 .PHONY : src/address.cpp.s
+
+src/application.o: src/application.cpp.o
+
+.PHONY : src/application.o
+
+# target to build an object file
+src/application.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/application.cpp.o
+.PHONY : src/application.cpp.o
+
+src/application.i: src/application.cpp.i
+
+.PHONY : src/application.i
+
+# target to preprocess a source file
+src/application.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/application.cpp.i
+.PHONY : src/application.cpp.i
+
+src/application.s: src/application.cpp.s
+
+.PHONY : src/application.s
+
+# target to generate assembly for a file
+src/application.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/src/application.cpp.s
+.PHONY : src/application.cpp.s
 
 src/bytearray.o: src/bytearray.cpp.o
 
@@ -1236,6 +1276,33 @@ tests/test_address.cpp.s:
 	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.s
 .PHONY : tests/test_address.cpp.s
 
+tests/test_application.o: tests/test_application.cpp.o
+
+.PHONY : tests/test_application.o
+
+# target to build an object file
+tests/test_application.cpp.o:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cpp.o
+.PHONY : tests/test_application.cpp.o
+
+tests/test_application.i: tests/test_application.cpp.i
+
+.PHONY : tests/test_application.i
+
+# target to preprocess a source file
+tests/test_application.cpp.i:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cpp.i
+.PHONY : tests/test_application.cpp.i
+
+tests/test_application.s: tests/test_application.cpp.s
+
+.PHONY : tests/test_application.s
+
+# target to generate assembly for a file
+tests/test_application.cpp.s:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cpp.s
+.PHONY : tests/test_application.cpp.s
+
 tests/test_bytearray.o: tests/test_bytearray.cpp.o
 
 .PHONY : tests/test_bytearray.o
@@ -1701,6 +1768,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test_application"
 	@echo "... test_daemon"
 	@echo "... my_http_server"
 	@echo "... rebuild_cache"
@@ -1734,6 +1802,9 @@ help:
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
+	@echo "... src/application.o"
+	@echo "... src/application.i"
+	@echo "... src/application.s"
 	@echo "... src/bytearray.o"
 	@echo "... src/bytearray.i"
 	@echo "... src/bytearray.s"
@@ -1818,6 +1889,9 @@ help:
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
 	@echo "... tests/test_address.s"
+	@echo "... tests/test_application.o"
+	@echo "... tests/test_application.i"
+	@echo "... tests/test_application.s"
 	@echo "... tests/test_bytearray.o"
 	@echo "... tests/test_bytearray.i"
 	@echo "... tests/test_bytearray.s"

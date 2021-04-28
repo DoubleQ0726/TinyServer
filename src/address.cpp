@@ -193,9 +193,9 @@ bool Address::GetInterfaceAddress(std::multimap<std::string, std::pair<Ref<Addre
     return true;
 }
 
-bool Address::GetInterfaceAddress(std::vector<std::pair<Ref<Address>, uint32_t>>& result, const std::string& ifcae, int family)
+bool Address::GetInterfaceAddress(std::vector<std::pair<Ref<Address>, uint32_t>>& result, const std::string& iface, int family)
 {
-    if (ifcae.empty() || ifcae == "*")
+    if (iface.empty() || iface == "*")
     {
         if (family == AF_INET || family == AF_UNSPEC)
         {
@@ -210,7 +210,7 @@ bool Address::GetInterfaceAddress(std::vector<std::pair<Ref<Address>, uint32_t>>
     std::multimap<std::string, std::pair<Ref<Address>, uint32_t>> results;
     if (!GetInterfaceAddress(results, family))
         return false;
-    auto iters = results.equal_range(ifcae);
+    auto iters = results.equal_range(iface);
     for (; iters.first != iters.second; ++iters.first)
     {
         result.push_back(iters.first->second);

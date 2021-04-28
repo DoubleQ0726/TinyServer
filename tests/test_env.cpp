@@ -9,7 +9,7 @@ struct A
 {
     A()
     {
-        std::ifstream ifs("/proc/" + std::to_string(getpid()) + "/cmdline", std::ios::binary |std::ios::in);
+        std::ifstream ifs("/proc/" + std::to_string(getpid()) + "/cmdline", std::ios::binary | std::ios::in);
         std::string content;
         content.resize(4096);
 

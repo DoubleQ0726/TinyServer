@@ -23,7 +23,7 @@ public:
     static bool GetInterfaceAddress(std::multimap<std::string, std::pair<Ref<Address>, uint32_t>>& result,
         int family = AF_INET);
     
-    static bool GetInterfaceAddress(std::vector<std::pair<Ref<Address>, uint32_t>>& result, const std::string& ifcae, int family = AF_INET);
+    static bool GetInterfaceAddress(std::vector<std::pair<Ref<Address>, uint32_t>>& result, const std::string& iface, int family = AF_INET);
 
     int getFamily() const;
 
