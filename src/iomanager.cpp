@@ -3,7 +3,7 @@
 #include "log.h"
 #include <sys/epoll.h>
 #include <unistd.h>
-#include <fcntl.h>
+//#include <fcntl.h>
 #include <string.h>
 
 namespace TinyServer
@@ -17,19 +17,19 @@ IOManager::IOManager(size_t threads, bool use_call, const std::string& name)
     m_epollfd = epoll_create(5000);
     TINY_ASSERT(m_epollfd >= 0);
 
-    int res = pipe(m_ticklefd);
-    TINY_ASSERT(res == 0);
+    //int res = pipe(m_ticklefd);
+    //TINY_ASSERT(res == 0);
 
-    epoll_event event;
-    memset(&event, 0, sizeof(event));
-    event.events = EPOLLIN | EPOLLET;
-    event.data.fd = m_ticklefd[0];
+    //epoll_event event;
+    //memset(&event, 0, sizeof(event));
+    //event.events = EPOLLIN | EPOLLET;
+    //event.data.fd = m_ticklefd[0];
 
-    res = fcntl(m_ticklefd[0], F_SETFL, O_NONBLOCK);
-    TINY_ASSERT(res >= 0);
+    //res = fcntl(m_ticklefd[0], F_SETFL, O_NONBLOCK);
+    //TINY_ASSERT(res >= 0);
 
-    res = epoll_ctl(m_epollfd, EPOLL_CTL_ADD, m_ticklefd[0], &event);
-    TINY_ASSERT(res == 0);
+    //res = epoll_ctl(m_epollfd, EPOLL_CTL_ADD, m_ticklefd[0], &event);
+    //TINY_ASSERT(res == 0);
 
     eventResize(32);
     start(); //开启多线程多协程
@@ -39,8 +39,8 @@ IOManager::~IOManager()
 {
     stop();
     close(m_epollfd);
-    close(m_ticklefd[0]);
-    close(m_ticklefd[1]);
+    //close(m_ticklefd[0]);
+    //close(m_ticklefd[1]);
 
     for (size_t i = 0; i < m_fdEvents.size(); ++i)
     {
@@ -118,7 +118,7 @@ int IOManager::addEvent(int fd, EventType et, std::function<void()> cb)
         fd_event = m_fdEvents[fd];
     }
     FdEvent::MutexType::MutexLockGuard lock2(fd_event->mutex);
-    if (fd_event->et == et)
+    if (fd_event->et & et)
     {
         TINY_LOG_ERROR(logger) << "addEvent assert fd = " << fd << " event = " << et
             << " fd_event.event = " << fd_event->et;
@@ -268,8 +268,8 @@ void IOManager::tickle()
     if (hasIdleThreads())
         return;
     //TINY_LOG_INFO(logger) << "tick";
-    int res = ::write(m_ticklefd[1], "T", 1);
-    TINY_ASSERT(res == 1);
+    //int res = ::write(m_ticklefd[1], "T", 1);
+    //TINY_ASSERT(res == 1);
 }
 
 bool IOManager::stopping()
@@ -336,15 +336,15 @@ void IOManager::idle()
         for (int i = 0; i < res; ++i)
         {
             epoll_event& epevent = epevents[i];
-            if (epevents->data.fd == m_ticklefd[0])
-            {
-                uint8_t dummy;
-                while (read(m_ticklefd[0], &dummy, 1) == 1)
-                {
-                    //TINY_LOG_INFO(logger) << "T";
-                }
-                continue;
-            }
+            // if (epevents->data.fd == m_ticklefd[0])
+            // {
+            //     uint8_t dummy;
+            //     while (read(m_ticklefd[0], &dummy, 1) == 1)
+            //     {
+            //         //TINY_LOG_INFO(logger) << "T";
+            //     }
+            //     continue;
+            // }
             FdEvent* fd_event = (FdEvent*)epevent.data.ptr;
             FdEvent::MutexType::MutexLockGuard lock(fd_event->mutex);
             if (epevent.events & (EPOLLERR | EPOLLHUP))
@@ -361,7 +361,9 @@ void IOManager::idle()
                 real_event_type |= WRITE;
             }
             if ((real_event_type & fd_event->et) == NONE)
+            {
                 continue;
+            }
             
             int left_type = (fd_event->et & ~real_event_type);
             int op = left_type ? EPOLL_CTL_MOD : EPOLL_CTL_DEL;

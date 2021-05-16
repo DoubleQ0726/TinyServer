@@ -69,6 +69,11 @@ Ref<HttpRequest> HttpSession::recvRequest()
         }
         parser->getData()->setBody(body);
     }
+    std::string keep_alive = parser->getData()->getHeader("Connection");
+    if (strcasecmp("keep-alive", keep_alive.c_str()) == 0)
+    {
+        parser->getData()->setClose(false);
+    }
     return parser->getData();
 }
 

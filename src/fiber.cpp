@@ -176,7 +176,8 @@ void Fiber::YieldToReady()
 void Fiber::YieldToHold()
 {
     Ref<Fiber> cur = GetThis();
-    cur->m_state = State::HOLD;
+    TINY_ASSERT(cur->m_state == EXEC);
+    //cur->m_state = State::HOLD;
     cur->swapOut();
 }
 //总协程数

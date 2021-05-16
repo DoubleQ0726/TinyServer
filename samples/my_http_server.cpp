@@ -25,7 +25,7 @@ void run()
 
 int main()
 {
-    IOManager iom;
+    IOManager iom(1);
     iom.schedule(run);
     return 0;
 }
